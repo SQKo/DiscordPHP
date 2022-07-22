@@ -20,6 +20,9 @@ use Traversable;
 
 /**
  * Collection of items. Inspired by Laravel Collections.
+ *
+ * @since 5.0.0 No longer extends Laravel's BaseCollection
+ * @since 4.0.0
  */
 class Collection implements ArrayAccess, JsonSerializable, IteratorAggregate, Countable
 {
@@ -65,7 +68,7 @@ class Collection implements ArrayAccess, JsonSerializable, IteratorAggregate, Co
      * @param string $discrim
      * @param string $class
      *
-     * @return Collection
+     * @return static
      */
     public static function from(array $items = [], ?string $discrim = 'id', ?string $class = null)
     {
@@ -78,7 +81,7 @@ class Collection implements ArrayAccess, JsonSerializable, IteratorAggregate, Co
      * @param string $class
      * @param string $discrim
      *
-     * @return Collection
+     * @return static
      */
     public static function for(string $class, ?string $discrim = 'id')
     {
@@ -119,7 +122,7 @@ class Collection implements ArrayAccess, JsonSerializable, IteratorAggregate, Co
     public function set($offset, $value)
     {
         // Don't insert elements that are not of type class.
-        if (! is_null($this->class) && ! ($value instanceof $this->class)) {
+        if (null !== $this->class && ! ($value instanceof $this->class)) {
             return;
         }
 
@@ -185,13 +188,13 @@ class Collection implements ArrayAccess, JsonSerializable, IteratorAggregate, Co
      */
     public function pushItem($item): Collection
     {
-        if (is_null($this->discrim)) {
+        if (null === $this->discrim) {
             $this->items[] = $item;
 
             return $this;
         }
 
-        if (! is_null($this->class) && ! ($item instanceof $this->class)) {
+        if (null !== $this->class && ! ($item instanceof $this->class)) {
             return $this;
         }
 
@@ -259,7 +262,7 @@ class Collection implements ArrayAccess, JsonSerializable, IteratorAggregate, Co
     }
 
     /**
-     * Checks if the array has an object.
+     * Checks if the array has multiple offsets.
      *
      * @param array ...$keys
      *
@@ -277,9 +280,8 @@ class Collection implements ArrayAccess, JsonSerializable, IteratorAggregate, Co
     }
 
     /**
-     * Runs a filter callback over the collection and
-     * returns a new collection based on the response
-     * of the callback.
+     * Runs a filter callback over the collection and returns a new collection
+     * based on the response of the callback.
      *
      * @param callable $callback
      *
@@ -299,15 +301,12 @@ class Collection implements ArrayAccess, JsonSerializable, IteratorAggregate, Co
     }
 
     /**
-     * Runs a filter callback over the collection and
-     * returns the first item where the callback returns
-     * `true` when given the item.
+     * Runs a filter callback over the collection and returns the first item
+     * where the callback returns `true` when given the item.
      *
-     * Returns `null` if no items returns `true` when called in
-     * the callback.
+     * @param callable $callback
      *
-     * @param  callable $callback
-     * @return mixed
+     * @return mixed `null` if no items returns `true` when called in the `$callback`.
      */
     public function find(callable $callback)
     {
@@ -426,7 +425,7 @@ class Collection implements ArrayAccess, JsonSerializable, IteratorAggregate, Co
     /**
      * Returns the string representation of the collection.
      *
-     * @return string
+     * @return array
      */
     public function __serialize(): array
     {
@@ -446,11 +445,11 @@ class Collection implements ArrayAccess, JsonSerializable, IteratorAggregate, Co
     /**
      * Unserializes the collection.
      *
-     * @param array $serialized
+     * @param array $data
      */
-    public function __unserialize(array $serialized): void
+    public function __unserialize(array $data): void
     {
-        $this->items = $serialized;
+        $this->items = $data;
     }
 
     /**

@@ -19,8 +19,10 @@ use function Discord\poly_strlen;
 /**
  * Application Command attributes.
  *
- * @see Discord\Builders\CommandBuilder
- * @see Discord\Parts\Interactions\Command\Command
+ * @see \Discord\Builders\CommandBuilder
+ * @see \Discord\Parts\Interactions\Command\Command
+ *
+ * @since 7.1.0
  *
  * @property int                      $type                       The type of the command, defaults 1 if not set.
  * @property string                   $name                       1-32 character name of the command.
@@ -31,6 +33,7 @@ use function Discord\poly_strlen;
  * @property ?string                  $default_member_permissions Set of permissions represented as a bit set.
  * @property bool|null                $dm_permission              Indicates whether the command is available in DMs with the app, only for globally-scoped commands. By default, commands are visible.
  * @property ?bool                    $default_permission         Whether the command is enabled by default when the app is added to a guild. SOON DEPRECATED.
+ * @property bool|null                $nsfw                       Indicates whether the command is age-restricted, defaults to `false`.
  */
 trait CommandAttributes
 {
@@ -73,7 +76,7 @@ trait CommandAttributes
             throw new \LengthException('Command name can be only up to 32 characters long.');
         }
 
-        if ($this->type == Command::CHAT_INPUT && preg_match('/^[-_\p{L}\p{N}\p{Devanagari}\p{Thai}]{1,32}$/u', $name) === 0) {
+        if (isset($this->type) && $this->type == Command::CHAT_INPUT && preg_match('/^[-_\p{L}\p{N}\p{Devanagari}\p{Thai}]{1,32}$/u', $name) === 0) {
             throw new \DomainException('Slash command name contains invalid characters.');
         }
 
@@ -103,10 +106,12 @@ trait CommandAttributes
                 throw new \LengthException('Command name can be only up to 32 characters long.');
             }
 
-            if ($this->type == Command::CHAT_INPUT && preg_match('/^[-_\p{L}\p{N}\p{Devanagari}\p{Thai}]{1,32}$/u', $name) === 0) {
+            if (isset($this->type) && $this->type == Command::CHAT_INPUT && preg_match('/^[-_\p{L}\p{N}\p{Devanagari}\p{Thai}]{1,32}$/u', $name) === 0) {
                 throw new \DomainException('Slash command localized name contains invalid characters.');
             }
         }
+
+        $this->name_localizations ??= [];
 
         $this->name_localizations[$locale] = $name;
 
@@ -148,9 +153,11 @@ trait CommandAttributes
      */
     public function setDescriptionLocalization(string $locale, ?string $description): self
     {
-        if (isset($description) && $this->type == Command::CHAT_INPUT && poly_strlen($description) > 100) {
+        if (isset($description, $this->type) && $this->type == Command::CHAT_INPUT && poly_strlen($description) > 100) {
             throw new \LengthException('Command description must be less than or equal to 100 characters.');
         }
+
+        $this->description_localizations ??= [];
 
         $this->description_localizations[$locale] = $description;
 
@@ -202,6 +209,20 @@ trait CommandAttributes
     }
 
     /**
+     * Sets the age restriction of the command.
+     *
+     * @param bool $restricted Age restriction of the command.
+     *
+     * @return $this
+     */
+    public function setNsfw(bool $restricted): self
+    {
+        $this->nsfw = $restricted;
+
+        return $this;
+    }
+
+    /**
      * Adds an option to the command.
      *
      * @param Option $option The option.
@@ -213,13 +234,15 @@ trait CommandAttributes
      */
     public function addOption(Option $option): self
     {
-        if ($this->type != Command::CHAT_INPUT) {
+        if (isset($this->type) && $this->type != Command::CHAT_INPUT) {
             throw new \DomainException('Only CHAT_INPUT Command type can have option.');
         }
 
-        if (count($this->options) >= 25) {
+        if (isset($this->options) && count($this->options) >= 25) {
             throw new \OverflowException('Command can only have a maximum of 25 options.');
         }
+
+        $this->options ??= [];
 
         $this->options[] = $option;
 
@@ -237,11 +260,11 @@ trait CommandAttributes
      */
     public function removeOption(Option $option): self
     {
-        if ($this->type != Command::CHAT_INPUT) {
+        if (isset($this->type) && $this->type != Command::CHAT_INPUT) {
             throw new \DomainException('Only CHAT_INPUT Command type can have option.');
         }
 
-        if (($idx = array_search($option, $this->option)) !== null) {
+        if (isset($this->options) && ($idx = array_search($option, $this->options)) !== false) {
             array_splice($this->options, $idx, 1);
         }
 
@@ -255,7 +278,7 @@ trait CommandAttributes
      */
     public function clearOptions(): self
     {
-        $this->options = null;
+        $this->options = [];
 
         return $this;
     }

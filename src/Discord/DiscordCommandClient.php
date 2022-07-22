@@ -16,7 +16,9 @@ use Discord\Parts\Embed\Embed;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
- * Provides an easy way to have triggerable commands.
+ * Provides an easy way to have triggerable message based commands.
+ *
+ * @since 4.0.0
  */
 class DiscordCommandClient extends Discord
 {
@@ -57,7 +59,7 @@ class DiscordCommandClient extends Discord
 
         parent::__construct($discordOptions);
 
-        $this->on('ready', function () {
+        $this->on('init', function () {
             $this->commandClientOptions['prefix'] = str_replace('@mention', (string) $this->user, $this->commandClientOptions['prefix']);
             $this->commandClientOptions['name'] = str_replace('<UsernamePlaceholder>', $this->username, $this->commandClientOptions['name']);
 
@@ -78,7 +80,7 @@ class DiscordCommandClient extends Discord
                     $args = str_getcsv($withoutPrefix, ' ');
                     $command = array_shift($args);
 
-                    if ($command !== null && $this->commandClientOptions['caseInsensitiveCommands']) {
+                    if (null !== $command && $this->commandClientOptions['caseInsensitiveCommands']) {
                         $command = strtolower($command);
                     }
 
@@ -111,7 +113,7 @@ class DiscordCommandClient extends Discord
                         $commandString = array_shift($args);
                         $newCommand = $command->getCommand($commandString);
 
-                        if (is_null($newCommand)) {
+                        if (null === $newCommand) {
                             return "The command {$commandString} does not exist.";
                         }
 
@@ -119,6 +121,9 @@ class DiscordCommandClient extends Discord
                     }
 
                     $help = $command->getHelp($prefix);
+                    if (empty($help)) {
+                        return;
+                    }
 
                     $embed = new Embed($this);
                     $embed->setAuthor($this->commandClientOptions['name'], $this->client->user->avatar)
@@ -166,6 +171,9 @@ class DiscordCommandClient extends Discord
                 $embedfields = [];
                 foreach ($this->commands as $command) {
                     $help = $command->getHelp($prefix);
+                    if (empty($help)) {
+                        continue;
+                    }
                     $embedfields[] = [
                         'name' => $help['command'],
                         'value' => $help['description'],
@@ -201,9 +209,9 @@ class DiscordCommandClient extends Discord
     }
 
     /**
-     * Checks for a prefix in the message content, and returns the content
-     * of the message minus the prefix if a prefix was detected. If no prefix
-     * is detected, null is returned.
+     * Checks for a prefix in the message content, and returns the content of
+     * the message minus the prefix if a prefix was detected. If no prefix is
+     * detected, null is returned.
      *
      * @param string $content
      *
@@ -223,16 +231,16 @@ class DiscordCommandClient extends Discord
     /**
      * Registers a new command.
      *
-     * @param string           $command  The command name.
-     * @param \Callable|string $callable The function called when the command is executed.
-     * @param array            $options  An array of options.
+     * @param string          $command  The command name.
+     * @param callable|string $callable The function called when the command is executed.
+     * @param array           $options  An array of options.
      *
      * @return Command    The command instance.
      * @throws \Exception
      */
     public function registerCommand(string $command, $callable, array $options = []): Command
     {
-        if ($command !== null && $this->commandClientOptions['caseInsensitiveCommands']) {
+        if (null !== $command && $this->commandClientOptions['caseInsensitiveCommands']) {
             $command = strtolower($command);
         }
         if (array_key_exists($command, $this->commands)) {
@@ -243,7 +251,7 @@ class DiscordCommandClient extends Discord
         $this->commands[$command] = $commandInstance;
 
         foreach ($options['aliases'] as $alias) {
-            if ($alias !== null && $this->commandClientOptions['caseInsensitiveCommands']) {
+            if (null !== $alias && $this->commandClientOptions['caseInsensitiveCommands']) {
                 $alias = strtolower($alias);
             }
             $this->registerAlias($alias, $command);
@@ -317,9 +325,9 @@ class DiscordCommandClient extends Discord
     /**
      * Builds a command and returns it.
      *
-     * @param string           $command  The command name.
-     * @param \Callable|string $callable The function called when the command is executed.
-     * @param array            $options  An array of options.
+     * @param string          $command  The command name.
+     * @param callable|string $callable The function called when the command is executed.
+     * @param array           $options  An array of options.
      *
      * @return Command[]|array[] The command instance and options.
      */
@@ -349,7 +357,8 @@ class DiscordCommandClient extends Discord
             $options['longDescription'],
             $options['usage'],
             $options['cooldown'],
-            $options['cooldownMessage']
+            $options['cooldownMessage'],
+            $options['showHelp']
         );
 
         return [$commandInstance, $options];
@@ -374,6 +383,7 @@ class DiscordCommandClient extends Discord
                 'aliases',
                 'cooldown',
                 'cooldownMessage',
+                'showHelp',
             ])
             ->setDefaults([
                 'description' => 'No description provided.',
@@ -382,6 +392,7 @@ class DiscordCommandClient extends Discord
                 'aliases' => [],
                 'cooldown' => 0,
                 'cooldownMessage' => 'please wait %d second(s) to use this command again.',
+                'showHelp' => true,
             ]);
 
         $options = $resolver->resolve($options);

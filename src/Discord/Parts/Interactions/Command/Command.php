@@ -12,23 +12,21 @@
 namespace Discord\Parts\Interactions\Command;
 
 use Discord\Helpers\Collection;
-use Discord\Http\Endpoint;
 use Discord\Parts\Guild\Guild;
 use Discord\Parts\Part;
-use Discord\Repository\Guild\OverwriteRepository;
-use React\Promise\ExtendedPromiseInterface;
 
 /**
  * Represents a command registered on the Discord servers.
  *
- * @see https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-structure
+ * @link https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-structure
  *
- * @property string              $id             The unique identifier of the command.
- * @property string              $application_id The unique identifier of the parent Application that made the command, if made by one.
- * @property string|null         $guild_id       The unique identifier of the guild that the command belongs to. Null if global.
- * @property Guild|null          $guild          The guild that the command belongs to. Null if global.
- * @property string              $version        Autoincrementing version identifier updated during substantial record changes.
- * @property OverwriteRepository $overwrites     Permission overwrites.
+ * @since 7.0.0
+ *
+ * @property      string      $id             The unique identifier of the command.
+ * @property      string      $application_id The unique identifier of the parent Application that made the command, if made by one.
+ * @property      string|null $guild_id       The unique identifier of the guild that the command belongs to. Null if global.
+ * @property-read Guild|null  $guild          The guild that the command belongs to. Null if global.
+ * @property      string      $version        Autoincrementing version identifier updated during substantial record changes.
  */
 class Command extends Part
 {
@@ -44,7 +42,7 @@ class Command extends Part
     public const MESSAGE = 3;
 
     /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
     protected $fillable = [
         'id',
@@ -59,14 +57,8 @@ class Command extends Part
         'default_member_permissions',
         'dm_permission',
         'default_permission',
+        'nsfw',
         'version',
-    ];
-
-    /**
-     * @inheritdoc
-     */
-    protected $repositories = [
-        'overwrites' => OverwriteRepository::class,
     ];
 
     /**
@@ -90,14 +82,14 @@ class Command extends Part
      */
     protected function getOptionsAttribute(): ?Collection
     {
-        if (! isset($this->attributes['options'])) {
+        if (! isset($this->attributes['options']) && (isset($this->type) && $this->type != self::CHAT_INPUT)) {
             return null;
         }
 
         $options = Collection::for(Option::class, null);
 
-        foreach ($this->attributes['options'] as $option) {
-            $options->pushItem($this->factory->create(Option::class, $option, true));
+        foreach ($this->attributes['options'] ?? [] as $option) {
+            $options->pushItem($this->createOf(Option::class, $option));
         }
 
         return $options;
@@ -106,7 +98,7 @@ class Command extends Part
     /**
      * Returns the guild attribute.
      *
-     * @return Guild|null The guild attribute. Null for global command.
+     * @return Guild|null The guild attribute. `null` for global command.
      */
     protected function getGuildAttribute(): ?Guild
     {
@@ -118,74 +110,69 @@ class Command extends Part
     }
 
     /**
-     * Sets an overwrite to the guild application command.
+     * {@inheritDoc}
      *
-     * @see https://discord.com/developers/docs/interactions/application-commands#edit-application-command-permissions
-     *
-     * @param Overwrite $overwrite An overwrite object.
-     *
-     * @deprecated 7.1.0 Requires Bearer token on Permissions v2
-     *
-     * @return ExtendedPromiseInterface
-     */
-    public function setOverwrite(Overwrite $overwrite): ExtendedPromiseInterface
-    {
-        return $this->http->put(Endpoint::bind(Endpoint::GUILD_APPLICATION_COMMAND_PERMISSIONS, $this->application_id, $this->guild_id, $this->id), $overwrite->getUpdatableAttributes());
-    }
-
-    /**
-     * @inheritdoc
+     * @link https://discord.com/developers/docs/interactions/application-commands#create-global-application-command-json-params
+     * @link https://discord.com/developers/docs/interactions/application-commands#create-guild-application-command-json-params
      */
     public function getCreatableAttributes(): array
     {
         $attr = [
-            'guild_id' => $this->guild_id ?? null,
+            'name' => $this->name,
+        ];
+
+        $attr += $this->makeOptionalAttributes([
+            'name_localizations' => $this->name_localizations,
+            'description' => $this->description,
+            'description_localizations' => $this->description_localizations,
+            'options',
+            'default_member_permissions' => $this->default_member_permissions,
+            'default_permission' => $this->default_permission,
+            'type' => $this->type,
+            'nsfw' => $this->nsfw,
+
+            'dm_permission' => $this->dm_permission,  // Guild command might omit this fillable
+        ]);
+
+        return $attr;
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @link https://discord.com/developers/docs/interactions/application-commands#edit-global-application-command-json-params
+     */
+    public function getUpdatableAttributes(): array
+    {
+        $attr = $this->makeOptionalAttributes([
             'name' => $this->name,
             'name_localizations' => $this->name_localizations,
             'description' => $this->description,
             'description_localizations' => $this->description_localizations,
-            'options' => $this->attributes['options'] ?? null,
+            'options',
             'default_member_permissions' => $this->default_member_permissions,
             'default_permission' => $this->default_permission,
-            'type' => $this->type,
-        ];
+            'nsfw' => $this->nsfw,
+        ]);
 
-        // Guild command might omit this fillable
-        if (array_key_exists('dm_permission', $this->attributes)) {
-            $attr['dm_permission'] = $this->dm_permission;
+        if (! isset($this->guild_id)) {
+            $attr += $this->makeOptionalAttributes([
+                'dm_permission' => $this->dm_permission,
+            ]);
         }
 
         return $attr;
     }
 
     /**
-     * @inheritdoc
-     */
-    public function getUpdatableAttributes(): array
-    {
-        return [
-            'guild_id' => $this->guild_id ?? null,
-            'name' => $this->name,
-            'name_localizations' => $this->name_localizations,
-            'description' => $this->description,
-            'description_localizations' => $this->description_localizations,
-            'options' => $this->attributes['options'] ?? null,
-            'default_member_permissions' => $this->default_member_permissions,
-            'dm_permission' => $this->dm_permission,
-            'default_permission' => $this->default_permission,
-            'type' => $this->type,
-        ];
-    }
-
-    /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
     public function getRepositoryAttributes(): array
     {
         return [
-            'command_id' => $this->id,
             'guild_id' => $this->guild_id,
             'application_id' => $this->application_id,
+            'command_id' => $this->id,
         ];
     }
 

@@ -13,11 +13,15 @@ namespace Discord\Helpers;
 
 use Discord\Discord;
 use Discord\Parts\Interactions\Interaction;
+use Discord\Parts\Interactions\Request\Option;
 
 /**
- * RegisteredCommand represents a command that has been registered
- * with the Discord servers and has a handler to handle when the
- * command is triggered.
+ * RegisteredCommand represents a command that has been registered with the
+ * Discord servers and has a handler to handle when the command is triggered.
+ *
+ * https://discord.com/developers/docs/interactions/application-commands
+ *
+ * @since 7.0.0
  *
  * @author David Cole <david.cole1340@gmail.com>
  */
@@ -59,9 +63,8 @@ class RegisteredCommand
     private $subCommands;
 
     /**
-     * RegisteredCommand represents a command that has been registered
-     * with the Discord servers and has a handler to handle when the
-     * command is triggered.
+     * RegisteredCommand represents a command that has been registered with the
+     * Discord servers and has a handler to handle when the command is triggered.
      *
      * @param Discord  $discord
      * @param string   $name
@@ -76,8 +79,8 @@ class RegisteredCommand
     }
 
     /**
-     * Executes the command. Will search for a sub-command if given,
-     * otherwise executes the callback, if given.
+     * Executes the command. Will search for a sub-command if given, otherwise
+     * executes the callback, if given.
      *
      * @param array       $options
      * @param Interaction $interaction
@@ -86,16 +89,19 @@ class RegisteredCommand
      */
     public function execute(array $options, Interaction $interaction): bool
     {
+        $params = Collection::for(Option::class, 'name');
+
         foreach ($options as $option) {
-            if (isset($this->subCommands[$option['name']])) {
-                if ($this->subCommands[$option['name']]->execute($option['options'] ?? [], $interaction)) {
+            if (isset($this->subCommands[$option->name])) {
+                if ($this->subCommands[$option->name]->execute($option->options ?? [], $interaction)) {
                     return true;
                 }
             }
+            $params->pushItem($this->discord->getFactory()->part(Option::class, (array) $option, true));
         }
 
-        if (! is_null($this->callback)) {
-            ($this->callback)($interaction);
+        if (isset($this->callback)) {
+            ($this->callback)($interaction, $params);
 
             return true;
         }
@@ -104,8 +110,8 @@ class RegisteredCommand
     }
 
     /**
-     * Executes the command. Will search for a sub-command if given,
-     * otherwise executes the callback, if given.
+     * Executes the command. Will search for a sub-command if given, otherwise
+     * executes the callback, if given.
      *
      * @param Interaction $interaction
      *
@@ -166,7 +172,7 @@ class RegisteredCommand
      *
      * @throws \LogicException
      *
-     * @return RegisteredCommand
+     * @return static
      */
     public function addSubCommand($name, callable $callback = null, ?callable $autocomplete_callback = null): RegisteredCommand
     {
@@ -182,13 +188,13 @@ class RegisteredCommand
             return $this->subCommands[$name] = new static($this->discord, $name, $callback, $autocomplete_callback);
         }
 
-        $baseCommand = array_shift($name);
+        $subCommand = array_shift($name);
 
-        if (! isset($this->subCommands[$baseCommand])) {
-            $this->addSubCommand($baseCommand);
+        if (! isset($this->subCommands[$subCommand])) {
+            $this->addSubCommand($subCommand);
         }
 
-        return $this->subCommands[$baseCommand]->addSubCommand($name, $callback, $autocomplete_callback);
+        return $this->subCommands[$subCommand]->addSubCommand($name, $callback, $autocomplete_callback);
     }
 
     /**

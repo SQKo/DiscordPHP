@@ -19,7 +19,9 @@ use function Discord\poly_strlen;
 /**
  * Option represents an array of options that can be given to a command.
  *
- * @see https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-option-structure
+ * @link https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-option-structure
+ *
+ * @since 7.0.0
  *
  * @property int                      $type                      Type of the option.
  * @property string                   $name                      Name of the option.
@@ -51,7 +53,7 @@ class Option extends Part
     public const ATTACHMENT = 11;
 
     /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
     protected $fillable = [
         'type',
@@ -77,14 +79,14 @@ class Option extends Part
      */
     protected function getChoicesAttribute(): ?Collection
     {
-        if (! isset($this->attributes['choices'])) {
+        if (! isset($this->attributes['choices']) && ! in_array($this->type, [self::STRING, self::INTEGER, self::NUMBER])) {
             return null;
         }
 
         $choices = Collection::for(Choice::class, null);
 
-        foreach ($this->attributes['choices'] as $choice) {
-            $choices->pushItem($this->factory->create(Choice::class, $choice, true));
+        foreach ($this->attributes['choices'] ?? [] as $choice) {
+            $choices->pushItem($this->createOf(Choice::class, $choice));
         }
 
         return $choices;
@@ -100,7 +102,7 @@ class Option extends Part
         $options = Collection::for(Option::class, null);
 
         foreach ($this->attributes['options'] ?? [] as $option) {
-            $options->pushItem($this->factory->create(Option::class, $option, true));
+            $options->pushItem($this->createOf(Option::class, $option));
         }
 
         return $options;
@@ -168,7 +170,7 @@ class Option extends Part
             throw new \LengthException('Name must be less than or equal to 32 characters.');
         }
 
-        $this->name_localizations[$locale] = $name;
+        $this->attributes['name_localizations'][$locale] = $name;
 
         return $this;
     }
@@ -209,7 +211,7 @@ class Option extends Part
             throw new \LengthException('Description must be less than or equal to 100 characters.');
         }
 
-        $this->description_localizations[$locale] = $description;
+        $this->attributes['description_localizations'][$locale] = $description;
 
         return $this;
     }
@@ -295,12 +297,10 @@ class Option extends Part
             $option = $option->name;
         }
 
-        if (! empty($this->attributes['options'])) {
-            foreach ($this->attributes['options'] as $idx => $opt) {
-                if ($opt['name'] == $option) {
-                    unset($this->attributes['options'][$idx]);
-                    break;
-                }
+        foreach ($this->attributes['options'] ?? [] as $idx => $opt) {
+            if ($opt['name'] == $option) {
+                unset($this->attributes['options'][$idx]);
+                break;
             }
         }
 
@@ -320,12 +320,10 @@ class Option extends Part
             $choice = $choice->name;
         }
 
-        if (! empty($this->attributes['choices'])) {
-            foreach ($this->attributes['choices'] as $idx => $cho) {
-                if ($cho['name'] == $choice) {
-                    unset($this->attributes['choices'][$idx]);
-                    break;
-                }
+        foreach ($this->attributes['choices'] ?? [] as $idx => $cho) {
+            if ($cho['name'] == $choice) {
+                unset($this->attributes['choices'][$idx]);
+                break;
             }
         }
 
@@ -415,7 +413,7 @@ class Option extends Part
      *
      * @param bool|null $autocomplete enable autocomplete interactions for this option.
      *
-     * @throws \InvalidArgumentException Command option type is not string/integer/number.
+     * @throws \DomainException Command option type is not string/integer/number.
      *
      * @return $this
      */
@@ -423,11 +421,11 @@ class Option extends Part
     {
         if ($autocomplete) {
             if (! empty($this->attributes['choices'])) {
-                throw new \InvalidArgumentException('Autocomplete may not be set to true if choices are present.');
+                throw new \DomainException('Autocomplete may not be set to true if choices are present.');
             }
 
             if (! in_array($this->type, [self::STRING, self::INTEGER, self::NUMBER])) {
-                throw new \InvalidArgumentException('Autocomplete may be only set to true if option type is STRING, INTEGER, or NUMBER.');
+                throw new \DomainException('Autocomplete may be only set to true if option type is STRING, INTEGER, or NUMBER.');
             }
         }
 

@@ -26,67 +26,72 @@ use function React\Promise\resolve;
 
 /**
  * Represents a specific reaction to a message by a specific user.
- * Different from `Reaction` in the fact that `Reaction` represents a specific reaction
- * to a message by _multiple_ members.
+ * Different from `Reaction` in the fact that `Reaction` represents a specific
+ * reaction to a message by _multiple_ members.
  *
- * @property string|null    $user_id     ID of the user that performed the reaction.
- * @property User|null      $user        User that performed the reaction.
- * @property string         $channel_id  ID of the channel that the reaction was performed in.
- * @property Channel|Thread $channel     Channel that the reaction was performed in.
- * @property string         $message_id  ID of the message that the reaction was placed on.
- * @property Message|null   $message     Message that the reaction was placed on, null if not cached.
- * @property string|null    $guild_id    ID of the guild that owns the channel.
- * @property Guild|null     $guild       Guild that owns the channel.
- * @property Member|null    $member      Member object of the user that performed the reaction, null if not cached or DM channel.
- * @property Emoji          $emoji       The emoji that was used as the reaction.
- * @property string         $reaction_id ID of the reaction.
+ * @since 5.0.0
+ *
+ * @property      string|null    $user_id    ID of the user that performed the reaction.
+ * @property      User|null      $user       User that performed the reaction.
+ * @property      string         $channel_id ID of the channel that the reaction was performed in.
+ * @property-read Channel|Thread $channel    Channel that the reaction was performed in.
+ * @property      string         $message_id ID of the message that the reaction was placed on.
+ * @property      Message|null   $message    Message that the reaction was placed on, null if not cached.
+ * @property      string|null    $guild_id   ID of the guild that owns the channel.
+ * @property-read Guild|null     $guild      Guild that owns the channel.
+ * @property      Member|null    $member     Member object of the user that performed the reaction, null if not cached or DM channel.
+ * @property      Emoji|null     $emoji      The emoji that was used as the reaction.
+ *
+ * @property string $reaction_id ID of the reaction.
  */
 class MessageReaction extends Part
 {
     /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
-    protected $fillable = ['user_id', 'channel_id', 'message_id', 'guild_id', 'member', 'emoji'];
+    protected $fillable = [
+        'user_id',
+        'channel_id',
+        'message_id',
+        'guild_id',
+        'member',
+        'emoji',
+    ];
 
     /**
-     * @inheritdoc
-     */
-    protected $visible = ['user', 'channel', 'message', 'guild'];
-
-    /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
     public function isPartial(): bool
     {
-        return $this->user == null ||
-            $this->message == null ||
-            $this->member == null;
+        return $this->user === null ||
+            $this->message === null ||
+            $this->member === null;
     }
 
     /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
     public function fetch(): ExtendedPromiseInterface
     {
         $promise = resolve();
 
-        if ($this->member == null) {
+        if ($this->member === null) {
             $promise = $promise
                 ->then(function () {
                     return $this->http->get(Endpoint::bind(Endpoint::GUILD_MEMBER, $this->guild_id, $this->user_id));
                 })
                 ->then(function ($member) {
-                    $this->attributes['member'] = $this->factory->create(Member::class, $member, true);
+                    $this->attributes['member'] = $this->factory->part(Member::class, (array) $member, true);
                 });
         }
 
-        if ($this->message == null) {
+        if ($this->message === null) {
             $promise = $promise
                 ->then(function () {
                     return $this->http->get(Endpoint::bind(Endpoint::CHANNEL_MESSAGE, $this->channel_id, $this->message_id));
                 })
                 ->then(function ($message) {
-                    $this->attributes['message'] = $this->factory->create(Message::class, $message, true);
+                    $this->attributes['message'] = $this->factory->part(Message::class, (array) $message, true);
                 });
         }
 
@@ -99,10 +104,12 @@ class MessageReaction extends Part
      * Gets the ID of the reaction.
      *
      * @return string
+     *
+     * @since 10.0.0 Changed to only return custom emoji id or unicode emoji name.
      */
     protected function getReactionIdAttribute(): string
     {
-        return ":{$this->emoji->name}:{$this->emoji->id}";
+        return $this->emoji->id ?? $this->emoji->name;
     }
 
     /**
@@ -116,7 +123,7 @@ class MessageReaction extends Part
             return $member->user;
         }
 
-        if ($user = $this->discord->users->offsetGet($this->user_id)) {
+        if ($user = $this->discord->users->get('id', $this->user_id)) {
             return $user;
         }
 
@@ -128,15 +135,16 @@ class MessageReaction extends Part
      *
      * @return Channel|Thread
      */
-    protected function getChannelAttribute()
+    protected function getChannelAttribute(): Part
     {
         if ($guild = $this->guild) {
-            if ($channel = $guild->channels->get('id', $this->channel_id)) {
+            $channels = $guild->channels;
+            if ($channel = $channels->get('id', $this->channel_id)) {
                 return $channel;
             }
 
-            foreach ($guild->channels as $channel) {
-                if ($thread = $channel->threads->get('id', $this->channel_id)) {
+            foreach ($channels as $parent) {
+                if ($thread = $parent->threads->get('id', $this->channel_id)) {
                     return $thread;
                 }
             }
@@ -144,14 +152,14 @@ class MessageReaction extends Part
             return null;
         }
 
-        if ($channel = $this->discord->private_channels->offsetGet($this->channel_id)) {
+        if ($channel = $this->discord->private_channels->get('id', $this->channel_id)) {
             return $channel;
         }
 
-        return $this->factory->create(Channel::class, [
+        return $this->factory->part(Channel::class, [
             'id' => $this->channel_id,
             'type' => Channel::TYPE_DM,
-        ]);
+        ], true);
     }
 
     /**
@@ -217,17 +225,20 @@ class MessageReaction extends Part
     /**
      * Delete this reaction.
      *
-     * @see Message::deleteReaction()
-     *
      * @param int|null $type The type of deletion to perform.
      *
-     * @throws \UnexpectedValueException
+     * @throws \RuntimeException Reaction has no user id.
      *
      * @return ExtendedPromiseInterface
+     *
+     * @see Message::deleteReaction()
+     *
+     * @link https://discord.com/developers/docs/resources/channel#delete-own-reaction
+     * @link https://discord.com/developers/docs/resources/channel#delete-user-reaction
      */
     public function delete(?int $type = null): ExtendedPromiseInterface
     {
-        if (is_null($type)) {
+        if ($type === null) {
             if ($this->user_id == $this->discord->id) {
                 $type = Message::REACT_DELETE_ME;
             } else {
@@ -235,24 +246,24 @@ class MessageReaction extends Part
             }
         }
 
-        $reaction = $this->emoji->toReactionString();
+        $emoji = urlencode($this->emoji->id === null ? $this->emoji->name : "{$this->emoji->name}:{$this->emoji->id}");
 
         switch ($type) {
             case Message::REACT_DELETE_ALL:
                 $url = Endpoint::bind(Endpoint::MESSAGE_REACTION_ALL, $this->channel_id, $this->message_id);
                 break;
             case Message::REACT_DELETE_ME:
-                $url = Endpoint::bind(Endpoint::OWN_MESSAGE_REACTION, $this->channel_id, $this->message_id, $reaction);
+                $url = Endpoint::bind(Endpoint::OWN_MESSAGE_REACTION, $this->channel_id, $this->message_id, $emoji);
                 break;
             case Message::REACT_DELETE_EMOJI:
-                $url = Endpoint::bind(Endpoint::MESSAGE_REACTION_EMOJI, $this->channel_id, $this->message_id, $reaction);
+                $url = Endpoint::bind(Endpoint::MESSAGE_REACTION_EMOJI, $this->channel_id, $this->message_id, $emoji);
                 break;
             case Message::REACT_DELETE_ID:
             default:
                 if (! $userid = $this->user_id ?? $this->user->id) {
-                    return reject(new \UnexpectedValueException('This reaction has no user id'));
+                    return reject(new \RuntimeException('This reaction has no user id'));
                 }
-                $url = Endpoint::bind(Endpoint::USER_MESSAGE_REACTION, $this->channel_id, $this->message_id, $reaction, $userid);
+                $url = Endpoint::bind(Endpoint::USER_MESSAGE_REACTION, $this->channel_id, $this->message_id, $emoji, $userid);
                 break;
         }
 

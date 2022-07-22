@@ -18,7 +18,9 @@ use function Discord\poly_strlen;
 /**
  * Option for select menu component.
  *
- * @see https://discord.com/developers/docs/interactions/message-components#select-menu-object-select-option-structure
+ * @link https://discord.com/developers/docs/interactions/message-components#select-menu-object-select-option-structure
+ *
+ * @since 7.0.0
  */
 class Option extends Component
 {
@@ -93,9 +95,9 @@ class Option extends Component
     }
 
     /**
-     * Sets the description of the option. Null to clear.
+     * Sets the description of the option.
      *
-     * @param string|null $description Description of the option. Maximum 100 characters.
+     * @param string|null $description Description of the option. Maximum 100 characters. `null` to clear.
      *
      * @throws \LengthException
      *
@@ -113,9 +115,9 @@ class Option extends Component
     }
 
     /**
-     * Sets the emoji of the option. Null to clear.
+     * Sets the emoji of the option.
      *
-     * @param Emoji|string|null $emoji Emoji to set.
+     * @param Emoji|string|null $emoji Emoji to set. `null` to clear.
      *
      * @return $this
      */
@@ -221,7 +223,7 @@ class Option extends Component
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array
     {

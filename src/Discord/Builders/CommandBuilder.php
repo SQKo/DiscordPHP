@@ -18,6 +18,8 @@ use JsonSerializable;
 /**
  * Helper class used to build application commands.
  *
+ * @since 7.0.0
+ *
  * @author Mark `PeanutNL` Versluis
  */
 class CommandBuilder implements JsonSerializable
@@ -29,7 +31,7 @@ class CommandBuilder implements JsonSerializable
      *
      * @var int
      */
-    protected int $type = Command::CHAT_INPUT;
+    protected $type = Command::CHAT_INPUT;
 
     /**
      * Name of the command.
@@ -43,26 +45,19 @@ class CommandBuilder implements JsonSerializable
      *
      * @var string
      */
-    protected string $description = '';
-
-    /**
-     * array with options.
-     *
-     * @var Option[]|null
-     */
-    protected array $options;
+    protected string $description;
 
     /**
      * The default permission of the command. If true the command is enabled when the app is added to the guild.
      *
      * @var bool
      */
-    protected bool $default_permission = true;
+    protected $default_permission = true;
 
     /**
      * Creates a new command builder.
      *
-     * @return $this
+     * @return static
      */
     public static function new(): self
     {
@@ -92,16 +87,21 @@ class CommandBuilder implements JsonSerializable
         $arrCommand = [
             'name' => $this->name,
             'description' => $this->description,
-            'type' => $this->type,
-            'default_permission' => $this->default_permission,
         ];
 
-        if (property_exists($this, 'name_localizations')) {
-            $arrCommand['name_localizations'] = $this->name_localizations;
-        }
+        $optionals = [
+            'type',
+            'name_localizations',
+            'description_localizations',
+            'default_member_permissions',
+            'default_permission',
+            'dm_permission',
+        ];
 
-        if (property_exists($this, 'description_localizations')) {
-            $arrCommand['description_localizations'] = $this->description_localizations;
+        foreach ($optionals as $optional) {
+            if (property_exists($this, $optional)) {
+                $arrCommand[$optional] = $this->$optional;
+            }
         }
 
         foreach ($this->options ?? [] as $option) {
@@ -112,7 +112,7 @@ class CommandBuilder implements JsonSerializable
     }
 
     /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
     public function jsonSerialize(): array
     {

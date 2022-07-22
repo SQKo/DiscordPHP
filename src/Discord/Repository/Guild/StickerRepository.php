@@ -16,20 +16,23 @@ use Discord\Parts\Guild\Sticker;
 use Discord\Repository\AbstractRepository;
 
 /**
- * Contains stickers that belong to guilds.
+ * Contains stickers of a guild.
  *
- * @see \Discord\Parts\Guild\Sticker
+ * @see Sticker
  * @see \Discord\Parts\Guild\Guild
  *
- * @method Sticker|null get(string $discrim, $key)  Gets an item from the collection.
- * @method Sticker|null first()                     Returns the first element of the collection.
- * @method Sticker|null pull($key, $default = null) Pulls an item from the repository, removing and returning the item.
- * @method Sticker|null find(callable $callback)    Runs a filter callback over the repository.
+ * @since 7.0.0
+ *
+ * @method Sticker|null get(string $discrim, $key)
+ * @method Sticker|null pull(string|int $key, $default = null)
+ * @method Sticker|null first()
+ * @method Sticker|null last()
+ * @method Sticker|null find()
  */
 class StickerRepository extends AbstractRepository
 {
     /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
     protected $endpoints = [
         'all' => Endpoint::GUILD_STICKERS,
@@ -40,7 +43,7 @@ class StickerRepository extends AbstractRepository
     ];
 
     /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
     protected $class = Sticker::class;
 }

@@ -16,17 +16,24 @@ use Discord\Parts\Part;
 /**
  * A video for an embed.
  *
- * @see https://discord.com/developers/docs/resources/channel#embed-object-embed-video-structure
+ * @link https://discord.com/developers/docs/resources/channel#embed-object-embed-video-structure
  *
- * @property string|null $url       The source of the video.
- * @property string|null $proxy_url A proxied url of the video.
- * @property int|null    $height    The height of the video.
- * @property int|null    $width     The width of the video.
+ * @since 4.0.3
+ *
+ * @property      string|null $url       The source of the video.
+ * @property-read string|null $proxy_url A proxied url of the video.
+ * @property-read int|null    $height    The height of the video.
+ * @property-read int|null    $width     The width of the video.
  */
 class Video extends Part
 {
     /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
-    protected $fillable = ['url', 'proxy_url', 'height', 'width'];
+    protected $fillable = [
+        'url',
+        'proxy_url',
+        'height',
+        'width',
+    ];
 }

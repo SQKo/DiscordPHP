@@ -11,32 +11,40 @@
 
 namespace Discord\Parts\Channel;
 
+use Discord\Builders\MessageBuilder;
 use Discord\Http\Endpoint;
 use Discord\Http\Http;
 use Discord\Parts\Guild\Guild;
 use Discord\Parts\Part;
 use Discord\Parts\User\User;
-use React\Promise\PromiseInterface;
+use Discord\Repository\Channel\WebhookMessageRepository;
+use React\Promise\ExtendedPromiseInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
- * Webhooks are a low-effort way to post messages to channels in Discord. They do not require a bot user or authentication to use.
+ * Webhooks are a low-effort way to post messages to channels in Discord. They
+ * do not require a bot user or authentication to use.
  *
- * @see https://discord.com/developers/docs/resources/webhook#webhook-resource
+ * @link https://discord.com/developers/docs/resources/webhook#webhook-resource
  *
- * @property string       $id             The id of the webhook.
- * @property int          $type           The type of webhook.
- * @property ?string|null $guild_id       The guild ID this is for, if any.
- * @property Guild|null   $guild          The guild this is for, if any.
- * @property ?string|null $channel_id     The channel ID this is for, if any.
- * @property Channel|null $channel        The channel ID this is for, if any.
- * @property User|null    $user           The user that created the webhook.
- * @property ?string      $name           The name of the webhook.
- * @property ?string      $avatar         The avatar of the webhook.
- * @property string|null  $token          The token of the webhook.
- * @property ?string      $application_id The bot/OAuth2 application that created this webhook.
- * @property object|null  $source_guild   The partial guild of the channel that this webhook is following (returned for Channel Follower Webhooks).
- * @property object|null  $source_channel The partial channel that this webhook is following (returned for Channel Follower Webhooks).
- * @property string|null  $url            The url used for executing the webhook (returned by the webhooks OAuth2 flow).
+ * @since 5.0.0
+ *
+ * @property      string       $id             The id of the webhook.
+ * @property      int          $type           The type of webhook.
+ * @property      ?string|null $guild_id       The guild ID this webhook is for, if any.
+ * @property-read Guild|null   $guild          The guild this webhook is for, if any.
+ * @property      ?string|null $channel_id     The channel ID this webhook is for, if any.
+ * @property-read Channel|null $channel        The channel this webhook is for, if any.
+ * @property      User|null    $user           The user that created the webhook.
+ * @property      ?string      $name           The name of the webhook.
+ * @property      ?string      $avatar         The avatar of the webhook.
+ * @property      string|null  $token          The token of the webhook.
+ * @property      ?string      $application_id The bot/OAuth2 application that created this webhook.
+ * @property      object|null  $source_guild   The partial guild of the channel that this webhook is following (returned for Channel Follower Webhooks).
+ * @property      object|null  $source_channel The partial channel that this webhook is following (returned for Channel Follower Webhooks).
+ * @property      string|null  $url            The url used for executing the webhook (returned by the webhooks OAuth2 flow).
+ *
+ * @property WebhookMessageRepository $messages
  */
 class Webhook extends Part
 {
@@ -45,7 +53,7 @@ class Webhook extends Part
     public const TYPE_APPLICATION = 3;
 
     /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
     protected $fillable = [
         'id',
@@ -63,17 +71,99 @@ class Webhook extends Part
     ];
 
     /**
+     * {@inheritDoc}
+     */
+    protected $repositories = [
+        'messages' => WebhookMessageRepository::class,
+    ];
+
+    /**
      * Executes the webhook with an array of data.
      *
-     * @see https://discord.com/developers/docs/resources/webhook#execute-webhook-jsonform-params
+     * @link https://discord.com/developers/docs/resources/webhook#execute-webhook
      *
-     * @param array $data
+     * @param MessageBuilder|array $data
+     * @param array                $queryparams Query string params to add to the request.
      *
-     * @return PromiseInterface
+     * @return ExtendedPromiseInterface
      */
-    public function execute(array $data): PromiseInterface
+    public function execute($data, array $queryparams = []): ExtendedPromiseInterface
     {
-        return $this->http->post(Endpoint::bind(Endpoint::WEBHOOK_EXECUTE, $this->id, $this->token), $data);
+        $endpoint = Endpoint::bind(Endpoint::WEBHOOK_EXECUTE, $this->id, $this->token);
+
+        $resolver = new OptionsResolver();
+        $resolver
+            ->setDefined(['wait', 'thread_id'])
+            ->setAllowedTypes('wait', 'bool')
+            ->setAllowedTypes('thread_id', ['string', 'int']);
+
+        $options = $resolver->resolve($queryparams);
+
+        foreach ($options as $query => $param) {
+            $endpoint->addQuery($query, $param);
+        }
+
+        if ($data instanceof MessageBuilder && $data->requiresMultipart()) {
+            $multipart = $data->toMultipart();
+
+            $promise = $this->http->post($endpoint, (string) $multipart, $multipart->getHeaders());
+        } else {
+            $promise = $this->http->post($endpoint, $data);
+        }
+
+        if (! empty($queryparams['wait'])) {
+            return $promise->then(function ($response) {
+                return $this->factory->part(Message::class, (array) $response + ['guild_id' => $this->guild_id], true);
+            });
+        }
+
+        return $promise;
+    }
+
+    /**
+     * Edits a previously-sent webhook message from the same token.
+     *
+     * @link https://discord.com/developers/docs/resources/webhook#edit-webhook-message
+     *
+     * @param string         $message_id  ID of the message to update.
+     * @param MessageBuilder $builder     The new message.
+     * @param array          $queryparams Query string params to add to the request.
+     *
+     * @return ExtendedPromiseInterface
+     */
+    public function updateMessage(string $message_id, MessageBuilder $builder, array $queryparams = []): ExtendedPromiseInterface
+    {
+        $endpoint = Endpoint::bind(Endpoint::WEBHOOK_MESSAGE, $this->id, $this->token, $message_id);
+
+        $resolver = new OptionsResolver();
+        $resolver
+            ->setDefined('thread_id')
+            ->setAllowedTypes('thread_id', ['string', 'int']);
+
+        $options = $resolver->resolve($queryparams);
+
+        foreach ($options as $query => $param) {
+            $endpoint->addQuery($query, $param);
+        }
+
+        if ($builder->requiresMultipart()) {
+            $multipart = $builder->toMultipart();
+
+            $promise = $this->http->patch($endpoint, (string) $multipart, $multipart->getHeaders());
+        } else {
+            $promise = $this->http->patch($endpoint, $builder);
+        }
+
+        return $promise->then(function ($response) {
+            $channel = $this->channel;
+            if (($channel && $message = $channel->messages->get('id', $response->id)) || $message = $this->messages->get('id', $response->id)) {
+                $message->fill((array) $response);
+
+                return $message;
+            }
+
+            return $this->factory->part(Message::class, (array) $response + ['guild_id' => $this->guild_id], true);
+        });
     }
 
     /**
@@ -97,8 +187,10 @@ class Webhook extends Part
             return null;
         }
 
-        if ($this->guild && $channel = $this->guild->channels->get('id', $this->channel_id)) {
-            return $channel;
+        if ($guild = $this->guild) {
+            if ($channel = $guild->channels->get('id', $this->channel_id)) {
+                return $channel;
+            }
         }
 
         return $this->discord->getChannel($this->channel_id);
@@ -141,35 +233,46 @@ class Webhook extends Part
     }
 
     /**
-     * @inheritdoc
-     */
-    public function getUpdatableAttributes(): array
-    {
-        return [
-            'name' => $this->name,
-            'avatar' => $this->avatar,
-            'channel_id' => $this->channel_id,
-        ];
-    }
-
-    /**
-     * @inheritdoc
+     * {@inheritDoc}
+     *
+     * @link https://discord.com/developers/docs/resources/webhook#create-webhook-json-params
      */
     public function getCreatableAttributes(): array
     {
         return [
             'name' => $this->name,
+        ] + $this->makeOptionalAttributes([
             'avatar' => $this->avatar,
-        ];
+        ]);
     }
 
     /**
-     * @inheritdoc
+     * {@inheritDoc}
+     *
+     * @link https://discord.com/developers/docs/resources/webhook#modify-webhook-json-params
+     */
+    public function getUpdatableAttributes(): array
+    {
+        return $this->makeOptionalAttributes([
+            'name' => $this->name,
+            'channel_id' => $this->channel_id,
+            'avatar' => $this->avatar,
+        ]);
+    }
+
+    /**
+     * {@inheritDoc}
      */
     public function getRepositoryAttributes(): array
     {
-        return [
+        $attr = [
             'webhook_id' => $this->id,
         ];
+
+        if (array_key_exists('token', $this->attributes)) {
+            $attr['webhook_token'] = $this->token;
+        }
+
+        return $attr;
     }
 }

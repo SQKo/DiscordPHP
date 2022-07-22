@@ -17,29 +17,35 @@ use Discord\Parts\Part;
 use Discord\Parts\User\User;
 
 /**
- * Auto Moderation is a feature which allows each guild to set up rules that trigger based on some criteria. For example, a rule can trigger whenever a message contains a specific keyword.
- * Rules can be configured to automatically execute actions whenever they trigger. For example, if a user tries to send a message which contains a certain keyword, a rule can trigger and block the message before it is sent.
+ * Auto Moderation is a feature which allows each guild to set up rules that
+ * trigger based on some criteria. For example, a rule can trigger whenever a
+ * message contains a specific keyword.
+ * Rules can be configured to automatically execute actions whenever they
+ * trigger. For example, if a user tries to send a message which contains a
+ * certain keyword, a rule can trigger and block the message before it is sent.
  *
- * @see https://discord.com/developers/docs/resources/auto-moderation#auto-moderation-rule-object
+ * @link https://discord.com/developers/docs/resources/auto-moderation#auto-moderation-rule-object
  *
- * @property string              $id               The id of this rule.
- * @property string              $guild_id         The id of the guild which this rule belongs to.
- * @property Guild|null          $guild            The guild which this rule belongs to.
- * @property string              $name             The rule name.
- * @property string              $creator_id       The id of the user which first created this rule.
- * @property User|null           $creator          The user which first created this rule.
- * @property int                 $event_type       The rule event type.
- * @property int                 $trigger_type     The rule trigger type.
- * @property object              $trigger_metadata The rule trigger metadata (may contain `keyword_filter`, `presets`, `allow_list`, and `mention_total_limit`).
- * @property Collection|Action[] $actions          The actions which will execute when the rule is triggered.
- * @property bool                $enabled          Whether the rule is enabled.
- * @property array               $exempt_roles     The role ids that should not be affected by the rule (Maximum of 20).
- * @property array               $exempt_channels  The channel ids that should not be affected by the rule (Maximum of 50).
+ * @since 7.1.0
+ *
+ * @property      string                $id               The id of this rule.
+ * @property      string                $guild_id         The id of the guild which this rule belongs to.
+ * @property-read Guild|null            $guild            The guild which this rule belongs to.
+ * @property      string                $name             The rule name.
+ * @property      string                $creator_id       The id of the user which first created this rule.
+ * @property-read User|null             $creator          The user which first created this rule.
+ * @property      int                   $event_type       The rule event type.
+ * @property      int                   $trigger_type     The rule trigger type.
+ * @property      object                $trigger_metadata The rule trigger metadata (may contain `keyword_filter`, `regex_patterns`, `presets`, `allow_list`, `mention_total_limit` and `mention_raid_protection_enabled`).
+ * @property      Collection|Action[]   $actions          The actions which will execute when the rule is triggered.
+ * @property      bool                  $enabled          Whether the rule is enabled.
+ * @property      Collection|Roles[]    $exempt_roles     The role ids that should not be affected by the rule (Maximum of 20).
+ * @property      Collection|Channels[] $exempt_channels  The channel ids that should not be affected by the rule (Maximum of 50).
  */
 class Rule extends Part
 {
     /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
     protected $fillable = [
         'id',
@@ -56,7 +62,6 @@ class Rule extends Part
     ];
 
     public const TRIGGER_TYPE_KEYWORD = 1;
-    public const TRIGGER_TYPE_HARMFUL_LINK = 2;
     public const TRIGGER_TYPE_SPAM = 3;
     public const TRIGGER_TYPE_KEYWORD_PRESET = 4;
     public const TRIGGER_TYPE_MENTION_SPAM = 5;
@@ -97,14 +102,64 @@ class Rule extends Part
         $actions = Collection::for(Action::class, null);
 
         foreach ($this->attributes['actions'] as $action) {
-            $actions->pushItem($this->factory->create(Action::class, $action, true));
+            $actions->pushItem($this->createOf(Action::class, $action));
         }
 
         return $actions;
     }
 
     /**
-     * @inheritdoc
+     * Returns the exempt roles attribute.
+     *
+     * @return Collection<?Role> A collection of roles exempt from the rule.
+     */
+    protected function getExemptRolesAttribute(): Collection
+    {
+        $roles = new Collection();
+
+        if (empty($this->attributes['exempt_roles'])) {
+            return $roles;
+        }
+
+        $roles->fill(array_fill_keys($this->attributes['exempt_roles'], null));
+
+        if ($guild = $this->guild) {
+            $roles->merge($guild->roles->filter(
+                fn ($role) => in_array($role->id, $this->attributes['exempt_roles'])
+            ));
+        }
+
+        return $roles;
+    }
+
+    /**
+     * Returns the exempt channels attribute.
+     *
+     * @return Collection<?Channel> A collection of channels exempt from the rule.
+     */
+    protected function getExemptChannelsAttribute(): Collection
+    {
+        $channels = new Collection();
+
+        if (empty($this->attributes['exempt_channels'])) {
+            return $channels;
+        }
+
+        $channels->fill(array_fill_keys($this->attributes['exempt_channels'], null));
+
+        if ($guild = $this->guild) {
+            $channels->merge($guild->channels->filter(
+                fn ($channel) => in_array($channel->id, $this->attributes['exempt_channels'])
+            ));
+        }
+
+        return $channels;
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @link https://discord.com/developers/docs/resources/auto-moderation#create-auto-moderation-rule-json-params
      */
     public function getCreatableAttributes(): array
     {
@@ -112,32 +167,28 @@ class Rule extends Part
             'name' => $this->name,
             'event_type' => $this->event_type,
             'trigger_type' => $this->trigger_type,
-            'actions' => array_values($this->actions->map(function (Action $overwrite) {
-                return $overwrite->getCreatableAttributes();
+            'actions' => array_values($this->actions->map(function (Action $action) {
+                return $action->getCreatableAttributes();
             })->toArray()),
         ];
 
+        $attr += $this->makeOptionalAttributes([
+            'enabled' => $this->enabled,
+            'exempt_roles',
+            'exempt_channels',
+        ]);
+
         if (in_array($this->trigger_type, [self::TRIGGER_TYPE_KEYWORD, self::TRIGGER_TYPE_KEYWORD_PRESET, self::TRIGGER_TYPE_MENTION_SPAM])) {
             $attr['trigger_metadata'] = $this->trigger_metadata;
-        }
-
-        if (isset($this->attributes['enabled'])) {
-            $attr['enabled'] = $this->enabled;
-        }
-
-        if (isset($this->attributes['exempt_roles'])) {
-            $attr['exempt_roles'] = $this->attributes['exempt_roles'];
-        }
-
-        if (isset($this->attributes['exempt_channels'])) {
-            $attr['exempt_channels'] = $this->attributes['exempt_channels'];
         }
 
         return $attr;
     }
 
     /**
-     * @inheritdoc
+     * {@inheritDoc}
+     *
+     * @link https://discord.com/developers/docs/resources/auto-moderation#modify-auto-moderation-rule-json-params
      */
     public function getUpdatableAttributes(): array
     {
@@ -158,7 +209,7 @@ class Rule extends Part
     }
 
     /**
-     * @inheritdoc
+     * {@inheritDoc}
      */
     public function getRepositoryAttributes(): array
     {
