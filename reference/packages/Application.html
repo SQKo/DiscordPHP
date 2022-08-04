@@ -141,15 +141,17 @@ by returning an extended promise.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Builders-CommandBuilder.html"><abbr title="\Discord\Builders\CommandBuilder">CommandBuilder</abbr></a></dt>
         <dd>Helper class used to build application commands.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Builders-Components-ActionRow.html"><abbr title="\Discord\Builders\Components\ActionRow">ActionRow</abbr></a></dt>
-        <dd></dd>
+        <dd>An Action Row is a non-interactive container component for other types of components.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Builders-Components-Button.html"><abbr title="\Discord\Builders\Components\Button">Button</abbr></a></dt>
-        <dd></dd>
+        <dd>Buttons are interactive components that render on messages.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Builders-Components-Component.html"><abbr title="\Discord\Builders\Components\Component">Component</abbr></a></dt>
-        <dd></dd>
+        <dd>Components are a new field on the message object, so you can use them whether you&#039;re sending messages or responding to a slash command or other interaction.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Builders-Components-Option.html"><abbr title="\Discord\Builders\Components\Option">Option</abbr></a></dt>
-        <dd></dd>
+        <dd>Option for select menu component.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Builders-Components-SelectMenu.html"><abbr title="\Discord\Builders\Components\SelectMenu">SelectMenu</abbr></a></dt>
-        <dd></dd>
+        <dd>Select menus are another interactive component that renders on messages.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Builders-Components-TextInput.html"><abbr title="\Discord\Builders\Components\TextInput">TextInput</abbr></a></dt>
+        <dd>Text inputs are an interactive component that render on modals. They can be used to collect short-form or long-form text.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Builders-MessageBuilder.html"><abbr title="\Discord\Builders\MessageBuilder">MessageBuilder</abbr></a></dt>
         <dd>Helper class used to build messages.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-CommandClient-Command.html"><abbr title="\Discord\CommandClient\Command">Command</abbr></a></dt>
@@ -182,7 +184,7 @@ was specified.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Factory-Factory.html"><abbr title="\Discord\Factory\Factory">Factory</abbr></a></dt>
         <dd>Exposes an interface to build part objects without the other requirements.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Helpers-Bitwise.html"><abbr title="\Discord\Helpers\Bitwise">Bitwise</abbr></a></dt>
-        <dd>Polyfill to handle bitwise operation in 32 bit php using ext-gmp</dd>
+        <dd>Polyfill to handle bitwise operation in 32 bit php using ext-gmp.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Helpers-Buffer.html"><abbr title="\Discord\Helpers\Buffer">Buffer</abbr></a></dt>
         <dd></dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Helpers-Collection.html"><abbr title="\Discord\Helpers\Collection">Collection</abbr></a></dt>
@@ -195,8 +197,12 @@ was specified.</dd>
         <dd>RegisteredCommand represents a command that has been registered
 with the Discord servers and has a handler to handle when the
 command is triggered.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Channel-Attachment.html"><abbr title="\Discord\Parts\Channel\Attachment">Attachment</abbr></a></dt>
+        <dd>A message attachment.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Channel-Channel.html"><abbr title="\Discord\Parts\Channel\Channel">Channel</abbr></a></dt>
         <dd>A Channel can be either a text or voice channel on a Discord guild.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Channel-Invite.html"><abbr title="\Discord\Parts\Channel\Invite">Invite</abbr></a></dt>
+        <dd>An invite to a Channel and Guild.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Channel-Message.html"><abbr title="\Discord\Parts\Channel\Message">Message</abbr></a></dt>
         <dd>A message which is posted to a Discord text channel.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Channel-Overwrite.html"><abbr title="\Discord\Parts\Channel\Overwrite">Overwrite</abbr></a></dt>
@@ -225,6 +231,10 @@ command is triggered.</dd>
         <dd>Represents an entry in the audit log.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-AuditLog-Options.html"><abbr title="\Discord\Parts\Guild\AuditLog\Options">Options</abbr></a></dt>
         <dd>Represents an object of options for different audit log action types.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-AutoModeration-Action.html"><abbr title="\Discord\Parts\Guild\AutoModeration\Action">Action</abbr></a></dt>
+        <dd>An action which will execute whenever a rule is triggered.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-AutoModeration-Rule.html"><abbr title="\Discord\Parts\Guild\AutoModeration\Rule">Rule</abbr></a></dt>
+        <dd>Auto Moderation is a feature which allows each guild to set up rules that trigger based on some criteria. For example, a rule can trigger whenever a message contains a specific keyword.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-Ban.html"><abbr title="\Discord\Parts\Guild\Ban">Ban</abbr></a></dt>
         <dd>A Ban is a ban on a user specific to a guild. It is also IP based.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-Emoji.html"><abbr title="\Discord\Parts\Guild\Emoji">Emoji</abbr></a></dt>
@@ -234,9 +244,7 @@ command is triggered.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-GuildTemplate.html"><abbr title="\Discord\Parts\Guild\GuildTemplate">GuildTemplate</abbr></a></dt>
         <dd>A Guild Template is a code that when used, creates a guild based on a snapshot of an existing guild.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-Integration.html"><abbr title="\Discord\Parts\Guild\Integration">Integration</abbr></a></dt>
-        <dd>An Integration is a guild integrations for Twitch, Youtube, Bot and Apps</dd>
-            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-Invite.html"><abbr title="\Discord\Parts\Guild\Invite">Invite</abbr></a></dt>
-        <dd>An invite to a Channel and Guild.</dd>
+        <dd>An Integration is a guild integrations for Twitch, Youtube, Bot and Apps.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-Role.html"><abbr title="\Discord\Parts\Guild\Role">Role</abbr></a></dt>
         <dd>A role defines permissions for the guild. Members can be added to the role. The role belongs to a guild.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-ScheduledEvent.html"><abbr title="\Discord\Parts\Guild\ScheduledEvent">ScheduledEvent</abbr></a></dt>
@@ -244,11 +252,11 @@ command is triggered.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-Sticker.html"><abbr title="\Discord\Parts\Guild\Sticker">Sticker</abbr></a></dt>
         <dd>A sticker that can be sent in a Discord message.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-WelcomeChannel.html"><abbr title="\Discord\Parts\Guild\WelcomeChannel">WelcomeChannel</abbr></a></dt>
-        <dd>A Welcome Channel of a Guild</dd>
+        <dd>A Welcome Channel of a Guild.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-WelcomeScreen.html"><abbr title="\Discord\Parts\Guild\WelcomeScreen">WelcomeScreen</abbr></a></dt>
-        <dd>A Welcome Screen of a Guild</dd>
+        <dd>A Welcome Screen of a Guild.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Guild-Widget.html"><abbr title="\Discord\Parts\Guild\Widget">Widget</abbr></a></dt>
-        <dd>A Widget of a Guild</dd>
+        <dd>A Widget of a Guild.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Interactions-Command-Choice.html"><abbr title="\Discord\Parts\Interactions\Command\Choice">Choice</abbr></a></dt>
         <dd>Choice represents a choice that can be given to a command.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Interactions-Command-Command.html"><abbr title="\Discord\Parts\Interactions\Command\Command">Command</abbr></a></dt>
@@ -256,11 +264,13 @@ command is triggered.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Interactions-Command-Option.html"><abbr title="\Discord\Parts\Interactions\Command\Option">Option</abbr></a></dt>
         <dd>Option represents an array of options that can be given to a command.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Interactions-Command-Overwrite.html"><abbr title="\Discord\Parts\Interactions\Command\Overwrite">Overwrite</abbr></a></dt>
-        <dd>Guild Application Command Permissions Overwrite Class</dd>
+        <dd>Guild Application Command Permissions Overwrite Class.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Interactions-Command-Permission.html"><abbr title="\Discord\Parts\Interactions\Command\Permission">Permission</abbr></a></dt>
-        <dd>Application Command Permissions Class</dd>
+        <dd>Application Command Permissions Class.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Interactions-Interaction.html"><abbr title="\Discord\Parts\Interactions\Interaction">Interaction</abbr></a></dt>
         <dd>Represents an interaction from Discord.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Interactions-Request-Component.html"><abbr title="\Discord\Parts\Interactions\Request\Component">Component</abbr></a></dt>
+        <dd>Represents a component received with a message or interaction.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Interactions-Request-InteractionData.html"><abbr title="\Discord\Parts\Interactions\Request\InteractionData">InteractionData</abbr></a></dt>
         <dd>Represents the data associated with an interaction.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-Interactions-Request-Option.html"><abbr title="\Discord\Parts\Interactions\Request\Option">Option</abbr></a></dt>
@@ -290,6 +300,10 @@ base class.</dd>
         <dd>A member is a relationship between a user and a guild. It contains user-to-guild specific data like roles.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-User-User.html"><abbr title="\Discord\Parts\User\User">User</abbr></a></dt>
         <dd>A user is a general user that is not attached to a guild.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-WebSockets-AutoModerationActionExecution.html"><abbr title="\Discord\Parts\WebSockets\AutoModerationActionExecution">AutoModerationActionExecution</abbr></a></dt>
+        <dd>Sent when a rule is triggered and an action is executed (e.g. when a message is blocked).</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-WebSockets-MessageInteraction.html"><abbr title="\Discord\Parts\WebSockets\MessageInteraction">MessageInteraction</abbr></a></dt>
+        <dd>Sent on the message object when the message is a response to an Interaction without an existing message.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-WebSockets-MessageReaction.html"><abbr title="\Discord\Parts\WebSockets\MessageReaction">MessageReaction</abbr></a></dt>
         <dd>Represents a specific reaction to a message by a specific user.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Parts-WebSockets-PresenceUpdate.html"><abbr title="\Discord\Parts\WebSockets\PresenceUpdate">PresenceUpdate</abbr></a></dt>
@@ -316,8 +330,12 @@ information such as when the event was fired and then channel it was fired in.</
         <dd>Contains threads that belong to a channel.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Repository-Channel-VoiceMemberRepository.html"><abbr title="\Discord\Repository\Channel\VoiceMemberRepository">VoiceMemberRepository</abbr></a></dt>
         <dd>Contains voice states for users in the voice channel.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Repository-Channel-WebhookMessageRepository.html"><abbr title="\Discord\Repository\Channel\WebhookMessageRepository">WebhookMessageRepository</abbr></a></dt>
+        <dd>Contains messages sent to channels from webhook.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Repository-Channel-WebhookRepository.html"><abbr title="\Discord\Repository\Channel\WebhookRepository">WebhookRepository</abbr></a></dt>
         <dd>Repositories provide a way to store and update parts on the Discord server.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Repository-Guild-AutoModerationRuleRepository.html"><abbr title="\Discord\Repository\Guild\AutoModerationRuleRepository">AutoModerationRuleRepository</abbr></a></dt>
+        <dd>Contains auto moderation rules that belong to guilds.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Repository-Guild-BanRepository.html"><abbr title="\Discord\Repository\Guild\BanRepository">BanRepository</abbr></a></dt>
         <dd>Contains bans on users.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Repository-Guild-ChannelRepository.html"><abbr title="\Discord\Repository\Guild\ChannelRepository">ChannelRepository</abbr></a></dt>
@@ -346,6 +364,8 @@ information such as when the event was fired and then channel it was fired in.</
         <dd>Contains stickers that belong to guilds.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Repository-GuildRepository.html"><abbr title="\Discord\Repository\GuildRepository">GuildRepository</abbr></a></dt>
         <dd>Contains guilds that the user is in.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Repository-Interaction-ComponentRepository.html"><abbr title="\Discord\Repository\Interaction\ComponentRepository">ComponentRepository</abbr></a></dt>
+        <dd>Repositories provide a way to store and update parts on the Discord server.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Repository-Interaction-GlobalCommandRepository.html"><abbr title="\Discord\Repository\Interaction\GlobalCommandRepository">GlobalCommandRepository</abbr></a></dt>
         <dd>Contains application global commands.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Repository-Interaction-OptionRepository.html"><abbr title="\Discord\Repository\Interaction\OptionRepository">OptionRepository</abbr></a></dt>
@@ -365,6 +385,21 @@ information such as when the event was fired and then channel it was fired in.</
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-Voice-VoicePacket.html"><abbr title="\Discord\Voice\VoicePacket">VoicePacket</abbr></a></dt>
         <dd>A voice packet received from Discord.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-WebSockets-Event.html"><abbr title="\Discord\WebSockets\Event">Event</abbr></a></dt>
+        <dd>Contains constants for WebSocket events as well as handlers
+for the events.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-WebSockets-Events-ApplicationCommandPermissionsUpdate.html"><abbr title="\Discord\WebSockets\Events\ApplicationCommandPermissionsUpdate">ApplicationCommandPermissionsUpdate</abbr></a></dt>
+        <dd>Contains constants for WebSocket events as well as handlers
+for the events.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-WebSockets-Events-AutoModerationActionExecution.html"><abbr title="\Discord\WebSockets\Events\AutoModerationActionExecution">AutoModerationActionExecution</abbr></a></dt>
+        <dd>Contains constants for WebSocket events as well as handlers
+for the events.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-WebSockets-Events-AutoModerationRuleCreate.html"><abbr title="\Discord\WebSockets\Events\AutoModerationRuleCreate">AutoModerationRuleCreate</abbr></a></dt>
+        <dd>Contains constants for WebSocket events as well as handlers
+for the events.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-WebSockets-Events-AutoModerationRuleDelete.html"><abbr title="\Discord\WebSockets\Events\AutoModerationRuleDelete">AutoModerationRuleDelete</abbr></a></dt>
+        <dd>Contains constants for WebSocket events as well as handlers
+for the events.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-WebSockets-Events-AutoModerationRuleUpdate.html"><abbr title="\Discord\WebSockets\Events\AutoModerationRuleUpdate">AutoModerationRuleUpdate</abbr></a></dt>
         <dd>Contains constants for WebSocket events as well as handlers
 for the events.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-WebSockets-Events-ChannelCreate.html"><abbr title="\Discord\WebSockets\Events\ChannelCreate">ChannelCreate</abbr></a></dt>
@@ -530,6 +565,8 @@ for the events.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Discord-WebSockets-Op.html"><abbr title="\Discord\WebSockets\Op">Op</abbr></a></dt>
         <dd>Contains constants used in websockets.</dd>
     
+            <dt class="phpdocumentor-table-of-contents__entry -trait"><a href="classes/Discord-Builders-CommandAttributes.html"><abbr title="\Discord\Builders\CommandAttributes">CommandAttributes</abbr></a></dt>
+        <dd>Application Command attributes.</dd>
     
     </dl>
 
@@ -592,7 +629,7 @@ for the events.</dd>
             <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/discord.html#function_getSnowflakeTimestamp">getSnowflakeTimestamp()</a>
     <span>
-                                &nbsp;: int    </span>
+                                &nbsp;: float    </span>
 </dt>
 <dd>Takes a snowflake and calculates the time that the snowflake
 was generated.</dd>
@@ -606,7 +643,14 @@ was generated.</dd>
 _Italics_, **Bold**, __Underline__, ~~Strikethrough~~, ||spoiler||
 `Code`, ```Code block```, &gt; Quotes, &gt;&gt;&gt; Block quotes
 #Channel @User
-A backslash will be added before the each formatting symbol</dd>
+A backslash will be added before the each formatting symbol.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/discord.html#function_deferFind">deferFind()</a>
+    <span>
+                                &nbsp;: <abbr title="\React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>    </span>
+</dt>
+<dd>Run a deferred search in array.</dd>
 
     </dl>
 
@@ -625,7 +669,7 @@ A backslash will be added before the each formatting symbol</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Discord/functions.php"><a href="files/src-discord-functions.html"><abbr title="src/Discord/functions.php">functions.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
@@ -675,7 +719,7 @@ A backslash will be added before the each formatting symbol</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Discord/functions.php"><a href="files/src-discord-functions.html"><abbr title="src/Discord/functions.php">functions.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">75</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 
     </aside>
 
@@ -683,7 +727,7 @@ A backslash will be added before the each formatting symbol</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">mentioned</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Discord-Parts-Part.html"><abbr title="\Discord\Parts\Part">Part</abbr></a>|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$part</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Discord-Parts-Channel-Message.html"><abbr title="\Discord\Parts\Channel\Message">Message</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$message</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">mentioned</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Discord-Parts-Part.html"><abbr title="\Discord\Parts\Part">Part</abbr></a>|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$part</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Discord-Parts-Channel-Message.html"><abbr title="\Discord\Parts\Channel\Message">Message</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$message</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -726,7 +770,7 @@ A backslash will be added before the each formatting symbol</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Discord/functions.php"><a href="files/src-discord-functions.html"><abbr title="src/Discord/functions.php">functions.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">95</span>
+    <span class="phpdocumentor-element-found-in__line">99</span>
 
     </aside>
 
@@ -734,7 +778,7 @@ A backslash will be added before the each formatting symbol</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">getColor</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$color</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+                    <span class="phpdocumentor-signature__name">getColor</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$color</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -768,7 +812,7 @@ A backslash will be added before the each formatting symbol</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Discord/functions.php"><a href="files/src-discord-functions.html"><abbr title="src/Discord/functions.php">functions.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">123</span>
+    <span class="phpdocumentor-element-found-in__line">127</span>
 
     </aside>
 
@@ -776,7 +820,7 @@ A backslash will be added before the each formatting symbol</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">contains</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$string</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$matches</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">contains</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$string</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$matches</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -817,7 +861,7 @@ A backslash will be added before the each formatting symbol</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Discord/functions.php"><a href="files/src-discord-functions.html"><abbr title="src/Discord/functions.php">functions.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">141</span>
+    <span class="phpdocumentor-element-found-in__line">145</span>
 
     </aside>
 
@@ -825,7 +869,7 @@ A backslash will be added before the each formatting symbol</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">studly</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$string</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">studly</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$string</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -857,7 +901,7 @@ A backslash will be added before the each formatting symbol</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Discord/functions.php"><a href="files/src-discord-functions.html"><abbr title="src/Discord/functions.php">functions.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">160</span>
+    <span class="phpdocumentor-element-found-in__line">164</span>
 
     </aside>
 
@@ -865,7 +909,7 @@ A backslash will be added before the each formatting symbol</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">poly_strlen</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$str</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+                    <span class="phpdocumentor-signature__name">poly_strlen</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$str</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -895,7 +939,7 @@ A backslash will be added before the each formatting symbol</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Discord/functions.php"><a href="files/src-discord-functions.html"><abbr title="src/Discord/functions.php">functions.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">177</span>
+    <span class="phpdocumentor-element-found-in__line">181</span>
 
     </aside>
 
@@ -903,7 +947,7 @@ A backslash will be added before the each formatting symbol</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">imageToBase64</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filepath</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">imageToBase64</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$filepath</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -933,7 +977,7 @@ A backslash will be added before the each formatting symbol</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Discord/functions.php"><a href="files/src-discord-functions.html"><abbr title="src/Discord/functions.php">functions.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">203</span>
+    <span class="phpdocumentor-element-found-in__line">207</span>
 
     </aside>
 
@@ -942,14 +986,14 @@ was generated.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">getSnowflakeTimestamp</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$snowflake</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
+                    <span class="phpdocumentor-signature__name">getSnowflakeTimestamp</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|float&nbsp;</span><span class="phpdocumentor-signature__argument__name">$snowflake</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">float</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$snowflake</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string|int</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string|float</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -959,7 +1003,7 @@ was generated.</p>
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
+    <span class="phpdocumentor-signature__response_type">float</span>
             &mdash;
         
     
@@ -972,7 +1016,7 @@ was generated.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Discord/functions.php"><a href="files/src-discord-functions.html"><abbr title="src/Discord/functions.php">functions.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">257</span>
+    <span class="phpdocumentor-element-found-in__line">261</span>
 
     </aside>
 
@@ -980,11 +1024,11 @@ was generated.</p>
 _Italics_, **Bold**, __Underline__, ~~Strikethrough~~, ||spoiler||
 `Code`, ```Code block```, &gt; Quotes, &gt;&gt;&gt; Block quotes
 #Channel @User
-A backslash will be added before the each formatting symbol</p>
+A backslash will be added before the each formatting symbol.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">escapeMarkdown</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$text</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">escapeMarkdown</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$text</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -1007,6 +1051,73 @@ A backslash will be added before the each formatting symbol</p>
             <section class="phpdocumentor-description"><p>the escaped string unformatted as plain text</p>
 </section>
 
+    
+</article>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_deferFind">
+        deferFind()
+        <a href="namespaces/discord.html#function_deferFind" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Discord/functions.php"><a href="files/src-discord-functions.html"><abbr title="src/Discord/functions.php">functions.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">276</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Run a deferred search in array.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                    <span class="phpdocumentor-signature__name">deferFind</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|object&nbsp;</span><span class="phpdocumentor-signature__argument__name">$array</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$callback</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\React\EventLoop\LoopInterface">LoopInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$loop</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__name">$canceller</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$array</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|object</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Traversable, use $collection-&gt;getIterator() if searching in Collection</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$callback</span>
+                : <span class="phpdocumentor-signature__argument__return-type">callable</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The filter function to run</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$loop</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\React\EventLoop\LoopInterface">LoopInterface</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Loop interface, use $discord-&gt;getLoop()</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$canceller</span>
+                : <span class="phpdocumentor-signature__argument__return-type">callable</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The function to cancel the search</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></span>
+            &mdash;
+        
     
 </article>
             </section>

@@ -1,6 +1,66 @@
 Search.appendIndex(
     [
                 {
+            "fqsen": "\\Discord\\Builders\\CommandAttributes",
+            "name": "CommandAttributes",
+            "summary": "Application\u0020Command\u0020attributes.",
+            "url": "classes/Discord-Builders-CommandAttributes.html"
+        },                {
+            "fqsen": "\\Discord\\Builders\\CommandAttributes\u003A\u003AsetType\u0028\u0029",
+            "name": "setType",
+            "summary": "Sets\u0020the\u0020type\u0020of\u0020the\u0020command.",
+            "url": "classes/Discord-Builders-CommandAttributes.html#method_setType"
+        },                {
+            "fqsen": "\\Discord\\Builders\\CommandAttributes\u003A\u003AsetName\u0028\u0029",
+            "name": "setName",
+            "summary": "Sets\u0020the\u0020name\u0020of\u0020the\u0020command.",
+            "url": "classes/Discord-Builders-CommandAttributes.html#method_setName"
+        },                {
+            "fqsen": "\\Discord\\Builders\\CommandAttributes\u003A\u003AsetNameLocalization\u0028\u0029",
+            "name": "setNameLocalization",
+            "summary": "Sets\u0020the\u0020name\u0020of\u0020the\u0020command\u0020in\u0020another\u0020language.",
+            "url": "classes/Discord-Builders-CommandAttributes.html#method_setNameLocalization"
+        },                {
+            "fqsen": "\\Discord\\Builders\\CommandAttributes\u003A\u003AsetDescription\u0028\u0029",
+            "name": "setDescription",
+            "summary": "Sets\u0020the\u0020description\u0020of\u0020the\u0020command.",
+            "url": "classes/Discord-Builders-CommandAttributes.html#method_setDescription"
+        },                {
+            "fqsen": "\\Discord\\Builders\\CommandAttributes\u003A\u003AsetDescriptionLocalization\u0028\u0029",
+            "name": "setDescriptionLocalization",
+            "summary": "Sets\u0020the\u0020description\u0020of\u0020the\u0020command\u0020in\u0020another\u0020language.",
+            "url": "classes/Discord-Builders-CommandAttributes.html#method_setDescriptionLocalization"
+        },                {
+            "fqsen": "\\Discord\\Builders\\CommandAttributes\u003A\u003AsetDefaultPermission\u0028\u0029",
+            "name": "setDefaultPermission",
+            "summary": "Sets\u0020the\u0020default\u0020permission\u0020of\u0020the\u0020command.",
+            "url": "classes/Discord-Builders-CommandAttributes.html#method_setDefaultPermission"
+        },                {
+            "fqsen": "\\Discord\\Builders\\CommandAttributes\u003A\u003AsetDefaultMemberPermissions\u0028\u0029",
+            "name": "setDefaultMemberPermissions",
+            "summary": "Sets\u0020the\u0020default\u0020member\u0020permissions\u0020of\u0020the\u0020command.",
+            "url": "classes/Discord-Builders-CommandAttributes.html#method_setDefaultMemberPermissions"
+        },                {
+            "fqsen": "\\Discord\\Builders\\CommandAttributes\u003A\u003AsetDmPermission\u0028\u0029",
+            "name": "setDmPermission",
+            "summary": "Sets\u0020the\u0020DM\u0020permission\u0020of\u0020the\u0020command.",
+            "url": "classes/Discord-Builders-CommandAttributes.html#method_setDmPermission"
+        },                {
+            "fqsen": "\\Discord\\Builders\\CommandAttributes\u003A\u003AaddOption\u0028\u0029",
+            "name": "addOption",
+            "summary": "Adds\u0020an\u0020option\u0020to\u0020the\u0020command.",
+            "url": "classes/Discord-Builders-CommandAttributes.html#method_addOption"
+        },                {
+            "fqsen": "\\Discord\\Builders\\CommandAttributes\u003A\u003AremoveOption\u0028\u0029",
+            "name": "removeOption",
+            "summary": "Removes\u0020an\u0020option\u0020from\u0020the\u0020command.",
+            "url": "classes/Discord-Builders-CommandAttributes.html#method_removeOption"
+        },                {
+            "fqsen": "\\Discord\\Builders\\CommandAttributes\u003A\u003AclearOptions\u0028\u0029",
+            "name": "clearOptions",
+            "summary": "Clear\u0020all\u0020options\u0020from\u0020the\u0020command.",
+            "url": "classes/Discord-Builders-CommandAttributes.html#method_clearOptions"
+        },                {
             "fqsen": "\\Discord\\Builders\\CommandBuilder",
             "name": "CommandBuilder",
             "summary": "Helper\u0020class\u0020used\u0020to\u0020build\u0020application\u0020commands.",
@@ -10,36 +70,6 @@ Search.appendIndex(
             "name": "new",
             "summary": "Creates\u0020a\u0020new\u0020command\u0020builder.",
             "url": "classes/Discord-Builders-CommandBuilder.html#method_new"
-        },                {
-            "fqsen": "\\Discord\\Builders\\CommandBuilder\u003A\u003AsetType\u0028\u0029",
-            "name": "setType",
-            "summary": "Sets\u0020the\u0020type\u0020of\u0020the\u0020command.",
-            "url": "classes/Discord-Builders-CommandBuilder.html#method_setType"
-        },                {
-            "fqsen": "\\Discord\\Builders\\CommandBuilder\u003A\u003AsetName\u0028\u0029",
-            "name": "setName",
-            "summary": "Sets\u0020the\u0020name\u0020of\u0020the\u0020command.",
-            "url": "classes/Discord-Builders-CommandBuilder.html#method_setName"
-        },                {
-            "fqsen": "\\Discord\\Builders\\CommandBuilder\u003A\u003AsetDescription\u0028\u0029",
-            "name": "setDescription",
-            "summary": "Sets\u0020the\u0020description\u0020of\u0020the\u0020command.",
-            "url": "classes/Discord-Builders-CommandBuilder.html#method_setDescription"
-        },                {
-            "fqsen": "\\Discord\\Builders\\CommandBuilder\u003A\u003AsetDefaultPermission\u0028\u0029",
-            "name": "setDefaultPermission",
-            "summary": "Sets\u0020the\u0020default\u0020permission\u0020of\u0020the\u0020command.",
-            "url": "classes/Discord-Builders-CommandBuilder.html#method_setDefaultPermission"
-        },                {
-            "fqsen": "\\Discord\\Builders\\CommandBuilder\u003A\u003AaddOption\u0028\u0029",
-            "name": "addOption",
-            "summary": "Adds\u0020an\u0020option\u0020to\u0020the\u0020command.",
-            "url": "classes/Discord-Builders-CommandBuilder.html#method_addOption"
-        },                {
-            "fqsen": "\\Discord\\Builders\\CommandBuilder\u003A\u003AremoveOption\u0028\u0029",
-            "name": "removeOption",
-            "summary": "Removes\u0020an\u0020option\u0020from\u0020the\u0020command.",
-            "url": "classes/Discord-Builders-CommandBuilder.html#method_removeOption"
         },                {
             "fqsen": "\\Discord\\Builders\\CommandBuilder\u003A\u003AgetOptions\u0028\u0029",
             "name": "getOptions",
@@ -58,7 +88,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Builders\\CommandBuilder\u003A\u003A\u0024type",
             "name": "type",
-            "summary": "Type\u0020of\u0020the\u0020command.\u0020The\u0020type\u0020defaults\u0020to\u00201",
+            "summary": "Type\u0020of\u0020the\u0020command.\u0020The\u0020type\u0020defaults\u0020to\u00201.",
             "url": "classes/Discord-Builders-CommandBuilder.html#property_type"
         },                {
             "fqsen": "\\Discord\\Builders\\CommandBuilder\u003A\u003A\u0024name",
@@ -68,7 +98,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Builders\\CommandBuilder\u003A\u003A\u0024description",
             "name": "description",
-            "summary": "Description\u0020of\u0020the\u0020command.\u0020should\u0020be\u0020emtpy\u0020if\u0020the\u0020type\u0020is\u0020not\u0020CHAT_INPUT",
+            "summary": "Description\u0020of\u0020the\u0020command.\u0020should\u0020be\u0020emtpy\u0020if\u0020the\u0020type\u0020is\u0020not\u0020CHAT_INPUT.",
             "url": "classes/Discord-Builders-CommandBuilder.html#property_description"
         },                {
             "fqsen": "\\Discord\\Builders\\CommandBuilder\u003A\u003A\u0024options",
@@ -78,12 +108,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Builders\\CommandBuilder\u003A\u003A\u0024default_permission",
             "name": "default_permission",
-            "summary": "The\u0020default\u0020permission\u0020of\u0020the\u0020command.\u0020If\u0020true\u0020the\u0020command\u0020is\u0020enabled\u0020when\u0020the\u0020app\u0020is\u0020added\u0020to\u0020the\u0020guild",
+            "summary": "The\u0020default\u0020permission\u0020of\u0020the\u0020command.\u0020If\u0020true\u0020the\u0020command\u0020is\u0020enabled\u0020when\u0020the\u0020app\u0020is\u0020added\u0020to\u0020the\u0020guild.",
             "url": "classes/Discord-Builders-CommandBuilder.html#property_default_permission"
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\ActionRow",
             "name": "ActionRow",
-            "summary": "",
+            "summary": "An\u0020Action\u0020Row\u0020is\u0020a\u0020non\u002Dinteractive\u0020container\u0020component\u0020for\u0020other\u0020types\u0020of\u0020components.",
             "url": "classes/Discord-Builders-Components-ActionRow.html"
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\ActionRow\u003A\u003Anew\u0028\u0029",
@@ -123,7 +153,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\Button",
             "name": "Button",
-            "summary": "",
+            "summary": "Buttons\u0020are\u0020interactive\u0020components\u0020that\u0020render\u0020on\u0020messages.",
             "url": "classes/Discord-Builders-Components-Button.html"
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\Button\u003A\u003A__construct\u0028\u0029",
@@ -278,7 +308,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\Component",
             "name": "Component",
-            "summary": "",
+            "summary": "Components\u0020are\u0020a\u0020new\u0020field\u0020on\u0020the\u0020message\u0020object,\u0020so\u0020you\u0020can\u0020use\u0020them\u0020whether\u0020you\u0027re\u0020sending\u0020messages\u0020or\u0020responding\u0020to\u0020a\u0020slash\u0020command\u0020or\u0020other\u0020interaction.",
             "url": "classes/Discord-Builders-Components-Component.html"
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\Component\u003A\u003AgenerateUuid\u0028\u0029",
@@ -301,9 +331,14 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Builders-Components-Component.html#constant_TYPE_SELECT_MENU"
         },                {
+            "fqsen": "\\Discord\\Builders\\Components\\Component\u003A\u003ATYPE_TEXT_INPUT",
+            "name": "TYPE_TEXT_INPUT",
+            "summary": "",
+            "url": "classes/Discord-Builders-Components-Component.html#constant_TYPE_TEXT_INPUT"
+        },                {
             "fqsen": "\\Discord\\Builders\\Components\\Option",
             "name": "Option",
-            "summary": "",
+            "summary": "Option\u0020for\u0020select\u0020menu\u0020component.",
             "url": "classes/Discord-Builders-Components-Option.html"
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\Option\u003A\u003A__construct\u0028\u0029",
@@ -388,7 +423,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\SelectMenu",
             "name": "SelectMenu",
-            "summary": "",
+            "summary": "Select\u0020menus\u0020are\u0020another\u0020interactive\u0020component\u0020that\u0020renders\u0020on\u0020messages.",
             "url": "classes/Discord-Builders-Components-SelectMenu.html"
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\SelectMenu\u003A\u003A__construct\u0028\u0029",
@@ -403,7 +438,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\SelectMenu\u003A\u003AsetCustomId\u0028\u0029",
             "name": "setCustomId",
-            "summary": "Sets\u0020the\u0020custom\u0020ID\u0020for\u0020the\u0020select\u0020menu",
+            "summary": "Sets\u0020the\u0020custom\u0020ID\u0020for\u0020the\u0020select\u0020menu.",
             "url": "classes/Discord-Builders-Components-SelectMenu.html#method_setCustomId"
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\SelectMenu\u003A\u003AaddOption\u0028\u0029",
@@ -493,7 +528,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\SelectMenu\u003A\u003A\u0024placeholder",
             "name": "placeholder",
-            "summary": "Placeholder\u0020string\u0020to\u0020display\u0020if\u0020nothing\u0020is\u0020selected.\u0020Maximum\u0020100\u0020characters.",
+            "summary": "Placeholder\u0020string\u0020to\u0020display\u0020if\u0020nothing\u0020is\u0020selected.\u0020Maximum\u0020150\u0020characters.",
             "url": "classes/Discord-Builders-Components-SelectMenu.html#property_placeholder"
         },                {
             "fqsen": "\\Discord\\Builders\\Components\\SelectMenu\u003A\u003A\u0024min_values",
@@ -521,6 +556,141 @@ Search.appendIndex(
             "summary": "Discord\u0020instance\u0020when\u0020the\u0020listener\u0020is\u0020set.",
             "url": "classes/Discord-Builders-Components-SelectMenu.html#property_discord"
         },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput",
+            "name": "TextInput",
+            "summary": "Text\u0020inputs\u0020are\u0020an\u0020interactive\u0020component\u0020that\u0020render\u0020on\u0020modals.\u0020They\u0020can\u0020be\u0020used\u0020to\u0020collect\u0020short\u002Dform\u0020or\u0020long\u002Dform\u0020text.",
+            "url": "classes/Discord-Builders-Components-TextInput.html"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Creates\u0020a\u0020new\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method___construct"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003Anew\u0028\u0029",
+            "name": "new",
+            "summary": "Creates\u0020a\u0020new\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_new"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AsetCustomId\u0028\u0029",
+            "name": "setCustomId",
+            "summary": "Sets\u0020the\u0020custom\u0020ID\u0020for\u0020the\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_setCustomId"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AsetStyle\u0028\u0029",
+            "name": "setStyle",
+            "summary": "Sets\u0020the\u0020style\u0020of\u0020the\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_setStyle"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AsetLabel\u0028\u0029",
+            "name": "setLabel",
+            "summary": "Sets\u0020the\u0020label\u0020of\u0020the\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_setLabel"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AsetMinLength\u0028\u0029",
+            "name": "setMinLength",
+            "summary": "Sets\u0020the\u0020minimum\u0020input\u0020length\u0020for\u0020a\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_setMinLength"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AsetMaxLength\u0028\u0029",
+            "name": "setMaxLength",
+            "summary": "Sets\u0020the\u0020maximum\u0020input\u0020length\u0020for\u0020a\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_setMaxLength"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AsetPlaceholder\u0028\u0029",
+            "name": "setPlaceholder",
+            "summary": "Sets\u0020the\u0020placeholder\u0020string\u0020to\u0020display\u0020if\u0020text\u0020input\u0020is\u0020empty.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_setPlaceholder"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AsetRequired\u0028\u0029",
+            "name": "setRequired",
+            "summary": "Set\u0020if\u0020this\u0020component\u0020is\u0020required\u0020to\u0020be\u0020filled,\u0020default\u0020false.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_setRequired"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AsetValue\u0028\u0029",
+            "name": "setValue",
+            "summary": "Sets\u0020a\u0020pre\u002Dfilled\u0020value\u0020for\u0020the\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_setValue"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AgetCustomId\u0028\u0029",
+            "name": "getCustomId",
+            "summary": "Returns\u0020the\u0020Custom\u0020ID\u0020of\u0020the\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_getCustomId"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AgetPlaceholder\u0028\u0029",
+            "name": "getPlaceholder",
+            "summary": "Returns\u0020the\u0020placeholder\u0020string\u0020of\u0020the\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_getPlaceholder"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AgetMinLength\u0028\u0029",
+            "name": "getMinLength",
+            "summary": "Returns\u0020the\u0020minimum\u0020length\u0020of\u0020the\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_getMinLength"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AgetMaxLength\u0028\u0029",
+            "name": "getMaxLength",
+            "summary": "Returns\u0020the\u0020maximum\u0020length\u0020of\u0020the\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_getMaxLength"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AisRequired\u0028\u0029",
+            "name": "isRequired",
+            "summary": "Returns\u0020wether\u0020the\u0020text\u0020input\u0020is\u0020disabled.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_isRequired"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Discord-Builders-Components-TextInput.html#method_jsonSerialize"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003ASTYLE_SHORT",
+            "name": "STYLE_SHORT",
+            "summary": "",
+            "url": "classes/Discord-Builders-Components-TextInput.html#constant_STYLE_SHORT"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003ASTYLE_PARAGRAPH",
+            "name": "STYLE_PARAGRAPH",
+            "summary": "",
+            "url": "classes/Discord-Builders-Components-TextInput.html#constant_STYLE_PARAGRAPH"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003A\u0024custom_id",
+            "name": "custom_id",
+            "summary": "Custom\u0020ID\u0020to\u0020identify\u0020the\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#property_custom_id"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003A\u0024style",
+            "name": "style",
+            "summary": "Style\u0020of\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#property_style"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003A\u0024label",
+            "name": "label",
+            "summary": "Label\u0020for\u0020the\u0020text\u0020input.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#property_label"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003A\u0024min_length",
+            "name": "min_length",
+            "summary": "Minimum\u0020input\u0020length\u0020for\u0020a\u0020text\u0020input,\u0020min\u00200,\u0020max\u00204000.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#property_min_length"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003A\u0024max_length",
+            "name": "max_length",
+            "summary": "Maximum\u0020input\u0020length\u0020for\u0020a\u0020text\u0020input,\u0020min\u00201,\u0020max\u00204000.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#property_max_length"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003A\u0024required",
+            "name": "required",
+            "summary": "Whether\u0020the\u0020text\u0020input\u0020is\u0020required.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#property_required"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003A\u0024value",
+            "name": "value",
+            "summary": "Pre\u002Dfilled\u0020value\u0020for\u0020text\u0020input.\u0020Max\u00204000\u0020characters.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#property_value"
+        },                {
+            "fqsen": "\\Discord\\Builders\\Components\\TextInput\u003A\u003A\u0024placeholder",
+            "name": "placeholder",
+            "summary": "Placeholder\u0020string\u0020to\u0020display\u0020if\u0020text\u0020input\u0020is\u0020empty.\u0020Maximum\u0020100\u0020characters.",
+            "url": "classes/Discord-Builders-Components-TextInput.html#property_placeholder"
+        },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder",
             "name": "MessageBuilder",
             "summary": "Helper\u0020class\u0020used\u0020to\u0020build\u0020messages.",
@@ -536,19 +706,34 @@ Search.appendIndex(
             "summary": "Sets\u0020the\u0020content\u0020of\u0020the\u0020message.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_setContent"
         },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AsetNonce\u0028\u0029",
+            "name": "setNonce",
+            "summary": "Sets\u0020the\u0020nonce\u0020of\u0020the\u0020message.\u0020Only\u0020used\u0020for\u0020sending\u0020message.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#method_setNonce"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AsetUsername\u0028\u0029",
+            "name": "setUsername",
+            "summary": "Override\u0020the\u0020default\u0020username\u0020of\u0020the\u0020webhook.\u0020Only\u0020used\u0020for\u0020executing\u0020webhook.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#method_setUsername"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AsetAvatarUrl\u0028\u0029",
+            "name": "setAvatarUrl",
+            "summary": "Override\u0020the\u0020default\u0020avatar\u0020URL\u0020of\u0020the\u0020webhook.\u0020Only\u0020used\u0020for\u0020executing\u0020webhook.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#method_setAvatarUrl"
+        },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AsetTts\u0028\u0029",
             "name": "setTts",
-            "summary": "Sets\u0020the\u0020TTS\u0020status\u0020of\u0020the\u0020message.",
+            "summary": "Sets\u0020the\u0020TTS\u0020status\u0020of\u0020the\u0020message.\u0020Only\u0020used\u0020for\u0020sending\u0020message\u0020or\u0020executing\u0020webhook.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_setTts"
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AgetTts\u0028\u0029",
             "name": "getTts",
-            "summary": "Returns\u0020the\u0020value\u0020of\u0020TTS\u0020of\u0020the\u0020message.",
+            "summary": "Returns\u0020the\u0020value\u0020of\u0020TTS\u0020of\u0020the\u0020builder.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_getTts"
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AaddEmbed\u0028\u0029",
             "name": "addEmbed",
-            "summary": "Adds\u0020an\u0020embed\u0020to\u0020the\u0020message.",
+            "summary": "Adds\u0020an\u0020embed\u0020to\u0020the\u0020builder.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_addEmbed"
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AsetEmbeds\u0028\u0029",
@@ -556,39 +741,24 @@ Search.appendIndex(
             "summary": "Sets\u0020the\u0020embeds\u0020for\u0020the\u0020message.\u0020Clears\u0020the\u0020existing\u0020embeds\u0020in\u0020the\u0020process.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_setEmbeds"
         },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AsetAllowedMentions\u0028\u0029",
+            "name": "setAllowedMentions",
+            "summary": "Sets\u0020the\u0020allowed\u0020mentions\u0020object\u0020of\u0020the\u0020message.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#method_setAllowedMentions"
+        },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AsetReplyTo\u0028\u0029",
             "name": "setReplyTo",
-            "summary": "Sets\u0020this\u0020message\u0020as\u0020a\u0020reply\u0020to\u0020another\u0020message.",
+            "summary": "Sets\u0020this\u0020message\u0020as\u0020a\u0020reply\u0020to\u0020another\u0020message.\u0020Only\u0020used\u0020for\u0020sending\u0020message.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_setReplyTo"
-        },                {
-            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AaddFile\u0028\u0029",
-            "name": "addFile",
-            "summary": "Adds\u0020a\u0020file\u0020attachment\u0020to\u0020the\u0020message.",
-            "url": "classes/Discord-Builders-MessageBuilder.html#method_addFile"
-        },                {
-            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AaddFileFromContent\u0028\u0029",
-            "name": "addFileFromContent",
-            "summary": "Adds\u0020a\u0020file\u0020attachment\u0020to\u0020the\u0020message\u0020with\u0020a\u0020given\u0020filename\u0020and\u0020content.",
-            "url": "classes/Discord-Builders-MessageBuilder.html#method_addFileFromContent"
-        },                {
-            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AnumFiles\u0028\u0029",
-            "name": "numFiles",
-            "summary": "Returns\u0020the\u0020number\u0020of\u0020files\u0020attached\u0020to\u0020the\u0020message.",
-            "url": "classes/Discord-Builders-MessageBuilder.html#method_numFiles"
-        },                {
-            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AclearFiles\u0028\u0029",
-            "name": "clearFiles",
-            "summary": "Removes\u0020all\u0020files\u0020from\u0020the\u0020message.",
-            "url": "classes/Discord-Builders-MessageBuilder.html#method_clearFiles"
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AaddComponent\u0028\u0029",
             "name": "addComponent",
-            "summary": "Adds\u0020a\u0020component\u0020to\u0020the\u0020message.",
+            "summary": "Adds\u0020a\u0020component\u0020to\u0020the\u0020builder.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_addComponent"
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AremoveComponent\u0028\u0029",
             "name": "removeComponent",
-            "summary": "Removes\u0020a\u0020component\u0020from\u0020the\u0020message.",
+            "summary": "Removes\u0020a\u0020component\u0020from\u0020the\u0020builder.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_removeComponent"
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AsetComponents\u0028\u0029",
@@ -598,33 +768,63 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AgetComponents\u0028\u0029",
             "name": "getComponents",
-            "summary": "Returns\u0020all\u0020the\u0020components\u0020in\u0020the\u0020message.",
+            "summary": "Returns\u0020all\u0020the\u0020components\u0020in\u0020the\u0020builder.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_getComponents"
-        },                {
-            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AsetAllowedMentions\u0028\u0029",
-            "name": "setAllowedMentions",
-            "summary": "Sets\u0020the\u0020allowed\u0020mentions\u0020object\u0020of\u0020the\u0020message.",
-            "url": "classes/Discord-Builders-MessageBuilder.html#method_setAllowedMentions"
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AaddSticker\u0028\u0029",
             "name": "addSticker",
-            "summary": "Adds\u0020a\u0020sticker\u0020to\u0020the\u0020message.",
+            "summary": "Adds\u0020a\u0020sticker\u0020to\u0020the\u0020builder.\u0020Only\u0020used\u0020for\u0020sending\u0020message\u0020or\u0020creating\u0020forum\u0020thread.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_addSticker"
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AremoveSticker\u0028\u0029",
             "name": "removeSticker",
-            "summary": "Removes\u0020a\u0020sticker\u0020from\u0020the\u0020message.",
+            "summary": "Removes\u0020a\u0020sticker\u0020from\u0020the\u0020builder.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_removeSticker"
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AsetStickers\u0028\u0029",
             "name": "setStickers",
-            "summary": "Sets\u0020the\u0020stickers\u0020of\u0020the\u0020message.\u0020Removes\u0020the\u0020existing\u0020stickers\u0020in\u0020the\u0020process.",
+            "summary": "Sets\u0020the\u0020stickers\u0020of\u0020the\u0020builder.\u0020Removes\u0020the\u0020existing\u0020stickers\u0020in\u0020the\u0020process.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_setStickers"
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AgetStickers\u0028\u0029",
             "name": "getStickers",
-            "summary": "Returns\u0020all\u0020the\u0020sticker\u0020IDs\u0020in\u0020the\u0020message.",
+            "summary": "Returns\u0020all\u0020the\u0020sticker\u0020ids\u0020in\u0020the\u0020builder.",
             "url": "classes/Discord-Builders-MessageBuilder.html#method_getStickers"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AaddFile\u0028\u0029",
+            "name": "addFile",
+            "summary": "Adds\u0020a\u0020file\u0020attachment\u0020to\u0020the\u0020builder.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#method_addFile"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AaddFileFromContent\u0028\u0029",
+            "name": "addFileFromContent",
+            "summary": "Adds\u0020a\u0020file\u0020attachment\u0020to\u0020the\u0020builder\u0020with\u0020a\u0020given\u0020filename\u0020and\u0020content.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#method_addFileFromContent"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AnumFiles\u0028\u0029",
+            "name": "numFiles",
+            "summary": "Returns\u0020the\u0020number\u0020of\u0020files\u0020attached\u0020to\u0020the\u0020builder.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#method_numFiles"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AclearFiles\u0028\u0029",
+            "name": "clearFiles",
+            "summary": "Removes\u0020all\u0020files\u0020from\u0020the\u0020message.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#method_clearFiles"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AaddAttachment\u0028\u0029",
+            "name": "addAttachment",
+            "summary": "Adds\u0020attachment\u0028s\u0029\u0020to\u0020the\u0020builder.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#method_addAttachment"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AgetAttachments\u0028\u0029",
+            "name": "getAttachments",
+            "summary": "Returns\u0020all\u0020the\u0020attachments\u0020in\u0020the\u0020builder.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#method_getAttachments"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003AclearAttachments\u0028\u0029",
+            "name": "clearAttachments",
+            "summary": "Removes\u0020all\u0020attachments\u0020from\u0020the\u0020message.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#method_clearAttachments"
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003ArequiresMultipart\u0028\u0029",
             "name": "requiresMultipart",
@@ -641,6 +841,21 @@ Search.appendIndex(
             "summary": "Content\u0020of\u0020the\u0020message.",
             "url": "classes/Discord-Builders-MessageBuilder.html#property_content"
         },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024nonce",
+            "name": "nonce",
+            "summary": "A\u0020nonce\u0020that\u0020can\u0020be\u0020used\u0020for\u0020message\u0020roundtrips\u0020with\u0020the\u0020gateway\u0020\u0028up\u0020to\u002025\u0020characters\u0029.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#property_nonce"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024username",
+            "name": "username",
+            "summary": "Override\u0020the\u0020default\u0020username\u0020of\u0020the\u0020webhook.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#property_username"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024avatar_url",
+            "name": "avatar_url",
+            "summary": "Override\u0020the\u0020default\u0020avatar\u0020of\u0020the\u0020webhook",
+            "url": "classes/Discord-Builders-MessageBuilder.html#property_avatar_url"
+        },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024tts",
             "name": "tts",
             "summary": "Whether\u0020the\u0020message\u0020is\u0020text\u002Dto\u002Dspeech.",
@@ -651,35 +866,40 @@ Search.appendIndex(
             "summary": "Array\u0020of\u0020embeds\u0020to\u0020send\u0020with\u0020the\u0020message.",
             "url": "classes/Discord-Builders-MessageBuilder.html#property_embeds"
         },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024allowed_mentions",
+            "name": "allowed_mentions",
+            "summary": "Allowed\u0020mentions\u0020object\u0020for\u0020the\u0020message.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#property_allowed_mentions"
+        },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024replyTo",
             "name": "replyTo",
             "summary": "Message\u0020to\u0020reply\u0020to\u0020with\u0020this\u0020message.",
             "url": "classes/Discord-Builders-MessageBuilder.html#property_replyTo"
-        },                {
-            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024files",
-            "name": "files",
-            "summary": "Files\u0020to\u0020send\u0020with\u0020this\u0020message.",
-            "url": "classes/Discord-Builders-MessageBuilder.html#property_files"
         },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024components",
             "name": "components",
             "summary": "Components\u0020to\u0020send\u0020with\u0020this\u0020message.",
             "url": "classes/Discord-Builders-MessageBuilder.html#property_components"
         },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024sticker_ids",
+            "name": "sticker_ids",
+            "summary": "IDs\u0020of\u0020up\u0020to\u00203\u0020stickers\u0020in\u0020the\u0020server\u0020to\u0020send\u0020in\u0020the\u0020message.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#property_sticker_ids"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024files",
+            "name": "files",
+            "summary": "Files\u0020to\u0020send\u0020with\u0020this\u0020message.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#property_files"
+        },                {
+            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024attachments",
+            "name": "attachments",
+            "summary": "Attachments\u0020to\u0020send\u0020with\u0020this\u0020message.",
+            "url": "classes/Discord-Builders-MessageBuilder.html#property_attachments"
+        },                {
             "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024flags",
             "name": "flags",
             "summary": "Flags\u0020to\u0020send\u0020with\u0020this\u0020message.",
             "url": "classes/Discord-Builders-MessageBuilder.html#property_flags"
-        },                {
-            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024allowed_mentions",
-            "name": "allowed_mentions",
-            "summary": "Allowed\u0020mentions\u0020object\u0020for\u0020the\u0020message.",
-            "url": "classes/Discord-Builders-MessageBuilder.html#property_allowed_mentions"
-        },                {
-            "fqsen": "\\Discord\\Builders\\MessageBuilder\u003A\u003A\u0024sticker_ids",
-            "name": "sticker_ids",
-            "summary": "IDs\u0020of\u0020up\u0020to\u00203\u0020stickers\u0020in\u0020the\u0020server\u0020to\u0020send\u0020in\u0020the\u0020message",
-            "url": "classes/Discord-Builders-MessageBuilder.html#property_sticker_ids"
         },                {
             "fqsen": "\\Discord\\CommandClient\\Command",
             "name": "Command",
@@ -830,6 +1050,11 @@ Search.appendIndex(
             "name": "handleWsMessage",
             "summary": "Handles\u0020WebSocket\u0020messages\u0020received\u0020by\u0020the\u0020client.",
             "url": "classes/Discord-Discord.html#method_handleWsMessage"
+        },                {
+            "fqsen": "\\Discord\\Discord\u003A\u003AprocessWsMessage\u0028\u0029",
+            "name": "processWsMessage",
+            "summary": "Process\u0020WebSocket\u0020message\u0020payloads.",
+            "url": "classes/Discord-Discord.html#method_processWsMessage"
         },                {
             "fqsen": "\\Discord\\Discord\u003A\u003AhandleWsClose\u0028\u0029",
             "name": "handleWsClose",
@@ -998,7 +1223,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Discord\u003A\u003AlistenCommand\u0028\u0029",
             "name": "listenCommand",
-            "summary": "Registeres\u0020a\u0020command\u0020with\u0020the\u0020client.",
+            "summary": "Add\u0020listerner\u0020for\u0020incoming\u0020application\u0020command\u0020from\u0020interaction",
             "url": "classes/Discord-Discord.html#method_listenCommand"
         },                {
             "fqsen": "\\Discord\\Discord\u003A\u003A__call\u0028\u0029",
@@ -1145,6 +1370,16 @@ Search.appendIndex(
             "name": "encoding",
             "summary": "What\u0020encoding\u0020the\u0020client\u0020will\u0020use,\u0020either\u0020\u0060json\u0060\u0020or\u0020\u0060etf\u0060.",
             "url": "classes/Discord-Discord.html#property_encoding"
+        },                {
+            "fqsen": "\\Discord\\Discord\u003A\u003A\u0024payloadBuffer",
+            "name": "payloadBuffer",
+            "summary": "Gateway\u0020compressed\u0020message\u0020payload\u0020buffer.",
+            "url": "classes/Discord-Discord.html#property_payloadBuffer"
+        },                {
+            "fqsen": "\\Discord\\Discord\u003A\u003A\u0024zlibDecompressor",
+            "name": "zlibDecompressor",
+            "summary": "zlib\u0020decompressor.",
+            "url": "classes/Discord-Discord.html#property_zlibDecompressor"
         },                {
             "fqsen": "\\Discord\\Discord\u003A\u003A\u0024payloadCount",
             "name": "payloadCount",
@@ -1378,18 +1613,18 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\escapeMarkdown\u0028\u0029",
             "name": "escapeMarkdown",
-            "summary": "Escape\u0020various\u0020Discord\u0020formatting\u0020and\u0020markdown\u0020into\u0020a\u0020plain\u0020text\u003A\n_Italics_,\u0020\u002A\u002ABold\u002A\u002A,\u0020__Underline__,\u0020\u007E\u007EStrikethrough\u007E\u007E,\u0020\u007C\u007Cspoiler\u007C\u007C\n\u0060Code\u0060,\u0020\u0060\u0060\u0060Code\u0020block\u0060\u0060\u0060,\u0020\u003E\u0020Quotes,\u0020\u003E\u003E\u003E\u0020Block\u0020quotes\n\u0023Channel\u0020\u0040User\nA\u0020backslash\u0020will\u0020be\u0020added\u0020before\u0020the\u0020each\u0020formatting\u0020symbol",
+            "summary": "Escape\u0020various\u0020Discord\u0020formatting\u0020and\u0020markdown\u0020into\u0020a\u0020plain\u0020text\u003A\n_Italics_,\u0020\u002A\u002ABold\u002A\u002A,\u0020__Underline__,\u0020\u007E\u007EStrikethrough\u007E\u007E,\u0020\u007C\u007Cspoiler\u007C\u007C\n\u0060Code\u0060,\u0020\u0060\u0060\u0060Code\u0020block\u0060\u0060\u0060,\u0020\u003E\u0020Quotes,\u0020\u003E\u003E\u003E\u0020Block\u0020quotes\n\u0023Channel\u0020\u0040User\nA\u0020backslash\u0020will\u0020be\u0020added\u0020before\u0020the\u0020each\u0020formatting\u0020symbol.",
             "url": "namespaces/discord.html#function_escapeMarkdown"
+        },                {
+            "fqsen": "\\Discord\\deferFind\u0028\u0029",
+            "name": "deferFind",
+            "summary": "Run\u0020a\u0020deferred\u0020search\u0020in\u0020array.",
+            "url": "namespaces/discord.html#function_deferFind"
         },                {
             "fqsen": "\\Discord\\Helpers\\Bitwise",
             "name": "Bitwise",
-            "summary": "Polyfill\u0020to\u0020handle\u0020bitwise\u0020operation\u0020in\u002032\u0020bit\u0020php\u0020using\u0020ext\u002Dgmp",
+            "summary": "Polyfill\u0020to\u0020handle\u0020bitwise\u0020operation\u0020in\u002032\u0020bit\u0020php\u0020using\u0020ext\u002Dgmp.",
             "url": "classes/Discord-Helpers-Bitwise.html"
-        },                {
-            "fqsen": "\\Discord\\Helpers\\Bitwise\u003A\u003Ainit\u0028\u0029",
-            "name": "init",
-            "summary": "Run\u0020a\u0020single\u0020check\u0020whether\u0020the\u0020GMP\u0020extension\u0020is\u0020loaded,\u0020internally\u0020used\nduring\u0020Discord\u0020class\u0020construct",
-            "url": "classes/Discord-Helpers-Bitwise.html#method_init"
         },                {
             "fqsen": "\\Discord\\Helpers\\Bitwise\u003A\u003Aand\u0028\u0029",
             "name": "and",
@@ -1580,6 +1815,11 @@ Search.appendIndex(
             "name": "first",
             "summary": "Returns\u0020the\u0020first\u0020element\u0020of\u0020the\u0020collection.",
             "url": "classes/Discord-Helpers-Collection.html#method_first"
+        },                {
+            "fqsen": "\\Discord\\Helpers\\Collection\u003A\u003Alast\u0028\u0029",
+            "name": "last",
+            "summary": "Returns\u0020the\u0020last\u0020element\u0020of\u0020the\u0020collection.",
+            "url": "classes/Discord-Helpers-Collection.html#method_last"
         },                {
             "fqsen": "\\Discord\\Helpers\\Collection\u003A\u003Aisset\u0028\u0029",
             "name": "isset",
@@ -1798,12 +2038,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Helpers\\RegisteredCommand\u003A\u003AgetName\u0028\u0029",
             "name": "getName",
-            "summary": "Get\u0020command\u0020name",
+            "summary": "Get\u0020command\u0020name.",
             "url": "classes/Discord-Helpers-RegisteredCommand.html#method_getName"
         },                {
             "fqsen": "\\Discord\\Helpers\\RegisteredCommand\u003A\u003AgetSubCommands\u0028\u0029",
             "name": "getSubCommands",
-            "summary": "Get\u0020sub\u0020commands",
+            "summary": "Get\u0020sub\u0020commands.",
             "url": "classes/Discord-Helpers-RegisteredCommand.html#method_getSubCommands"
         },                {
             "fqsen": "\\Discord\\Helpers\\RegisteredCommand\u003A\u003A\u0024discord",
@@ -1830,6 +2070,16 @@ Search.appendIndex(
             "name": "subCommands",
             "summary": "Array\u0020of\u0020sub\u002Dcommands.",
             "url": "classes/Discord-Helpers-RegisteredCommand.html#property_subCommands"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Attachment",
+            "name": "Attachment",
+            "summary": "A\u0020message\u0020attachment.",
+            "url": "classes/Discord-Parts-Channel-Attachment.html"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Attachment\u003A\u003A\u0024fillable",
+            "name": "fillable",
+            "summary": "The\u0020parts\u0020fillable\u0020attributes.",
+            "url": "classes/Discord-Parts-Channel-Attachment.html#property_fillable"
         },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Channel",
             "name": "Channel",
@@ -1991,6 +2241,16 @@ Search.appendIndex(
             "summary": "Returns\u0020if\u0020allow\u0020voice.",
             "url": "classes/Discord-Parts-Channel-Channel.html#method_allowVoice"
         },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Channel\u003A\u003AallowInvite\u0028\u0029",
+            "name": "allowInvite",
+            "summary": "Returns\u0020if\u0020allow\u0020invite.",
+            "url": "classes/Discord-Parts-Channel-Channel.html#method_allowInvite"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Channel\u003A\u003AgetBotPermissions\u0028\u0029",
+            "name": "getBotPermissions",
+            "summary": "Returns\u0020the\u0020bot\u0027s\u0020permissions\u0020in\u0020the\u0020channel.",
+            "url": "classes/Discord-Parts-Channel-Channel.html#method_getBotPermissions"
+        },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Channel\u003A\u003AgetCreatableAttributes\u0028\u0029",
             "name": "getCreatableAttributes",
             "summary": "Returns\u0020the\u0020attributes\u0020needed\u0020to\u0020create.",
@@ -2041,11 +2301,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Parts-Channel-Channel.html#constant_TYPE_NEWS"
         },                {
-            "fqsen": "\\Discord\\Parts\\Channel\\Channel\u003A\u003ATYPE_GAME_STORE",
-            "name": "TYPE_GAME_STORE",
-            "summary": "",
-            "url": "classes/Discord-Parts-Channel-Channel.html#constant_TYPE_GAME_STORE"
-        },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Channel\u003A\u003ATYPE_NEWS_THREAD",
             "name": "TYPE_NEWS_THREAD",
             "summary": "",
@@ -2066,6 +2321,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Parts-Channel-Channel.html#constant_TYPE_STAGE_CHANNEL"
         },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Channel\u003A\u003ATYPE_DIRECTORY",
+            "name": "TYPE_DIRECTORY",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Channel.html#constant_TYPE_DIRECTORY"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Channel\u003A\u003ATYPE_FORUM",
+            "name": "TYPE_FORUM",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Channel.html#constant_TYPE_FORUM"
+        },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Channel\u003A\u003AVIDEO_QUALITY_AUTO",
             "name": "VIDEO_QUALITY_AUTO",
             "summary": "",
@@ -2076,6 +2341,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Parts-Channel-Channel.html#constant_VIDEO_QUALITY_FULL"
         },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Channel\u003A\u003AFLAG_PINNED",
+            "name": "FLAG_PINNED",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Channel.html#constant_FLAG_PINNED"
+        },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Channel\u003A\u003A\u0024fillable",
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
@@ -2085,6 +2355,91 @@ Search.appendIndex(
             "name": "repositories",
             "summary": "An\u0020array\u0020of\u0020repositories\u0020that\u0020can\u0020exist\u0020in\u0020a\u0020part.",
             "url": "classes/Discord-Parts-Channel-Channel.html#property_repositories"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite",
+            "name": "Invite",
+            "summary": "An\u0020invite\u0020to\u0020a\u0020Channel\u0020and\u0020Guild.",
+            "url": "classes/Discord-Parts-Channel-Invite.html"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003Aaccept\u0028\u0029",
+            "name": "accept",
+            "summary": "Accepts\u0020the\u0020invite.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_accept"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003AgetIdAttribute\u0028\u0029",
+            "name": "getIdAttribute",
+            "summary": "Returns\u0020the\u0020id\u0020attribute.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_getIdAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003AgetInviteUrlAttribute\u0028\u0029",
+            "name": "getInviteUrlAttribute",
+            "summary": "Returns\u0020the\u0020invite\u0020URL\u0020attribute.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_getInviteUrlAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003AgetGuildAttribute\u0028\u0029",
+            "name": "getGuildAttribute",
+            "summary": "Returns\u0020the\u0020guild\u0020attribute.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_getGuildAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003AgetGuildIdAttribute\u0028\u0029",
+            "name": "getGuildIdAttribute",
+            "summary": "Returns\u0020the\u0020guild\u0020id\u0020attribute.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_getGuildIdAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003AgetChannelAttribute\u0028\u0029",
+            "name": "getChannelAttribute",
+            "summary": "Returns\u0020the\u0020channel\u0020attribute.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_getChannelAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003AgetChannelIdAttribute\u0028\u0029",
+            "name": "getChannelIdAttribute",
+            "summary": "Returns\u0020the\u0020channel\u0020id\u0020attribute.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_getChannelIdAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003AgetInviterAttribute\u0028\u0029",
+            "name": "getInviterAttribute",
+            "summary": "Returns\u0020the\u0020inviter\u0020attribute.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_getInviterAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003AgetCreatedAtAttribute\u0028\u0029",
+            "name": "getCreatedAtAttribute",
+            "summary": "Returns\u0020the\u0020created\u0020at\u0020attribute.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_getCreatedAtAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003AgetTargetUserAttribute\u0028\u0029",
+            "name": "getTargetUserAttribute",
+            "summary": "Returns\u0020the\u0020target\u0020user\u0020attribute.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_getTargetUserAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003AgetExpiresAtAttribute\u0028\u0029",
+            "name": "getExpiresAtAttribute",
+            "summary": "Returns\u0020the\u0020expires\u0020at\u0020attribute.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_getExpiresAtAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003AgetGuildScheduledEventAttribute\u0028\u0029",
+            "name": "getGuildScheduledEventAttribute",
+            "summary": "Returns\u0020the\u0020guild\u0020scheduled\u0020event\u0020on\u0020this\u0020invite.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_getGuildScheduledEventAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003AgetRepositoryAttributes\u0028\u0029",
+            "name": "getRepositoryAttributes",
+            "summary": "Gets\u0020the\u0020attributes\u0020to\u0020pass\u0020to\u0020repositories.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#method_getRepositoryAttributes"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003ATARGET_TYPE_STREAM",
+            "name": "TARGET_TYPE_STREAM",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Invite.html#constant_TARGET_TYPE_STREAM"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003ATARGET_TYPE_EMBEDDED_APPLICATION",
+            "name": "TARGET_TYPE_EMBEDDED_APPLICATION",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Invite.html#constant_TARGET_TYPE_EMBEDDED_APPLICATION"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Invite\u003A\u003A\u0024fillable",
+            "name": "fillable",
+            "summary": "The\u0020parts\u0020fillable\u0020attributes.",
+            "url": "classes/Discord-Parts-Channel-Invite.html#property_fillable"
         },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Message",
             "name": "Message",
@@ -2141,6 +2496,11 @@ Search.appendIndex(
             "summary": "Gets\u0020the\u0020mention_channels\u0020attribute.",
             "url": "classes/Discord-Parts-Channel-Message.html#method_getMentionChannelsAttribute"
         },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AgetAttachmentsAttribute\u0028\u0029",
+            "name": "getAttachmentsAttribute",
+            "summary": "Returns\u0020any\u0020attached\u0020files.",
+            "url": "classes/Discord-Parts-Channel-Message.html#method_getAttachmentsAttribute"
+        },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AsetReactionsAttribute\u0028\u0029",
             "name": "setReactionsAttribute",
             "summary": "Sets\u0020the\u0020reactions\u0020attriubte.",
@@ -2191,6 +2551,11 @@ Search.appendIndex(
             "summary": "Returns\u0020the\u0020embed\u0020attribute.",
             "url": "classes/Discord-Parts-Channel-Message.html#method_getEmbedsAttribute"
         },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AgetInteractionAttribute\u0028\u0029",
+            "name": "getInteractionAttribute",
+            "summary": "Gets\u0020the\u0020interaction\u0020which\u0020triggered\u0020the\u0020message\u0020\u0028application\u0020commands\u0029.",
+            "url": "classes/Discord-Parts-Channel-Message.html#method_getInteractionAttribute"
+        },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AgetReferencedMessageAttribute\u0028\u0029",
             "name": "getReferencedMessageAttribute",
             "summary": "Gets\u0020the\u0020referenced\u0020message\u0020attribute,\u0020if\u0020present.",
@@ -2205,6 +2570,11 @@ Search.appendIndex(
             "name": "getEditedTimestampAttribute",
             "summary": "Returns\u0020the\u0020edited_timestamp\u0020attribute.",
             "url": "classes/Discord-Parts-Channel-Message.html#method_getEditedTimestampAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AgetComponentsAttribute\u0028\u0029",
+            "name": "getComponentsAttribute",
+            "summary": "Returns\u0020the\u0020components\u0020attribute.",
+            "url": "classes/Discord-Parts-Channel-Message.html#method_getComponentsAttribute"
         },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AgetStickerItemsAttribute\u0028\u0029",
             "name": "getStickerItemsAttribute",
@@ -2326,30 +2696,30 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Parts-Channel-Message.html#constant_CHANNEL_PINNED_MESSAGE"
         },                {
-            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AGUILD_MEMBER_JOIN",
-            "name": "GUILD_MEMBER_JOIN",
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003ATYPE_USER_JOIN",
+            "name": "TYPE_USER_JOIN",
             "summary": "",
-            "url": "classes/Discord-Parts-Channel-Message.html#constant_GUILD_MEMBER_JOIN"
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_TYPE_USER_JOIN"
         },                {
-            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AUSER_PREMIUM_GUILD_SUBSCRIPTION",
-            "name": "USER_PREMIUM_GUILD_SUBSCRIPTION",
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003ATYPE_GUILD_BOOST",
+            "name": "TYPE_GUILD_BOOST",
             "summary": "",
-            "url": "classes/Discord-Parts-Channel-Message.html#constant_USER_PREMIUM_GUILD_SUBSCRIPTION"
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_TYPE_GUILD_BOOST"
         },                {
-            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AUSER_PREMIUM_GUILD_SUBSCRIPTION_TIER_1",
-            "name": "USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_1",
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003ATYPE_GUILD_BOOST_TIER_1",
+            "name": "TYPE_GUILD_BOOST_TIER_1",
             "summary": "",
-            "url": "classes/Discord-Parts-Channel-Message.html#constant_USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_1"
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_TYPE_GUILD_BOOST_TIER_1"
         },                {
-            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AUSER_PREMIUM_GUILD_SUBSCRIPTION_TIER_2",
-            "name": "USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_2",
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003ATYPE_GUILD_BOOST_TIER_2",
+            "name": "TYPE_GUILD_BOOST_TIER_2",
             "summary": "",
-            "url": "classes/Discord-Parts-Channel-Message.html#constant_USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_2"
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_TYPE_GUILD_BOOST_TIER_2"
         },                {
-            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AUSER_PREMIUM_GUILD_SUBSCRIPTION_TIER_3",
-            "name": "USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_3",
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003ATYPE_GUILD_BOOST_TIER_3",
+            "name": "TYPE_GUILD_BOOST_TIER_3",
             "summary": "",
-            "url": "classes/Discord-Parts-Channel-Message.html#constant_USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_3"
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_TYPE_GUILD_BOOST_TIER_3"
         },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003ACHANNEL_FOLLOW_ADD",
             "name": "CHANNEL_FOLLOW_ADD",
@@ -2406,6 +2776,36 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Parts-Channel-Message.html#constant_TYPE_CONTEXT_MENU_COMMAND"
         },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003ATYPE_AUTO_MODERATION_ACTION",
+            "name": "TYPE_AUTO_MODERATION_ACTION",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_TYPE_AUTO_MODERATION_ACTION"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AGUILD_MEMBER_JOIN",
+            "name": "GUILD_MEMBER_JOIN",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_GUILD_MEMBER_JOIN"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AUSER_PREMIUM_GUILD_SUBSCRIPTION",
+            "name": "USER_PREMIUM_GUILD_SUBSCRIPTION",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_USER_PREMIUM_GUILD_SUBSCRIPTION"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AUSER_PREMIUM_GUILD_SUBSCRIPTION_TIER_1",
+            "name": "USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_1",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_1"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AUSER_PREMIUM_GUILD_SUBSCRIPTION_TIER_2",
+            "name": "USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_2",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_2"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AUSER_PREMIUM_GUILD_SUBSCRIPTION_TIER_3",
+            "name": "USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_3",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_USER_PREMIUM_GUILD_SUBSCRIPTION_TIER_3"
+        },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AACTIVITY_JOIN",
             "name": "ACTIVITY_JOIN",
             "summary": "",
@@ -2445,6 +2845,16 @@ Search.appendIndex(
             "name": "REACT_DELETE_EMOJI",
             "summary": "",
             "url": "classes/Discord-Parts-Channel-Message.html#constant_REACT_DELETE_EMOJI"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AFLAG_SUPPRESS_EMBED",
+            "name": "FLAG_SUPPRESS_EMBED",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_FLAG_SUPPRESS_EMBED"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003AFLAG_EPHEMERAL",
+            "name": "FLAG_EPHEMERAL",
+            "summary": "",
+            "url": "classes/Discord-Parts-Channel-Message.html#constant_FLAG_EPHEMERAL"
         },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Message\u003A\u003A\u0024fillable",
             "name": "fillable",
@@ -2606,6 +3016,11 @@ Search.appendIndex(
             "summary": "Executes\u0020the\u0020webhook\u0020with\u0020an\u0020array\u0020of\u0020data.",
             "url": "classes/Discord-Parts-Channel-Webhook.html#method_execute"
         },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Webhook\u003A\u003AupdateMessage\u0028\u0029",
+            "name": "updateMessage",
+            "summary": "Edits\u0020a\u0020previously\u002Dsent\u0020webhook\u0020message\u0020from\u0020the\u0020same\u0020token.",
+            "url": "classes/Discord-Parts-Channel-Webhook.html#method_updateMessage"
+        },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Webhook\u003A\u003AgetGuildAttribute\u0028\u0029",
             "name": "getGuildAttribute",
             "summary": "Gets\u0020the\u0020guild\u0020the\u0020webhook\u0020belongs\u0020to.",
@@ -2626,15 +3041,15 @@ Search.appendIndex(
             "summary": "Gets\u0020the\u0020webhook\u0020url\u0020attribute.",
             "url": "classes/Discord-Parts-Channel-Webhook.html#method_getUrlAttribute"
         },                {
-            "fqsen": "\\Discord\\Parts\\Channel\\Webhook\u003A\u003AgetUpdatableAttributes\u0028\u0029",
-            "name": "getUpdatableAttributes",
-            "summary": "Returns\u0020the\u0020updatable\u0020attributes.",
-            "url": "classes/Discord-Parts-Channel-Webhook.html#method_getUpdatableAttributes"
-        },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Webhook\u003A\u003AgetCreatableAttributes\u0028\u0029",
             "name": "getCreatableAttributes",
             "summary": "Returns\u0020the\u0020attributes\u0020needed\u0020to\u0020create.",
             "url": "classes/Discord-Parts-Channel-Webhook.html#method_getCreatableAttributes"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Webhook\u003A\u003AgetUpdatableAttributes\u0028\u0029",
+            "name": "getUpdatableAttributes",
+            "summary": "Returns\u0020the\u0020updatable\u0020attributes.",
+            "url": "classes/Discord-Parts-Channel-Webhook.html#method_getUpdatableAttributes"
         },                {
             "fqsen": "\\Discord\\Parts\\Channel\\Webhook\u003A\u003AgetRepositoryAttributes\u0028\u0029",
             "name": "getRepositoryAttributes",
@@ -2660,6 +3075,11 @@ Search.appendIndex(
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
             "url": "classes/Discord-Parts-Channel-Webhook.html#property_fillable"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Channel\\Webhook\u003A\u003A\u0024repositories",
+            "name": "repositories",
+            "summary": "An\u0020array\u0020of\u0020repositories\u0020that\u0020can\u0020exist\u0020in\u0020a\u0020part.",
+            "url": "classes/Discord-Parts-Channel-Webhook.html#property_repositories"
         },                {
             "fqsen": "\\Discord\\Parts\\Embed\\Author",
             "name": "Author",
@@ -2925,6 +3345,11 @@ Search.appendIndex(
             "name": "getAuditLogEntriesAttribute",
             "summary": "Returns\u0020a\u0020collection\u0020of\u0020audit\u0020log\u0020entries.",
             "url": "classes/Discord-Parts-Guild-AuditLog-AuditLog.html#method_getAuditLogEntriesAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AuditLog\\AuditLog\u003A\u003AgetAutoModerationRulesAttribute\u0028\u0029",
+            "name": "getAutoModerationRulesAttribute",
+            "summary": "Returns\u0020a\u0020collection\u0020of\u0020auto\u0020moderation\u0020rules\u0020found\u0020in\u0020the\u0020audit\u0020log.",
+            "url": "classes/Discord-Parts-Guild-AuditLog-AuditLog.html#method_getAutoModerationRulesAttribute"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\AuditLog\\AuditLog\u003A\u003AgetIntegrationsAttribute\u0028\u0029",
             "name": "getIntegrationsAttribute",
@@ -3201,6 +3626,31 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Parts-Guild-AuditLog-Entry.html#constant_THREAD_DELETE"
         },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AuditLog\\Entry\u003A\u003AAPPLICATION_COMMAND_PERMISSION_UPDATE",
+            "name": "APPLICATION_COMMAND_PERMISSION_UPDATE",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AuditLog-Entry.html#constant_APPLICATION_COMMAND_PERMISSION_UPDATE"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AuditLog\\Entry\u003A\u003AAUTO_MODERATION_RULE_CREATE",
+            "name": "AUTO_MODERATION_RULE_CREATE",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AuditLog-Entry.html#constant_AUTO_MODERATION_RULE_CREATE"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AuditLog\\Entry\u003A\u003AAUTO_MODERATION_RULE_UPDATE",
+            "name": "AUTO_MODERATION_RULE_UPDATE",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AuditLog-Entry.html#constant_AUTO_MODERATION_RULE_UPDATE"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AuditLog\\Entry\u003A\u003AAUTO_MODERATION_RULE_DELETE",
+            "name": "AUTO_MODERATION_RULE_DELETE",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AuditLog-Entry.html#constant_AUTO_MODERATION_RULE_DELETE"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AuditLog\\Entry\u003A\u003AAUTO_MODERATION_BLOCK_MESSAGE",
+            "name": "AUTO_MODERATION_BLOCK_MESSAGE",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AuditLog-Entry.html#constant_AUTO_MODERATION_BLOCK_MESSAGE"
+        },                {
             "fqsen": "\\Discord\\Parts\\Guild\\AuditLog\\Entry\u003A\u003A\u0024fillable",
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
@@ -3215,6 +3665,121 @@ Search.appendIndex(
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
             "url": "classes/Discord-Parts-Guild-AuditLog-Options.html#property_fillable"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Action",
+            "name": "Action",
+            "summary": "An\u0020action\u0020which\u0020will\u0020execute\u0020whenever\u0020a\u0020rule\u0020is\u0020triggered.",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Action.html"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Action\u003A\u003AgetCreatableAttributes\u0028\u0029",
+            "name": "getCreatableAttributes",
+            "summary": "Returns\u0020the\u0020attributes\u0020needed\u0020to\u0020create.",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Action.html#method_getCreatableAttributes"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Action\u003A\u003ATYPE_BLOCK_MESSAGE",
+            "name": "TYPE_BLOCK_MESSAGE",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Action.html#constant_TYPE_BLOCK_MESSAGE"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Action\u003A\u003ATYPE_SEND_ALERT_MESSAGE",
+            "name": "TYPE_SEND_ALERT_MESSAGE",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Action.html#constant_TYPE_SEND_ALERT_MESSAGE"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Action\u003A\u003ATYPE_TIMEOUT",
+            "name": "TYPE_TIMEOUT",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Action.html#constant_TYPE_TIMEOUT"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Action\u003A\u003A\u0024fillable",
+            "name": "fillable",
+            "summary": "The\u0020parts\u0020fillable\u0020attributes.",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Action.html#property_fillable"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule",
+            "name": "Rule",
+            "summary": "Auto\u0020Moderation\u0020is\u0020a\u0020feature\u0020which\u0020allows\u0020each\u0020guild\u0020to\u0020set\u0020up\u0020rules\u0020that\u0020trigger\u0020based\u0020on\u0020some\u0020criteria.\u0020For\u0020example,\u0020a\u0020rule\u0020can\u0020trigger\u0020whenever\u0020a\u0020message\u0020contains\u0020a\u0020specific\u0020keyword.",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003AgetGuildAttribute\u0028\u0029",
+            "name": "getGuildAttribute",
+            "summary": "Returns\u0020the\u0020guild\u0020attribute.",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#method_getGuildAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003AgetCreatorAttribute\u0028\u0029",
+            "name": "getCreatorAttribute",
+            "summary": "Returns\u0020the\u0020user\u0020attribute.",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#method_getCreatorAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003AgetActionsAttribute\u0028\u0029",
+            "name": "getActionsAttribute",
+            "summary": "Returns\u0020the\u0020actions\u0020attribute.",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#method_getActionsAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003AgetCreatableAttributes\u0028\u0029",
+            "name": "getCreatableAttributes",
+            "summary": "Returns\u0020the\u0020attributes\u0020needed\u0020to\u0020create.",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#method_getCreatableAttributes"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003AgetUpdatableAttributes\u0028\u0029",
+            "name": "getUpdatableAttributes",
+            "summary": "Returns\u0020the\u0020updatable\u0020attributes.",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#method_getUpdatableAttributes"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003AgetRepositoryAttributes\u0028\u0029",
+            "name": "getRepositoryAttributes",
+            "summary": "Gets\u0020the\u0020attributes\u0020to\u0020pass\u0020to\u0020repositories.",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#method_getRepositoryAttributes"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003ATRIGGER_TYPE_KEYWORD",
+            "name": "TRIGGER_TYPE_KEYWORD",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#constant_TRIGGER_TYPE_KEYWORD"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003ATRIGGER_TYPE_HARMFUL_LINK",
+            "name": "TRIGGER_TYPE_HARMFUL_LINK",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#constant_TRIGGER_TYPE_HARMFUL_LINK"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003ATRIGGER_TYPE_SPAM",
+            "name": "TRIGGER_TYPE_SPAM",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#constant_TRIGGER_TYPE_SPAM"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003ATRIGGER_TYPE_KEYWORD_PRESET",
+            "name": "TRIGGER_TYPE_KEYWORD_PRESET",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#constant_TRIGGER_TYPE_KEYWORD_PRESET"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003ATRIGGER_TYPE_MENTION_SPAM",
+            "name": "TRIGGER_TYPE_MENTION_SPAM",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#constant_TRIGGER_TYPE_MENTION_SPAM"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003AKEYWORD_PRESET_TYPE_PROFANITY",
+            "name": "KEYWORD_PRESET_TYPE_PROFANITY",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#constant_KEYWORD_PRESET_TYPE_PROFANITY"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003AKEYWORD_PRESET_TYPE_SEXUAL_CONTENT",
+            "name": "KEYWORD_PRESET_TYPE_SEXUAL_CONTENT",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#constant_KEYWORD_PRESET_TYPE_SEXUAL_CONTENT"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003AKEYWORD_PRESET_TYPE_SLURS",
+            "name": "KEYWORD_PRESET_TYPE_SLURS",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#constant_KEYWORD_PRESET_TYPE_SLURS"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003AEVENT_TYPE_MESSAGE_SEND",
+            "name": "EVENT_TYPE_MESSAGE_SEND",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#constant_EVENT_TYPE_MESSAGE_SEND"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration\\Rule\u003A\u003A\u0024fillable",
+            "name": "fillable",
+            "summary": "The\u0020parts\u0020fillable\u0020attributes.",
+            "url": "classes/Discord-Parts-Guild-AutoModeration-Rule.html#property_fillable"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Ban",
             "name": "Ban",
@@ -3235,11 +3800,6 @@ Search.appendIndex(
             "name": "getUserAttribute",
             "summary": "Returns\u0020the\u0020user\u0020attribute\u0020of\u0020the\u0020ban.",
             "url": "classes/Discord-Parts-Guild-Ban.html#method_getUserAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Ban\u003A\u003AgetUpdatableAttributes\u0028\u0029",
-            "name": "getUpdatableAttributes",
-            "summary": "Returns\u0020the\u0020updatable\u0020attributes.",
-            "url": "classes/Discord-Parts-Guild-Ban.html#method_getUpdatableAttributes"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Ban\u003A\u003AgetRepositoryAttributes\u0028\u0029",
             "name": "getRepositoryAttributes",
@@ -3341,20 +3901,25 @@ Search.appendIndex(
             "summary": "Returns\u0020the\u0020guild\u0020splash\u0020hash.",
             "url": "classes/Discord-Parts-Guild-Guild.html#method_getSplashHashAttribute"
         },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetFeatureAnimatedBannerAttribute\u0028\u0029",
+            "name": "getFeatureAnimatedBannerAttribute",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-Guild.html#method_getFeatureAnimatedBannerAttribute"
+        },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetFeatureAnimatedIconAttribute\u0028\u0029",
             "name": "getFeatureAnimatedIconAttribute",
             "summary": "",
             "url": "classes/Discord-Parts-Guild-Guild.html#method_getFeatureAnimatedIconAttribute"
         },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetFeatureAutoModerationAttribute\u0028\u0029",
+            "name": "getFeatureAutoModerationAttribute",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-Guild.html#method_getFeatureAutoModerationAttribute"
+        },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetFeatureBannerAttribute\u0028\u0029",
             "name": "getFeatureBannerAttribute",
             "summary": "",
             "url": "classes/Discord-Parts-Guild-Guild.html#method_getFeatureBannerAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetFeatureCommerceAttribute\u0028\u0029",
-            "name": "getFeatureCommerceAttribute",
-            "summary": "",
-            "url": "classes/Discord-Parts-Guild-Guild.html#method_getFeatureCommerceAttribute"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetFeatureDiscoverableAttribute\u0028\u0029",
             "name": "getFeatureDiscoverableAttribute",
@@ -3366,10 +3931,20 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Parts-Guild-Guild.html#method_getFeatureFeaturableAttribute"
         },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetFeatureHasDirectoryEntryAttribute\u0028\u0029",
+            "name": "getFeatureHasDirectoryEntryAttribute",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-Guild.html#method_getFeatureHasDirectoryEntryAttribute"
+        },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetFeatureInviteSplashAttribute\u0028\u0029",
             "name": "getFeatureInviteSplashAttribute",
             "summary": "",
             "url": "classes/Discord-Parts-Guild-Guild.html#method_getFeatureInviteSplashAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetFeatureLinkedToHubAttribute\u0028\u0029",
+            "name": "getFeatureLinkedToHubAttribute",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-Guild.html#method_getFeatureLinkedToHubAttribute"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetFeatureMemberVerificationGateEnabledAttribute\u0028\u0029",
             "name": "getFeatureMemberVerificationGateEnabledAttribute",
@@ -3461,6 +4036,11 @@ Search.appendIndex(
             "summary": "Creates\u0020an\u0020Emoji\u0020for\u0020the\u0020guild.",
             "url": "classes/Discord-Parts-Guild-Guild.html#method_createEmoji"
         },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AcreateSticker\u0028\u0029",
+            "name": "createSticker",
+            "summary": "Creates\u0020an\u0020Sticker\u0020for\u0020the\u0020guild.",
+            "url": "classes/Discord-Parts-Guild-Guild.html#method_createSticker"
+        },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003Aleave\u0028\u0029",
             "name": "leave",
             "summary": "Leaves\u0020the\u0020guild.",
@@ -3491,6 +4071,16 @@ Search.appendIndex(
             "summary": "Returns\u0020a\u0020list\u0020of\u0020guild\u0020member\u0020objects\u0020whose\u0020username\u0020or\u0020nickname\u0020starts\u0020with\u0020a\u0020provided\u0020string.",
             "url": "classes/Discord-Parts-Guild-Guild.html#method_searchMembers"
         },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetPruneCount\u0028\u0029",
+            "name": "getPruneCount",
+            "summary": "Returns\u0020the\u0020number\u0020of\u0020members\u0020that\u0020would\u0020be\u0020removed\u0020in\u0020a\u0020prune\u0020operation.",
+            "url": "classes/Discord-Parts-Guild-Guild.html#method_getPruneCount"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AbeginPrune\u0028\u0029",
+            "name": "beginPrune",
+            "summary": "Begin\u0020a\u0020prune\u0020members\u0020operation.",
+            "url": "classes/Discord-Parts-Guild-Guild.html#method_beginPrune"
+        },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetWelcomeScreen\u0028\u0029",
             "name": "getWelcomeScreen",
             "summary": "Get\u0020the\u0020Welcome\u0020Screen\u0020for\u0020the\u0020guild.",
@@ -3520,6 +4110,16 @@ Search.appendIndex(
             "name": "getWidget",
             "summary": "Get\u0020the\u0020Widget\u0020for\u0020the\u0020guild.",
             "url": "classes/Discord-Parts-Guild-Guild.html#method_getWidget"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AcreateInvite\u0028\u0029",
+            "name": "createInvite",
+            "summary": "Attempts\u0020to\u0020create\u0020an\u0020Invite\u0020to\u0020a\u0020channel\u0020in\u0020this\u0020guild\u0020where\u0020possible.",
+            "url": "classes/Discord-Parts-Guild-Guild.html#method_createInvite"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AupdateMFALevel\u0028\u0029",
+            "name": "updateMFALevel",
+            "summary": "Modify\u0020the\u0020Guild\u0020\u0060mfa_level\u0060,\u0020requires\u0020guild\u0020ownership.",
+            "url": "classes/Discord-Parts-Guild-Guild.html#method_updateMFALevel"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AgetCreatableAttributes\u0028\u0029",
             "name": "getCreatableAttributes",
@@ -3666,6 +4266,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Parts-Guild-Guild.html#constant_SUPPRESS_JOIN_NOTIFICATION_REPLIES"
         },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AHUB_TYPE_DEFAULT",
+            "name": "HUB_TYPE_DEFAULT",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-Guild.html#constant_HUB_TYPE_DEFAULT"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AHUB_TYPE_HIGH_SCHOOL",
+            "name": "HUB_TYPE_HIGH_SCHOOL",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-Guild.html#constant_HUB_TYPE_HIGH_SCHOOL"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003AHUB_TYPE_COLLEGE",
+            "name": "HUB_TYPE_COLLEGE",
+            "summary": "",
+            "url": "classes/Discord-Parts-Guild-Guild.html#constant_HUB_TYPE_COLLEGE"
+        },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Guild\u003A\u003A\u0024fillable",
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
@@ -3748,7 +4363,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Integration",
             "name": "Integration",
-            "summary": "An\u0020Integration\u0020is\u0020a\u0020guild\u0020integrations\u0020for\u0020Twitch,\u0020Youtube,\u0020Bot\u0020and\u0020Apps",
+            "summary": "An\u0020Integration\u0020is\u0020a\u0020guild\u0020integrations\u0020for\u0020Twitch,\u0020Youtube,\u0020Bot\u0020and\u0020Apps.",
             "url": "classes/Discord-Parts-Guild-Integration.html"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Integration\u003A\u003AgetUserAttribute\u0028\u0029",
@@ -3785,91 +4400,6 @@ Search.appendIndex(
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
             "url": "classes/Discord-Parts-Guild-Integration.html#property_fillable"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite",
-            "name": "Invite",
-            "summary": "An\u0020invite\u0020to\u0020a\u0020Channel\u0020and\u0020Guild.",
-            "url": "classes/Discord-Parts-Guild-Invite.html"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003Aaccept\u0028\u0029",
-            "name": "accept",
-            "summary": "Accepts\u0020the\u0020invite.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_accept"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003AgetIdAttribute\u0028\u0029",
-            "name": "getIdAttribute",
-            "summary": "Returns\u0020the\u0020id\u0020attribute.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_getIdAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003AgetInviteUrlAttribute\u0028\u0029",
-            "name": "getInviteUrlAttribute",
-            "summary": "Returns\u0020the\u0020invite\u0020URL\u0020attribute.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_getInviteUrlAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003AgetGuildAttribute\u0028\u0029",
-            "name": "getGuildAttribute",
-            "summary": "Returns\u0020the\u0020guild\u0020attribute.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_getGuildAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003AgetGuildIdAttribute\u0028\u0029",
-            "name": "getGuildIdAttribute",
-            "summary": "Returns\u0020the\u0020guild\u0020id\u0020attribute.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_getGuildIdAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003AgetChannelAttribute\u0028\u0029",
-            "name": "getChannelAttribute",
-            "summary": "Returns\u0020the\u0020channel\u0020attribute.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_getChannelAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003AgetChannelIdAttribute\u0028\u0029",
-            "name": "getChannelIdAttribute",
-            "summary": "Returns\u0020the\u0020channel\u0020id\u0020attribute.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_getChannelIdAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003AgetInviterAttribute\u0028\u0029",
-            "name": "getInviterAttribute",
-            "summary": "Returns\u0020the\u0020inviter\u0020attribute.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_getInviterAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003AgetCreatedAtAttribute\u0028\u0029",
-            "name": "getCreatedAtAttribute",
-            "summary": "Returns\u0020the\u0020created\u0020at\u0020attribute.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_getCreatedAtAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003AgetTargetUserAttribute\u0028\u0029",
-            "name": "getTargetUserAttribute",
-            "summary": "Returns\u0020the\u0020target\u0020user\u0020attribute.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_getTargetUserAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003AgetExpiresAtAttribute\u0028\u0029",
-            "name": "getExpiresAtAttribute",
-            "summary": "Returns\u0020the\u0020expires\u0020at\u0020attribute.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_getExpiresAtAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003AgetGuildScheduledEventAttribute\u0028\u0029",
-            "name": "getGuildScheduledEventAttribute",
-            "summary": "Returns\u0020the\u0020guild\u0020scheduled\u0020event\u0020on\u0020this\u0020invite.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_getGuildScheduledEventAttribute"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003AgetRepositoryAttributes\u0028\u0029",
-            "name": "getRepositoryAttributes",
-            "summary": "Gets\u0020the\u0020attributes\u0020to\u0020pass\u0020to\u0020repositories.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#method_getRepositoryAttributes"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003ATARGET_TYPE_STREAM",
-            "name": "TARGET_TYPE_STREAM",
-            "summary": "",
-            "url": "classes/Discord-Parts-Guild-Invite.html#constant_TARGET_TYPE_STREAM"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003ATARGET_TYPE_EMBEDDED_APPLICATION",
-            "name": "TARGET_TYPE_EMBEDDED_APPLICATION",
-            "summary": "",
-            "url": "classes/Discord-Parts-Guild-Invite.html#constant_TARGET_TYPE_EMBEDDED_APPLICATION"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Guild\\Invite\u003A\u003A\u0024fillable",
-            "name": "fillable",
-            "summary": "The\u0020parts\u0020fillable\u0020attributes.",
-            "url": "classes/Discord-Parts-Guild-Invite.html#property_fillable"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Role",
             "name": "Role",
@@ -4063,7 +4593,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Sticker\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
-            "summary": "Returns\u0020the\u0020URL\u0020for\u0020the\u0020sticker",
+            "summary": "Returns\u0020the\u0020URL\u0020for\u0020the\u0020sticker.",
             "url": "classes/Discord-Parts-Guild-Sticker.html#method___toString"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Sticker\u003A\u003AgetUpdatableAttributes\u0028\u0029",
@@ -4108,7 +4638,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\WelcomeChannel",
             "name": "WelcomeChannel",
-            "summary": "A\u0020Welcome\u0020Channel\u0020of\u0020a\u0020Guild",
+            "summary": "A\u0020Welcome\u0020Channel\u0020of\u0020a\u0020Guild.",
             "url": "classes/Discord-Parts-Guild-WelcomeChannel.html"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\WelcomeChannel\u003A\u003AgetChannelAttribute\u0028\u0029",
@@ -4123,12 +4653,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\WelcomeScreen",
             "name": "WelcomeScreen",
-            "summary": "A\u0020Welcome\u0020Screen\u0020of\u0020a\u0020Guild",
+            "summary": "A\u0020Welcome\u0020Screen\u0020of\u0020a\u0020Guild.",
             "url": "classes/Discord-Parts-Guild-WelcomeScreen.html"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\WelcomeScreen\u003A\u003AgetWelcomeChannelsAttribute\u0028\u0029",
             "name": "getWelcomeChannelsAttribute",
-            "summary": "Returns\u0020the\u0020Welcome\u0020Channels\u0020of\u0020the\u0020Welcome\u0020Screen",
+            "summary": "Returns\u0020the\u0020Welcome\u0020Channels\u0020of\u0020the\u0020Welcome\u0020Screen.",
             "url": "classes/Discord-Parts-Guild-WelcomeScreen.html#method_getWelcomeChannelsAttribute"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\WelcomeScreen\u003A\u003A\u0024fillable",
@@ -4138,7 +4668,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Widget",
             "name": "Widget",
-            "summary": "A\u0020Widget\u0020of\u0020a\u0020Guild",
+            "summary": "A\u0020Widget\u0020of\u0020a\u0020Guild.",
             "url": "classes/Discord-Parts-Guild-Widget.html"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Widget\u003A\u003Afetch\u0028\u0029",
@@ -4148,13 +4678,38 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Widget\u003A\u003AgetGuildAttribute\u0028\u0029",
             "name": "getGuildAttribute",
-            "summary": "Returns\u0020the\u0020guild\u0020attribute",
+            "summary": "Returns\u0020the\u0020guild\u0020attribute.",
             "url": "classes/Discord-Parts-Guild-Widget.html#method_getGuildAttribute"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Widget\u003A\u003AgetImageAttribute\u0028\u0029",
             "name": "getImageAttribute",
             "summary": "Returns\u0020a\u0020PNG\u0020image\u0020widget\u0020for\u0020the\u0020guild.\u0020Requires\u0020no\u0020permissions\u0020or\u0020authentication.",
             "url": "classes/Discord-Parts-Guild-Widget.html#method_getImageAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Widget\u003A\u003ASTYLE_SHIELD",
+            "name": "STYLE_SHIELD",
+            "summary": "shield\u0020style\u0020widget\u0020with\u0020Discord\u0020icon\u0020and\u0020guild\u0020members\u0020online\u0020count",
+            "url": "classes/Discord-Parts-Guild-Widget.html#constant_STYLE_SHIELD"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Widget\u003A\u003ASTYLE_BANNER1",
+            "name": "STYLE_BANNER1",
+            "summary": "large\u0020image\u0020with\u0020guild\u0020icon,\u0020name\u0020and\u0020online\u0020count.\u0020\u0022POWERED\u0020BY\u0020DISCORD\u0022\u0020as\u0020the\u0020footer\u0020of\u0020the\u0020widget",
+            "url": "classes/Discord-Parts-Guild-Widget.html#constant_STYLE_BANNER1"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Widget\u003A\u003ASTYLE_BANNER2",
+            "name": "STYLE_BANNER2",
+            "summary": "smaller\u0020widget\u0020style\u0020with\u0020guild\u0020icon,\u0020name\u0020and\u0020online\u0020count.\u0020Split\u0020on\u0020the\u0020right\u0020with\u0020Discord\u0020logo",
+            "url": "classes/Discord-Parts-Guild-Widget.html#constant_STYLE_BANNER2"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Widget\u003A\u003ASTYLE_BANNER3",
+            "name": "STYLE_BANNER3",
+            "summary": "large\u0020image\u0020with\u0020guild\u0020icon,\u0020name\u0020and\u0020online\u0020count.\u0020In\u0020the\u0020footer,\u0020Discord\u0020logo\u0020on\u0020the\u0020left\u0020and\u0020\u0022Chat\u0020Now\u0022\u0020on\u0020the\u0020right",
+            "url": "classes/Discord-Parts-Guild-Widget.html#constant_STYLE_BANNER3"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\Widget\u003A\u003ASTYLE_BANNER4",
+            "name": "STYLE_BANNER4",
+            "summary": "large\u0020Discord\u0020logo\u0020at\u0020the\u0020top\u0020of\u0020the\u0020widget.\u0020Guild\u0020icon,\u0020name\u0020and\u0020online\u0020count\u0020in\u0020the\u0020middle\u0020portion\u0020of\u0020the\u0020widget\u0020and\u0020a\u0020\u0022JOIN\u0020MY\u0020SERVER\u0022\u0020button\u0020at\u0020the\u0020bottom",
+            "url": "classes/Discord-Parts-Guild-Widget.html#constant_STYLE_BANNER4"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild\\Widget\u003A\u003ASTYLE",
             "name": "STYLE",
@@ -4180,6 +4735,11 @@ Search.appendIndex(
             "name": "setName",
             "summary": "Sets\u0020the\u0020name\u0020of\u0020the\u0020choice.",
             "url": "classes/Discord-Parts-Interactions-Command-Choice.html#method_setName"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Choice\u003A\u003AsetNameLocalization\u0028\u0029",
+            "name": "setNameLocalization",
+            "summary": "Sets\u0020the\u0020name\u0020of\u0020the\u0020choice\u0020in\u0020another\u0020language.",
+            "url": "classes/Discord-Parts-Interactions-Command-Choice.html#method_setNameLocalization"
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Choice\u003A\u003AsetValue\u0028\u0029",
             "name": "setValue",
@@ -4231,6 +4791,11 @@ Search.appendIndex(
             "summary": "Gets\u0020the\u0020attributes\u0020to\u0020pass\u0020to\u0020repositories.",
             "url": "classes/Discord-Parts-Interactions-Command-Command.html#method_getRepositoryAttributes"
         },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Command\u003A\u003A__toString\u0028\u0029",
+            "name": "__toString",
+            "summary": "Returns\u0020a\u0020formatted\u0020mention\u0020of\u0020the\u0020command.",
+            "url": "classes/Discord-Parts-Interactions-Command-Command.html#method___toString"
+        },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Command\u003A\u003ACHAT_INPUT",
             "name": "CHAT_INPUT",
             "summary": "Slash\u0020commands\u003B\u0020a\u0020text\u002Dbased\u0020command\u0020that\u0020shows\u0020up\u0020when\u0020a\u0020user\u0020types\u0020\/",
@@ -4281,10 +4846,20 @@ Search.appendIndex(
             "summary": "Sets\u0020the\u0020name\u0020of\u0020the\u0020option.",
             "url": "classes/Discord-Parts-Interactions-Command-Option.html#method_setName"
         },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AsetNameLocalization\u0028\u0029",
+            "name": "setNameLocalization",
+            "summary": "Sets\u0020the\u0020name\u0020of\u0020the\u0020option\u0020in\u0020another\u0020language.",
+            "url": "classes/Discord-Parts-Interactions-Command-Option.html#method_setNameLocalization"
+        },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AsetDescription\u0028\u0029",
             "name": "setDescription",
             "summary": "Sets\u0020the\u0020description\u0020of\u0020the\u0020option.",
             "url": "classes/Discord-Parts-Interactions-Command-Option.html#method_setDescription"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AsetDescriptionLocalization\u0028\u0029",
+            "name": "setDescriptionLocalization",
+            "summary": "Sets\u0020the\u0020description\u0020of\u0020the\u0020option\u0020in\u0020another\u0020language.",
+            "url": "classes/Discord-Parts-Interactions-Command-Option.html#method_setDescriptionLocalization"
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AsetRequired\u0028\u0029",
             "name": "setRequired",
@@ -4303,7 +4878,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AaddChoice\u0028\u0029",
             "name": "addChoice",
-            "summary": "Adds\u0020a\u0020choice\u0020to\u0020the\u0020option.",
+            "summary": "Adds\u0020a\u0020choice\u0020to\u0020the\u0020option\u0020\u0028Only\u0020for\u0020slash\u0020commands\u0029.",
             "url": "classes/Discord-Parts-Interactions-Command-Option.html#method_addChoice"
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AremoveOption\u0028\u0029",
@@ -4313,7 +4888,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AremoveChoice\u0028\u0029",
             "name": "removeChoice",
-            "summary": "Removes\u0020a\u0020choice.",
+            "summary": "Removes\u0020a\u0020choice\u0020\u0028Only\u0020for\u0020slash\u0020commands\u0029.",
             "url": "classes/Discord-Parts-Interactions-Command-Option.html#method_removeChoice"
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AsetMinValue\u0028\u0029",
@@ -4323,8 +4898,18 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AsetMaxValue\u0028\u0029",
             "name": "setMaxValue",
-            "summary": "Sets\u0020the\u0020minimum\u0020value\u0020permitted.",
+            "summary": "Sets\u0020the\u0020maximum\u0020value\u0020permitted.",
             "url": "classes/Discord-Parts-Interactions-Command-Option.html#method_setMaxValue"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AsetMinLength\u0028\u0029",
+            "name": "setMinLength",
+            "summary": "Sets\u0020the\u0020minimum\u0020length\u0020permitted.",
+            "url": "classes/Discord-Parts-Interactions-Command-Option.html#method_setMinLength"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AsetMaxLength\u0028\u0029",
+            "name": "setMaxLength",
+            "summary": "Sets\u0020the\u0020maximum\u0020length\u0020permitted.",
+            "url": "classes/Discord-Parts-Interactions-Command-Option.html#method_setMaxLength"
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AsetAutoComplete\u0028\u0029",
             "name": "setAutoComplete",
@@ -4381,6 +4966,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Parts-Interactions-Command-Option.html#constant_NUMBER"
         },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003AATTACHMENT",
+            "name": "ATTACHMENT",
+            "summary": "",
+            "url": "classes/Discord-Parts-Interactions-Command-Option.html#constant_ATTACHMENT"
+        },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Option\u003A\u003A\u0024fillable",
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
@@ -4388,7 +4978,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Overwrite",
             "name": "Overwrite",
-            "summary": "Guild\u0020Application\u0020Command\u0020Permissions\u0020Overwrite\u0020Class",
+            "summary": "Guild\u0020Application\u0020Command\u0020Permissions\u0020Overwrite\u0020Class.",
             "url": "classes/Discord-Parts-Interactions-Command-Overwrite.html"
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Overwrite\u003A\u003AgetPermissionsAttribute\u0028\u0029",
@@ -4406,6 +4996,11 @@ Search.appendIndex(
             "summary": "Gets\u0020the\u0020attributes\u0020to\u0020pass\u0020to\u0020repositories.",
             "url": "classes/Discord-Parts-Interactions-Command-Overwrite.html#method_getRepositoryAttributes"
         },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Overwrite\u003A\u003AallChannelsConstant\u0028\u0029",
+            "name": "allChannelsConstant",
+            "summary": "Get\u0020the\u0020permission\u0020ID\u0020constant\u0020for\u0020All\u0020Channels\u0020in\u0020the\u0020guild\u0020\u0028i.e.\u0020guild_id\u0020\u002D\u00201\u0029\nRequires\u0020GMP\u0020extension\u0020loaded\u0020on\u002032\u0020bits\u0020PHP.",
+            "url": "classes/Discord-Parts-Interactions-Command-Overwrite.html#method_allChannelsConstant"
+        },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Overwrite\u003A\u003A\u0024fillable",
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
@@ -4413,7 +5008,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Permission",
             "name": "Permission",
-            "summary": "Application\u0020Command\u0020Permissions\u0020Class",
+            "summary": "Application\u0020Command\u0020Permissions\u0020Class.",
             "url": "classes/Discord-Parts-Interactions-Command-Permission.html"
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Permission\u003A\u003ATYPE_ROLE",
@@ -4426,6 +5021,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Parts-Interactions-Command-Permission.html#constant_TYPE_USER"
         },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Permission\u003A\u003ATYPE_CHANNEL",
+            "name": "TYPE_CHANNEL",
+            "summary": "",
+            "url": "classes/Discord-Parts-Interactions-Command-Permission.html#constant_TYPE_CHANNEL"
+        },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Command\\Permission\u003A\u003A\u0024fillable",
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
@@ -4435,6 +5035,11 @@ Search.appendIndex(
             "name": "Interaction",
             "summary": "Represents\u0020an\u0020interaction\u0020from\u0020Discord.",
             "url": "classes/Discord-Parts-Interactions-Interaction.html"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Interaction\u003A\u003AisResponded\u0028\u0029",
+            "name": "isResponded",
+            "summary": "Returns\u0020true\u0020if\u0020this\u0020interaction\u0020has\u0020been\u0020internally\u0020responded.",
+            "url": "classes/Discord-Parts-Interactions-Interaction.html#method_isResponded"
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Interaction\u003A\u003AgetDataAttribute\u0028\u0029",
             "name": "getDataAttribute",
@@ -4531,6 +5136,11 @@ Search.appendIndex(
             "summary": "Responds\u0020to\u0020the\u0020interaction\u0020with\u0020auto\u0020complete\u0020suggestions.",
             "url": "classes/Discord-Parts-Interactions-Interaction.html#method_autoCompleteResult"
         },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Interaction\u003A\u003AshowModal\u0028\u0029",
+            "name": "showModal",
+            "summary": "Responds\u0020to\u0020the\u0020interaction\u0020with\u0020a\u0020popup\u0020modal.",
+            "url": "classes/Discord-Parts-Interactions-Interaction.html#method_showModal"
+        },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Interaction\u003A\u003A\u0024fillable",
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
@@ -4546,6 +5156,36 @@ Search.appendIndex(
             "summary": "Whether\u0020we\u0020have\u0020responded\u0020to\u0020the\u0020interaction\u0020yet.",
             "url": "classes/Discord-Parts-Interactions-Interaction.html#property_responded"
         },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Request\\Component",
+            "name": "Component",
+            "summary": "Represents\u0020a\u0020component\u0020received\u0020with\u0020a\u0020message\u0020or\u0020interaction.",
+            "url": "classes/Discord-Parts-Interactions-Request-Component.html"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Request\\Component\u003A\u003AsetComponentsAttribute\u0028\u0029",
+            "name": "setComponentsAttribute",
+            "summary": "Sets\u0020the\u0020sub\u002Dcomponents\u0020of\u0020the\u0020component.",
+            "url": "classes/Discord-Parts-Interactions-Request-Component.html#method_setComponentsAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Request\\Component\u003A\u003AgetEmojiAttribute\u0028\u0029",
+            "name": "getEmojiAttribute",
+            "summary": "Gets\u0020the\u0020partial\u0020emoji\u0020attribute.",
+            "url": "classes/Discord-Parts-Interactions-Request-Component.html#method_getEmojiAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Request\\Component\u003A\u003AgetRepositoryAttributes\u0028\u0029",
+            "name": "getRepositoryAttributes",
+            "summary": "Gets\u0020the\u0020attributes\u0020to\u0020pass\u0020to\u0020repositories.",
+            "url": "classes/Discord-Parts-Interactions-Request-Component.html#method_getRepositoryAttributes"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Request\\Component\u003A\u003A\u0024fillable",
+            "name": "fillable",
+            "summary": "The\u0020parts\u0020fillable\u0020attributes.",
+            "url": "classes/Discord-Parts-Interactions-Request-Component.html#property_fillable"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Request\\Component\u003A\u003A\u0024repositories",
+            "name": "repositories",
+            "summary": "An\u0020array\u0020of\u0020repositories\u0020that\u0020can\u0020exist\u0020in\u0020a\u0020part.",
+            "url": "classes/Discord-Parts-Interactions-Request-Component.html#property_repositories"
+        },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Request\\InteractionData",
             "name": "InteractionData",
             "summary": "Represents\u0020the\u0020data\u0020associated\u0020with\u0020an\u0020interaction.",
@@ -4555,6 +5195,11 @@ Search.appendIndex(
             "name": "setOptionsAttribute",
             "summary": "Sets\u0020the\u0020options\u0020of\u0020the\u0020interaction.",
             "url": "classes/Discord-Parts-Interactions-Request-InteractionData.html#method_setOptionsAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Request\\InteractionData\u003A\u003AsetComponentsAttribute\u0028\u0029",
+            "name": "setComponentsAttribute",
+            "summary": "Sets\u0020the\u0020components\u0020of\u0020the\u0020interaction.",
+            "url": "classes/Discord-Parts-Interactions-Request-InteractionData.html#method_setComponentsAttribute"
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Request\\InteractionData\u003A\u003AgetResolvedAttribute\u0028\u0029",
             "name": "getResolvedAttribute",
@@ -4566,10 +5211,10 @@ Search.appendIndex(
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
             "url": "classes/Discord-Parts-Interactions-Request-InteractionData.html#property_fillable"
         },                {
-            "fqsen": "\\Discord\\Parts\\Interactions\\Request\\InteractionData\u003A\u003A\u0024visible",
-            "name": "visible",
-            "summary": "Attributes\u0020which\u0020are\u0020visible\u0020from\u0020debug\u0020info.",
-            "url": "classes/Discord-Parts-Interactions-Request-InteractionData.html#property_visible"
+            "fqsen": "\\Discord\\Parts\\Interactions\\Request\\InteractionData\u003A\u003A\u0024hidden",
+            "name": "hidden",
+            "summary": "Attributes\u0020that\u0020are\u0020hidden\u0020from\u0020debug\u0020info.",
+            "url": "classes/Discord-Parts-Interactions-Request-InteractionData.html#property_hidden"
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Request\\InteractionData\u003A\u003A\u0024repositories",
             "name": "repositories",
@@ -4595,11 +5240,6 @@ Search.appendIndex(
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
             "url": "classes/Discord-Parts-Interactions-Request-Option.html#property_fillable"
-        },                {
-            "fqsen": "\\Discord\\Parts\\Interactions\\Request\\Option\u003A\u003A\u0024visible",
-            "name": "visible",
-            "summary": "Attributes\u0020which\u0020are\u0020visible\u0020from\u0020debug\u0020info.",
-            "url": "classes/Discord-Parts-Interactions-Request-Option.html#property_visible"
         },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Request\\Option\u003A\u003A\u0024repositories",
             "name": "repositories",
@@ -4636,10 +5276,20 @@ Search.appendIndex(
             "summary": "Returns\u0020a\u0020collection\u0020of\u0020resolved\u0020messages.",
             "url": "classes/Discord-Parts-Interactions-Request-Resolved.html#method_getMessagesAttribute"
         },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Request\\Resolved\u003A\u003AgetAttachmentsAttribute\u0028\u0029",
+            "name": "getAttachmentsAttribute",
+            "summary": "Returns\u0020a\u0020collection\u0020of\u0020resolved\u0020attachments.",
+            "url": "classes/Discord-Parts-Interactions-Request-Resolved.html#method_getAttachmentsAttribute"
+        },                {
             "fqsen": "\\Discord\\Parts\\Interactions\\Request\\Resolved\u003A\u003A\u0024fillable",
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
             "url": "classes/Discord-Parts-Interactions-Request-Resolved.html#property_fillable"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Interactions\\Request\\Resolved\u003A\u003A\u0024hidden",
+            "name": "hidden",
+            "summary": "Attributes\u0020that\u0020are\u0020hidden\u0020from\u0020debug\u0020info.",
+            "url": "classes/Discord-Parts-Interactions-Request-Resolved.html#property_hidden"
         },                {
             "fqsen": "\\Discord\\Parts\\OAuth\\Application",
             "name": "Application",
@@ -4721,6 +5371,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Parts-OAuth-Application.html#constant_GATEWAY_MESSAGE_CONTENT_LIMITED"
         },                {
+            "fqsen": "\\Discord\\Parts\\OAuth\\Application\u003A\u003AAPPLICATION_COMMAND_BADGE",
+            "name": "APPLICATION_COMMAND_BADGE",
+            "summary": "",
+            "url": "classes/Discord-Parts-OAuth-Application.html#constant_APPLICATION_COMMAND_BADGE"
+        },                {
             "fqsen": "\\Discord\\Parts\\OAuth\\Application\u003A\u003A\u0024fillable",
             "name": "fillable",
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
@@ -4796,14 +5451,24 @@ Search.appendIndex(
             "summary": "Unsets\u0020an\u0020attribute\u0020via\u0020key.\u0020Used\u0020for\u0020ArrayAccess.",
             "url": "classes/Discord-Parts-Part.html#method_offsetUnset"
         },                {
+            "fqsen": "\\Discord\\Parts\\Part\u003A\u003Aserialize\u0028\u0029",
+            "name": "serialize",
+            "summary": "Serializes\u0020the\u0020data.\u0020Used\u0020for\u0020Serializable.",
+            "url": "classes/Discord-Parts-Part.html#method_serialize"
+        },                {
             "fqsen": "\\Discord\\Parts\\Part\u003A\u003A__serialize\u0028\u0029",
             "name": "__serialize",
-            "summary": "Serializes\u0020the\u0020data.\u0020Used\u0020for\u0020Serializable.",
+            "summary": "",
             "url": "classes/Discord-Parts-Part.html#method___serialize"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Part\u003A\u003Aunserialize\u0028\u0029",
+            "name": "unserialize",
+            "summary": "Unserializes\u0020some\u0020data\u0020and\u0020stores\u0020it.\u0020Used\u0020for\u0020Serializable.",
+            "url": "classes/Discord-Parts-Part.html#method_unserialize"
         },                {
             "fqsen": "\\Discord\\Parts\\Part\u003A\u003A__unserialize\u0028\u0029",
             "name": "__unserialize",
-            "summary": "Unserializes\u0020some\u0020data\u0020and\u0020stores\u0020it.\u0020Used\u0020for\u0020Serializable.",
+            "summary": "",
             "url": "classes/Discord-Parts-Part.html#method___unserialize"
         },                {
             "fqsen": "\\Discord\\Parts\\Part\u003A\u003AjsonSerialize\u0028\u0029",
@@ -4956,6 +5621,16 @@ Search.appendIndex(
             "summary": "Sets\u0020the\u0020bitwise\u0020attribute\u0020of\u0020the\u0020permission.",
             "url": "classes/Discord-Parts-Permissions-Permission.html#method_setBitwiseAttribute"
         },                {
+            "fqsen": "\\Discord\\Parts\\Permissions\\Permission\u003A\u003AgetUseEmbeddedActivitiesAttribute\u0028\u0029",
+            "name": "getUseEmbeddedActivitiesAttribute",
+            "summary": "",
+            "url": "classes/Discord-Parts-Permissions-Permission.html#method_getUseEmbeddedActivitiesAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Permissions\\Permission\u003A\u003AsetUseEmbeddedActivitiesAttribute\u0028\u0029",
+            "name": "setUseEmbeddedActivitiesAttribute",
+            "summary": "",
+            "url": "classes/Discord-Parts-Permissions-Permission.html#method_setUseEmbeddedActivitiesAttribute"
+        },                {
             "fqsen": "\\Discord\\Parts\\Permissions\\Permission\u003A\u003AgetUseSlashCommandsAttribute\u0028\u0029",
             "name": "getUseSlashCommandsAttribute",
             "summary": "",
@@ -5101,6 +5776,11 @@ Search.appendIndex(
             "summary": "Returns\u0020whether\u0020the\u0020thread\u0020has\u0020been\u0020locked.",
             "url": "classes/Discord-Parts-Thread-Thread.html#method_getLockedAttribute"
         },                {
+            "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003AgetInvitableAttribute\u0028\u0029",
+            "name": "getInvitableAttribute",
+            "summary": "Returns\u0020whether\u0020the\u0020thread\u0020is\u0020archived.",
+            "url": "classes/Discord-Parts-Thread-Thread.html#method_getInvitableAttribute"
+        },                {
             "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003AgetAutoArchiveDurationAttribute\u0028\u0029",
             "name": "getAutoArchiveDurationAttribute",
             "summary": "Returns\u0020the\u0020number\u0020of\u0020minutes\u0020of\u0020inactivity\u0020required\u0020for\u0020the\u0020thread\nto\u0020auto\u0020archive.",
@@ -5110,6 +5790,21 @@ Search.appendIndex(
             "name": "getArchiverIdAttribute",
             "summary": "Returns\u0020the\u0020ID\u0020of\u0020the\u0020user\u0020who\u0020archived\u0020the\u0020thread.",
             "url": "classes/Discord-Parts-Thread-Thread.html#method_getArchiverIdAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003AsetArchivedAttribute\u0028\u0029",
+            "name": "setArchivedAttribute",
+            "summary": "Set\u0020whether\u0020the\u0020thread\u0020is\u0020archived.",
+            "url": "classes/Discord-Parts-Thread-Thread.html#method_setArchivedAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003AsetLockedAttribute\u0028\u0029",
+            "name": "setLockedAttribute",
+            "summary": "Set\u0020whether\u0020the\u0020thread\u0020is\u0020locked.",
+            "url": "classes/Discord-Parts-Thread-Thread.html#method_setLockedAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003AsetAutoArchiveDurationAttribute\u0028\u0029",
+            "name": "setAutoArchiveDurationAttribute",
+            "summary": "Set\u0020the\u0020number\u0020of\u0020minutes\u0020of\u0020inactivity\u0020required\u0020for\u0020the\u0020thread\u0020to\u0020auto\u0020archive.",
+            "url": "classes/Discord-Parts-Thread-Thread.html#method_setAutoArchiveDurationAttribute"
         },                {
             "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003AgetArchiverAttribute\u0028\u0029",
             "name": "getArchiverAttribute",
@@ -5146,6 +5841,11 @@ Search.appendIndex(
             "summary": "Attempts\u0020to\u0020remove\u0020a\u0020user\u0020from\u0020the\u0020thread.",
             "url": "classes/Discord-Parts-Thread-Thread.html#method_removeMember"
         },                {
+            "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003Arename\u0028\u0029",
+            "name": "rename",
+            "summary": "Rename\u0020the\u0020thread.",
+            "url": "classes/Discord-Parts-Thread-Thread.html#method_rename"
+        },                {
             "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003Aarchive\u0028\u0029",
             "name": "archive",
             "summary": "Archive\u0020the\u0020thread.",
@@ -5155,6 +5855,11 @@ Search.appendIndex(
             "name": "unarchive",
             "summary": "Unarchive\u0020the\u0020thread.",
             "url": "classes/Discord-Parts-Thread-Thread.html#method_unarchive"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003AsetAutoArchiveDuration\u0028\u0029",
+            "name": "setAutoArchiveDuration",
+            "summary": "Set\u0020auto\u0020archive\u0020duration\u0020of\u0020the\u0020thread.",
+            "url": "classes/Discord-Parts-Thread-Thread.html#method_setAutoArchiveDuration"
         },                {
             "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003AgetPinnedMessages\u0028\u0029",
             "name": "getPinnedMessages",
@@ -5195,6 +5900,16 @@ Search.appendIndex(
             "name": "createMessageCollector",
             "summary": "Creates\u0020a\u0020message\u0020collector\u0020for\u0020the\u0020channel.",
             "url": "classes/Discord-Parts-Thread-Thread.html#method_createMessageCollector"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003AgetCreatableAttributes\u0028\u0029",
+            "name": "getCreatableAttributes",
+            "summary": "Returns\u0020the\u0020attributes\u0020needed\u0020to\u0020create.",
+            "url": "classes/Discord-Parts-Thread-Thread.html#method_getCreatableAttributes"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003AgetUpdatableAttributes\u0028\u0029",
+            "name": "getUpdatableAttributes",
+            "summary": "Returns\u0020the\u0020updatable\u0020attributes.",
+            "url": "classes/Discord-Parts-Thread-Thread.html#method_getUpdatableAttributes"
         },                {
             "fqsen": "\\Discord\\Parts\\Thread\\Thread\u003A\u003AgetRepositoryAttributes\u0028\u0029",
             "name": "getRepositoryAttributes",
@@ -5426,6 +6141,11 @@ Search.appendIndex(
             "summary": "Removes\u0020a\u0020role\u0020from\u0020the\u0020member.",
             "url": "classes/Discord-Parts-User-Member.html#method_removeRole"
         },                {
+            "fqsen": "\\Discord\\Parts\\User\\Member\u003A\u003AsetRoles\u0028\u0029",
+            "name": "setRoles",
+            "summary": "Updates\u0020member\u0020roles.",
+            "url": "classes/Discord-Parts-User-Member.html#method_setRoles"
+        },                {
             "fqsen": "\\Discord\\Parts\\User\\Member\u003A\u003AsendMessage\u0028\u0029",
             "name": "sendMessage",
             "summary": "Sends\u0020a\u0020message\u0020to\u0020the\u0020member.",
@@ -5506,10 +6226,20 @@ Search.appendIndex(
             "summary": "Returns\u0020the\u0020premium\u0020since\u0020attribute.",
             "url": "classes/Discord-Parts-User-Member.html#method_getPremiumSinceAttribute"
         },                {
+            "fqsen": "\\Discord\\Parts\\User\\Member\u003A\u003AgetPermissionsAttribute\u0028\u0029",
+            "name": "getPermissionsAttribute",
+            "summary": "Returns\u0020the\u0020permissions\u0020attribute.",
+            "url": "classes/Discord-Parts-User-Member.html#method_getPermissionsAttribute"
+        },                {
             "fqsen": "\\Discord\\Parts\\User\\Member\u003A\u003AgetCommunicationDisabledUntilAttribute\u0028\u0029",
             "name": "getCommunicationDisabledUntilAttribute",
             "summary": "Returns\u0020the\u0020communication\u0020disabled\u0020until\u0020attribute.",
             "url": "classes/Discord-Parts-User-Member.html#method_getCommunicationDisabledUntilAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\User\\Member\u003A\u003AgetVoiceChannel\u0028\u0029",
+            "name": "getVoiceChannel",
+            "summary": "Returns\u0020the\u0020voicechannel\u0020of\u0020the\u0020member.",
+            "url": "classes/Discord-Parts-User-Member.html#method_getVoiceChannel"
         },                {
             "fqsen": "\\Discord\\Parts\\User\\Member\u003A\u003AgetUpdatableAttributes\u0028\u0029",
             "name": "getUpdatableAttributes",
@@ -5691,6 +6421,76 @@ Search.appendIndex(
             "summary": "The\u0020parts\u0020fillable\u0020attributes.",
             "url": "classes/Discord-Parts-User-User.html#property_fillable"
         },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\AutoModerationActionExecution",
+            "name": "AutoModerationActionExecution",
+            "summary": "Sent\u0020when\u0020a\u0020rule\u0020is\u0020triggered\u0020and\u0020an\u0020action\u0020is\u0020executed\u0020\u0028e.g.\u0020when\u0020a\u0020message\u0020is\u0020blocked\u0029.",
+            "url": "classes/Discord-Parts-WebSockets-AutoModerationActionExecution.html"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\AutoModerationActionExecution\u003A\u003AgetGuildAttribute\u0028\u0029",
+            "name": "getGuildAttribute",
+            "summary": "Returns\u0020the\u0020guild\u0020attribute.",
+            "url": "classes/Discord-Parts-WebSockets-AutoModerationActionExecution.html#method_getGuildAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\AutoModerationActionExecution\u003A\u003AgetActionAttribute\u0028\u0029",
+            "name": "getActionAttribute",
+            "summary": "Returns\u0020the\u0020action\u0020attribute.",
+            "url": "classes/Discord-Parts-WebSockets-AutoModerationActionExecution.html#method_getActionAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\AutoModerationActionExecution\u003A\u003AgetUserAttribute\u0028\u0029",
+            "name": "getUserAttribute",
+            "summary": "Returns\u0020the\u0020user\u0020attribute.",
+            "url": "classes/Discord-Parts-WebSockets-AutoModerationActionExecution.html#method_getUserAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\AutoModerationActionExecution\u003A\u003AgetMemberAttribute\u0028\u0029",
+            "name": "getMemberAttribute",
+            "summary": "Returns\u0020the\u0020member\u0020attribute.",
+            "url": "classes/Discord-Parts-WebSockets-AutoModerationActionExecution.html#method_getMemberAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\AutoModerationActionExecution\u003A\u003AgetChannelAttribute\u0028\u0029",
+            "name": "getChannelAttribute",
+            "summary": "Returns\u0020the\u0020channel\u0020attribute.",
+            "url": "classes/Discord-Parts-WebSockets-AutoModerationActionExecution.html#method_getChannelAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\AutoModerationActionExecution\u003A\u003AgetMessageAttribute\u0028\u0029",
+            "name": "getMessageAttribute",
+            "summary": "Returns\u0020the\u0020message\u0020attribute.",
+            "url": "classes/Discord-Parts-WebSockets-AutoModerationActionExecution.html#method_getMessageAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\AutoModerationActionExecution\u003A\u003AgetAlertSystemMessageAttribute\u0028\u0029",
+            "name": "getAlertSystemMessageAttribute",
+            "summary": "Returns\u0020the\u0020alert\u0020system\u0020message\u0020attribute.",
+            "url": "classes/Discord-Parts-WebSockets-AutoModerationActionExecution.html#method_getAlertSystemMessageAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\AutoModerationActionExecution\u003A\u003A\u0024fillable",
+            "name": "fillable",
+            "summary": "The\u0020parts\u0020fillable\u0020attributes.",
+            "url": "classes/Discord-Parts-WebSockets-AutoModerationActionExecution.html#property_fillable"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\MessageInteraction",
+            "name": "MessageInteraction",
+            "summary": "Sent\u0020on\u0020the\u0020message\u0020object\u0020when\u0020the\u0020message\u0020is\u0020a\u0020response\u0020to\u0020an\u0020Interaction\u0020without\u0020an\u0020existing\u0020message.",
+            "url": "classes/Discord-Parts-WebSockets-MessageInteraction.html"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\MessageInteraction\u003A\u003AgetUserAttribute\u0028\u0029",
+            "name": "getUserAttribute",
+            "summary": "Returns\u0020the\u0020user\u0020who\u0020invoked\u0020the\u0020interaction.",
+            "url": "classes/Discord-Parts-WebSockets-MessageInteraction.html#method_getUserAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\MessageInteraction\u003A\u003AgetMemberAttribute\u0028\u0029",
+            "name": "getMemberAttribute",
+            "summary": "Returns\u0020the\u0020partial\u0020Member\u0020who\u0020invoked\u0020the\u0020interaction.",
+            "url": "classes/Discord-Parts-WebSockets-MessageInteraction.html#method_getMemberAttribute"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\MessageInteraction\u003A\u003A\u0024fillable",
+            "name": "fillable",
+            "summary": "The\u0020parts\u0020fillable\u0020attributes.",
+            "url": "classes/Discord-Parts-WebSockets-MessageInteraction.html#property_fillable"
+        },                {
+            "fqsen": "\\Discord\\Parts\\WebSockets\\MessageInteraction\u003A\u003A\u0024hidden",
+            "name": "hidden",
+            "summary": "Attributes\u0020that\u0020are\u0020hidden\u0020from\u0020debug\u0020info.",
+            "url": "classes/Discord-Parts-WebSockets-MessageInteraction.html#property_hidden"
+        },                {
             "fqsen": "\\Discord\\Parts\\WebSockets\\MessageReaction",
             "name": "MessageReaction",
             "summary": "Represents\u0020a\u0020specific\u0020reaction\u0020to\u0020a\u0020message\u0020by\u0020a\u0020specific\u0020user.",
@@ -5743,7 +6543,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Parts\\WebSockets\\MessageReaction\u003A\u003Adelete\u0028\u0029",
             "name": "delete",
-            "summary": "Delete\u0020this\u0020reaction",
+            "summary": "Delete\u0020this\u0020reaction.",
             "url": "classes/Discord-Parts-WebSockets-MessageReaction.html#method_delete"
         },                {
             "fqsen": "\\Discord\\Parts\\WebSockets\\MessageReaction\u003A\u003A\u0024fillable",
@@ -6086,6 +6886,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-Repository-Channel-VoiceMemberRepository.html#property_class"
         },                {
+            "fqsen": "\\Discord\\Repository\\Channel\\WebhookMessageRepository",
+            "name": "WebhookMessageRepository",
+            "summary": "Contains\u0020messages\u0020sent\u0020to\u0020channels\u0020from\u0020webhook.",
+            "url": "classes/Discord-Repository-Channel-WebhookMessageRepository.html"
+        },                {
+            "fqsen": "\\Discord\\Repository\\Channel\\WebhookMessageRepository\u003A\u003A\u0024endpoints",
+            "name": "endpoints",
+            "summary": "Endpoints\u0020for\u0020interacting\u0020with\u0020the\u0020Discord\u0020servers.",
+            "url": "classes/Discord-Repository-Channel-WebhookMessageRepository.html#property_endpoints"
+        },                {
+            "fqsen": "\\Discord\\Repository\\Channel\\WebhookMessageRepository\u003A\u003A\u0024class",
+            "name": "class",
+            "summary": "",
+            "url": "classes/Discord-Repository-Channel-WebhookMessageRepository.html#property_class"
+        },                {
             "fqsen": "\\Discord\\Repository\\Channel\\WebhookRepository",
             "name": "WebhookRepository",
             "summary": "Repositories\u0020provide\u0020a\u0020way\u0020to\u0020store\u0020and\u0020update\u0020parts\u0020on\u0020the\u0020Discord\u0020server.",
@@ -6100,6 +6915,21 @@ Search.appendIndex(
             "name": "class",
             "summary": "",
             "url": "classes/Discord-Repository-Channel-WebhookRepository.html#property_class"
+        },                {
+            "fqsen": "\\Discord\\Repository\\Guild\\AutoModerationRuleRepository",
+            "name": "AutoModerationRuleRepository",
+            "summary": "Contains\u0020auto\u0020moderation\u0020rules\u0020that\u0020belong\u0020to\u0020guilds.",
+            "url": "classes/Discord-Repository-Guild-AutoModerationRuleRepository.html"
+        },                {
+            "fqsen": "\\Discord\\Repository\\Guild\\AutoModerationRuleRepository\u003A\u003A\u0024endpoints",
+            "name": "endpoints",
+            "summary": "Endpoints\u0020for\u0020interacting\u0020with\u0020the\u0020Discord\u0020servers.",
+            "url": "classes/Discord-Repository-Guild-AutoModerationRuleRepository.html#property_endpoints"
+        },                {
+            "fqsen": "\\Discord\\Repository\\Guild\\AutoModerationRuleRepository\u003A\u003A\u0024class",
+            "name": "class",
+            "summary": "",
+            "url": "classes/Discord-Repository-Guild-AutoModerationRuleRepository.html#property_class"
         },                {
             "fqsen": "\\Discord\\Repository\\Guild\\BanRepository",
             "name": "BanRepository",
@@ -6243,8 +7073,13 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\Repository\\Guild\\MemberRepository\u003A\u003Akick\u0028\u0029",
             "name": "kick",
-            "summary": "Alias\u0020for\u0020delete.",
+            "summary": "Alias\u0020for\u0020\u0060\u0024member\u002D\u003Edelete\u0028\u0029\u0060.",
             "url": "classes/Discord-Repository-Guild-MemberRepository.html#method_kick"
+        },                {
+            "fqsen": "\\Discord\\Repository\\Guild\\MemberRepository\u003A\u003Afreshen\u0028\u0029",
+            "name": "freshen",
+            "summary": "Freshens\u0020the\u0020repository\u0020collection.",
+            "url": "classes/Discord-Repository-Guild-MemberRepository.html#method_freshen"
         },                {
             "fqsen": "\\Discord\\Repository\\Guild\\MemberRepository\u003A\u003A\u0024endpoints",
             "name": "endpoints",
@@ -6290,11 +7125,6 @@ Search.appendIndex(
             "name": "ScheduledEventRepository",
             "summary": "Contains\u0020scheduled\u0020events\u0020to\u0020guilds.",
             "url": "classes/Discord-Repository-Guild-ScheduledEventRepository.html"
-        },                {
-            "fqsen": "\\Discord\\Repository\\Guild\\ScheduledEventRepository\u003A\u003Afreshen\u0028\u0029",
-            "name": "freshen",
-            "summary": "Freshens\u0020the\u0020repository\u0020collection.",
-            "url": "classes/Discord-Repository-Guild-ScheduledEventRepository.html#method_freshen"
         },                {
             "fqsen": "\\Discord\\Repository\\Guild\\ScheduledEventRepository\u003A\u003Afetch\u0028\u0029",
             "name": "fetch",
@@ -6365,6 +7195,21 @@ Search.appendIndex(
             "name": "class",
             "summary": "",
             "url": "classes/Discord-Repository-GuildRepository.html#property_class"
+        },                {
+            "fqsen": "\\Discord\\Repository\\Interaction\\ComponentRepository",
+            "name": "ComponentRepository",
+            "summary": "Repositories\u0020provide\u0020a\u0020way\u0020to\u0020store\u0020and\u0020update\u0020parts\u0020on\u0020the\u0020Discord\u0020server.",
+            "url": "classes/Discord-Repository-Interaction-ComponentRepository.html"
+        },                {
+            "fqsen": "\\Discord\\Repository\\Interaction\\ComponentRepository\u003A\u003A\u0024class",
+            "name": "class",
+            "summary": "",
+            "url": "classes/Discord-Repository-Interaction-ComponentRepository.html#property_class"
+        },                {
+            "fqsen": "\\Discord\\Repository\\Interaction\\ComponentRepository\u003A\u003A\u0024discrim",
+            "name": "discrim",
+            "summary": "The\u0020discriminator.",
+            "url": "classes/Discord-Repository-Interaction-ComponentRepository.html#property_discrim"
         },                {
             "fqsen": "\\Discord\\Repository\\Interaction\\GlobalCommandRepository",
             "name": "GlobalCommandRepository",
@@ -6816,10 +7661,20 @@ Search.appendIndex(
             "summary": "Returns\u0020the\u0020connected\u0020channel.",
             "url": "classes/Discord-Voice-VoiceClient.html#method_getChannel"
         },                {
+            "fqsen": "\\Discord\\Voice\\VoiceClient\u003A\u003AinsertSilence\u0028\u0029",
+            "name": "insertSilence",
+            "summary": "Insert\u00205\u0020frames\u0020of\u0020silence.",
+            "url": "classes/Discord-Voice-VoiceClient.html#method_insertSilence"
+        },                {
             "fqsen": "\\Discord\\Voice\\VoiceClient\u003A\u003ADCA_VERSION",
             "name": "DCA_VERSION",
             "summary": "The\u0020DCA\u0020version\u0020the\u0020client\u0020is\u0020using.",
             "url": "classes/Discord-Voice-VoiceClient.html#constant_DCA_VERSION"
+        },                {
+            "fqsen": "\\Discord\\Voice\\VoiceClient\u003A\u003ASILENCE_FRAME",
+            "name": "SILENCE_FRAME",
+            "summary": "The\u0020Opus\u0020Silence\u0020Frame.",
+            "url": "classes/Discord-Voice-VoiceClient.html#constant_SILENCE_FRAME"
         },                {
             "fqsen": "\\Discord\\Voice\\VoiceClient\u003A\u003A\u0024ready",
             "name": "ready",
@@ -6926,11 +7781,6 @@ Search.appendIndex(
             "summary": "Are\u0020we\u0020currently\u0020set\u0020as\u0020speaking\u003F",
             "url": "classes/Discord-Voice-VoiceClient.html#property_speaking"
         },                {
-            "fqsen": "\\Discord\\Voice\\VoiceClient\u003A\u003A\u0024stopAudio",
-            "name": "stopAudio",
-            "summary": "Should\u0020we\u0020stop\u0020the\u0020current\u0020playing\u0020audio\u003F",
-            "url": "classes/Discord-Voice-VoiceClient.html#property_stopAudio"
-        },                {
             "fqsen": "\\Discord\\Voice\\VoiceClient\u003A\u003A\u0024mute",
             "name": "mute",
             "summary": "Whether\u0020we\u0020are\u0020set\u0020as\u0020mute.",
@@ -7010,6 +7860,26 @@ Search.appendIndex(
             "name": "version",
             "summary": "The\u0020Discord\u0020voice\u0020gateway\u0020version.",
             "url": "classes/Discord-Voice-VoiceClient.html#property_version"
+        },                {
+            "fqsen": "\\Discord\\Voice\\VoiceClient\u003A\u003A\u0024dnsConfig",
+            "name": "dnsConfig",
+            "summary": "The\u0020Config\u0020for\u0020DNS\u0020Resolver.",
+            "url": "classes/Discord-Voice-VoiceClient.html#property_dnsConfig"
+        },                {
+            "fqsen": "\\Discord\\Voice\\VoiceClient\u003A\u003A\u0024silenceRemaining",
+            "name": "silenceRemaining",
+            "summary": "Silence\u0020Frame\u0020Remain\u0020Count.",
+            "url": "classes/Discord-Voice-VoiceClient.html#property_silenceRemaining"
+        },                {
+            "fqsen": "\\Discord\\Voice\\VoiceClient\u003A\u003A\u0024readOpusTimer",
+            "name": "readOpusTimer",
+            "summary": "readopus\u0020Timer.",
+            "url": "classes/Discord-Voice-VoiceClient.html#property_readOpusTimer"
+        },                {
+            "fqsen": "\\Discord\\Voice\\VoiceClient\u003A\u003A\u0024buffer",
+            "name": "buffer",
+            "summary": "Audio\u0020Buffer.",
+            "url": "classes/Discord-Voice-VoiceClient.html#property_buffer"
         },                {
             "fqsen": "\\Discord\\Voice\\VoicePacket",
             "name": "VoicePacket",
@@ -7153,7 +8023,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\WebSockets\\Event\u003A\u003AcacheUser\u0028\u0029",
             "name": "cacheUser",
-            "summary": "Cache\u0020User\u0020repository\u0020from\u0020Event\u0020data",
+            "summary": "Cache\u0020User\u0020repository\u0020from\u0020Event\u0020data.",
             "url": "classes/Discord-WebSockets-Event.html#method_cacheUser"
         },                {
             "fqsen": "\\Discord\\WebSockets\\Event\u003A\u003A__debugInfo\u0028\u0029",
@@ -7163,7 +8033,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Discord\\WebSockets\\Event\u003A\u003AREADY",
             "name": "READY",
-            "summary": "",
+            "summary": "Not\u0020to\u0020be\u0020confused\u0020with\u0020\u0027ready\u0027",
             "url": "classes/Discord-WebSockets-Event.html#constant_READY"
         },                {
             "fqsen": "\\Discord\\WebSockets\\Event\u003A\u003ARESUMED",
@@ -7321,6 +8191,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Discord-WebSockets-Event.html#constant_WEBHOOKS_UPDATE"
         },                {
+            "fqsen": "\\Discord\\WebSockets\\Event\u003A\u003AAPPLICATION_COMMAND_PERMISSIONS_UPDATE",
+            "name": "APPLICATION_COMMAND_PERMISSIONS_UPDATE",
+            "summary": "",
+            "url": "classes/Discord-WebSockets-Event.html#constant_APPLICATION_COMMAND_PERMISSIONS_UPDATE"
+        },                {
             "fqsen": "\\Discord\\WebSockets\\Event\u003A\u003AINVITE_CREATE",
             "name": "INVITE_CREATE",
             "summary": "",
@@ -7330,6 +8205,26 @@ Search.appendIndex(
             "name": "INVITE_DELETE",
             "summary": "",
             "url": "classes/Discord-WebSockets-Event.html#constant_INVITE_DELETE"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Event\u003A\u003AAUTO_MODERATION_RULE_CREATE",
+            "name": "AUTO_MODERATION_RULE_CREATE",
+            "summary": "",
+            "url": "classes/Discord-WebSockets-Event.html#constant_AUTO_MODERATION_RULE_CREATE"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Event\u003A\u003AAUTO_MODERATION_RULE_UPDATE",
+            "name": "AUTO_MODERATION_RULE_UPDATE",
+            "summary": "",
+            "url": "classes/Discord-WebSockets-Event.html#constant_AUTO_MODERATION_RULE_UPDATE"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Event\u003A\u003AAUTO_MODERATION_RULE_DELETE",
+            "name": "AUTO_MODERATION_RULE_DELETE",
+            "summary": "",
+            "url": "classes/Discord-WebSockets-Event.html#constant_AUTO_MODERATION_RULE_DELETE"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Event\u003A\u003AAUTO_MODERATION_ACTION_EXECUTION",
+            "name": "AUTO_MODERATION_ACTION_EXECUTION",
+            "summary": "",
+            "url": "classes/Discord-WebSockets-Event.html#constant_AUTO_MODERATION_ACTION_EXECUTION"
         },                {
             "fqsen": "\\Discord\\WebSockets\\Event\u003A\u003ACHANNEL_CREATE",
             "name": "CHANNEL_CREATE",
@@ -7460,6 +8355,56 @@ Search.appendIndex(
             "name": "discord",
             "summary": "The\u0020Discord\u0020client\u0020instance.",
             "url": "classes/Discord-WebSockets-Event.html#property_discord"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Events\\ApplicationCommandPermissionsUpdate",
+            "name": "ApplicationCommandPermissionsUpdate",
+            "summary": "Contains\u0020constants\u0020for\u0020WebSocket\u0020events\u0020as\u0020well\u0020as\u0020handlers\nfor\u0020the\u0020events.",
+            "url": "classes/Discord-WebSockets-Events-ApplicationCommandPermissionsUpdate.html"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Events\\ApplicationCommandPermissionsUpdate\u003A\u003Ahandle\u0028\u0029",
+            "name": "handle",
+            "summary": "Transforms\u0020the\u0020given\u0020data,\u0020and\u0020updates\u0020the\nDiscord\u0020instance\u0020if\u0020necessary.",
+            "url": "classes/Discord-WebSockets-Events-ApplicationCommandPermissionsUpdate.html#method_handle"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Events\\AutoModerationActionExecution",
+            "name": "AutoModerationActionExecution",
+            "summary": "Contains\u0020constants\u0020for\u0020WebSocket\u0020events\u0020as\u0020well\u0020as\u0020handlers\nfor\u0020the\u0020events.",
+            "url": "classes/Discord-WebSockets-Events-AutoModerationActionExecution.html"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Events\\AutoModerationActionExecution\u003A\u003Ahandle\u0028\u0029",
+            "name": "handle",
+            "summary": "Transforms\u0020the\u0020given\u0020data,\u0020and\u0020updates\u0020the\nDiscord\u0020instance\u0020if\u0020necessary.",
+            "url": "classes/Discord-WebSockets-Events-AutoModerationActionExecution.html#method_handle"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Events\\AutoModerationRuleCreate",
+            "name": "AutoModerationRuleCreate",
+            "summary": "Contains\u0020constants\u0020for\u0020WebSocket\u0020events\u0020as\u0020well\u0020as\u0020handlers\nfor\u0020the\u0020events.",
+            "url": "classes/Discord-WebSockets-Events-AutoModerationRuleCreate.html"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Events\\AutoModerationRuleCreate\u003A\u003Ahandle\u0028\u0029",
+            "name": "handle",
+            "summary": "Transforms\u0020the\u0020given\u0020data,\u0020and\u0020updates\u0020the\nDiscord\u0020instance\u0020if\u0020necessary.",
+            "url": "classes/Discord-WebSockets-Events-AutoModerationRuleCreate.html#method_handle"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Events\\AutoModerationRuleDelete",
+            "name": "AutoModerationRuleDelete",
+            "summary": "Contains\u0020constants\u0020for\u0020WebSocket\u0020events\u0020as\u0020well\u0020as\u0020handlers\nfor\u0020the\u0020events.",
+            "url": "classes/Discord-WebSockets-Events-AutoModerationRuleDelete.html"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Events\\AutoModerationRuleDelete\u003A\u003Ahandle\u0028\u0029",
+            "name": "handle",
+            "summary": "Transforms\u0020the\u0020given\u0020data,\u0020and\u0020updates\u0020the\nDiscord\u0020instance\u0020if\u0020necessary.",
+            "url": "classes/Discord-WebSockets-Events-AutoModerationRuleDelete.html#method_handle"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Events\\AutoModerationRuleUpdate",
+            "name": "AutoModerationRuleUpdate",
+            "summary": "Contains\u0020constants\u0020for\u0020WebSocket\u0020events\u0020as\u0020well\u0020as\u0020handlers\nfor\u0020the\u0020events.",
+            "url": "classes/Discord-WebSockets-Events-AutoModerationRuleUpdate.html"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Events\\AutoModerationRuleUpdate\u003A\u003Ahandle\u0028\u0029",
+            "name": "handle",
+            "summary": "Transforms\u0020the\u0020given\u0020data,\u0020and\u0020updates\u0020the\nDiscord\u0020instance\u0020if\u0020necessary.",
+            "url": "classes/Discord-WebSockets-Events-AutoModerationRuleUpdate.html#method_handle"
         },                {
             "fqsen": "\\Discord\\WebSockets\\Events\\ChannelCreate",
             "name": "ChannelCreate",
@@ -8126,6 +9071,16 @@ Search.appendIndex(
             "summary": "Guild\u0020scheduled\u0020events\u0020events\u003A.",
             "url": "classes/Discord-WebSockets-Intents.html#constant_GUILD_SCHEDULED_EVENTS"
         },                {
+            "fqsen": "\\Discord\\WebSockets\\Intents\u003A\u003AAUTO_MODERATION_CONFIGURATION",
+            "name": "AUTO_MODERATION_CONFIGURATION",
+            "summary": "Auto\u0020moderation\u0020rule\u0020events\u003A.",
+            "url": "classes/Discord-WebSockets-Intents.html#constant_AUTO_MODERATION_CONFIGURATION"
+        },                {
+            "fqsen": "\\Discord\\WebSockets\\Intents\u003A\u003AAUTO_MODERATION_EXECUTION",
+            "name": "AUTO_MODERATION_EXECUTION",
+            "summary": "Auto\u0020moderation\u0020execution\u0020events\u003A.",
+            "url": "classes/Discord-WebSockets-Intents.html#constant_AUTO_MODERATION_EXECUTION"
+        },                {
             "fqsen": "\\Discord\\WebSockets\\Op",
             "name": "Op",
             "summary": "Contains\u0020constants\u0020used\u0020in\u0020websockets.",
@@ -8405,6 +9360,11 @@ Search.appendIndex(
             "name": "AuditLog",
             "summary": "",
             "url": "namespaces/discord-parts-guild-auditlog.html"
+        },                {
+            "fqsen": "\\Discord\\Parts\\Guild\\AutoModeration",
+            "name": "AutoModeration",
+            "summary": "",
+            "url": "namespaces/discord-parts-guild-automoderation.html"
         },                {
             "fqsen": "\\Discord\\Parts\\Guild",
             "name": "Guild",
