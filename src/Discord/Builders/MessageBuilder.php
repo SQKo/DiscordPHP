@@ -49,19 +49,6 @@ class MessageBuilder implements JsonSerializable
     private $nonce;
 
     /**
-     * Override the default username of the webhook.
-     *
-     * @var string|null
-     */
-    private $username;
-
-    /**
-     * Override the default avatar of the webhook.
-     *
-     * @var string|null
-     */
-    private $avatar_url;
-    /**
      * Whether the message is text-to-speech.
      *
      * @var bool
@@ -175,41 +162,7 @@ class MessageBuilder implements JsonSerializable
     }
 
     /**
-     * Override the default username of the webhook. Only used for executing webhook.
-     *
-     * @param string $username New webhook username.
-     *
-     * @throws \LengthException `$username` exceeds 80 characters.
-     *
-     * @return $this
-     */
-    public function setUsername(string $username): self
-    {
-        if (poly_strlen($username) > 80) {
-            throw new \LengthException('Username can be only up to 80 characters.');
-        }
-
-        $this->username = $username;
-
-        return $this;
-    }
-
-    /**
-     * Override the default avatar URL of the webhook. Only used for executing webhook.
-     *
-     * @param string $avatar_url New webhook avatar URL.
-     *
-     * @return $this
-     */
-    public function setAvatarUrl(string $avatar_url): self
-    {
-        $this->avatar_url = $avatar_url;
-
-        return $this;
-    }
-
-    /**
-     * Sets the TTS status of the message. Only used for sending message or executing webhook.
+     * Sets the TTS status of the message.
      *
      * @param bool $tts
      *
@@ -626,14 +579,6 @@ class MessageBuilder implements JsonSerializable
         if (isset($this->content)) {
             $body['content'] = $this->content;
             $empty = false;
-        }
-
-        if (isset($this->username)) {
-            $body['username'] = $this->username;
-        }
-
-        if (isset($this->avatar_url)) {
-            $body['avatar_url'] = $this->avatar_url;
         }
 
         if ($this->nonce !== null) {

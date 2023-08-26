@@ -64,13 +64,6 @@ class Command
     protected $cooldownMessage;
 
     /**
-     * Help visibility.
-     *
-     * @var bool wether visible in help or not.
-     */
-    protected $showHelp;
-
-    /**
      * An array of cooldowns for commands.
      *
      * @var array Cooldowns.
@@ -110,7 +103,6 @@ class Command
      * @param string               $usage           The usage of the command.
      * @param int                  $cooldown        The cooldown of the command in milliseconds.
      * @param string               $cooldownMessage The cooldown message to show when a cooldown is in effect.
-     * @param bool                 $showHelp        The visibility in help of the command.
      */
     public function __construct(
         DiscordCommandClient $client,
@@ -120,8 +112,7 @@ class Command
         string $longDescription,
         string $usage,
         int $cooldown,
-        string $cooldownMessage,
-        bool $showHelp = true
+        string $cooldownMessage
     ) {
         $this->client = $client;
         $this->command = $command;
@@ -131,7 +122,6 @@ class Command
         $this->usage = $usage;
         $this->cooldown = $cooldown;
         $this->cooldownMessage = $cooldownMessage;
-        $this->showHelp = $showHelp;
     }
 
     /**
@@ -279,16 +269,10 @@ class Command
      */
     public function getHelp(string $prefix): array
     {
-        if (! $this->showHelp) {
-            return [];
-        }
-
         $subCommandsHelp = [];
 
         foreach ($this->subCommands as $command) {
-            if ($command->showHelp) {
                 $subCommandsHelp[] = $command->getHelp($prefix.$this->command.' ');
-            }
         }
 
         return [
@@ -309,7 +293,7 @@ class Command
      */
     public function __get(string $variable)
     {
-        $allowed = ['command', 'description', 'longDescription', 'usage', 'cooldown', 'cooldownMessage', 'showHelp'];
+        $allowed = ['command', 'description', 'longDescription', 'usage', 'cooldown', 'cooldownMessage'];
 
         if (in_array($variable, $allowed)) {
             return $this->{$variable};

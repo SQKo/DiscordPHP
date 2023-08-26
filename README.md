@@ -8,9 +8,9 @@ A wrapper for the official [Discord](https://discordapp.com) REST, gateway and v
 
 For testing and stability it would be greatly appreciated if you were able to add our test bot to your server. We don't store any data - the bot simply idles and does not interact with anyone and is used to test stability with large numbers of guilds. You can invite the bot [here.](https://discord.com/oauth2/authorize?client_id=157746770539970560&scope=bot)
 
-## Cache Interface (experimental)
-> **Warning**
-> This branch contains an experimental feature, do not use it in production! See [the wiki page for more information](https://github.com/discord-php/DiscordPHP/wiki/Cache-Interface) on how to set it up.
+## Before you start
+
+Before you start using this Library, you **need** to know how PHP works, you need to know the language and you need to know how Event Loops and Promises work. This is a fundamental requirement before you start. Without this knowledge, you will only suffer.
 
 ## FAQ
 
@@ -21,25 +21,14 @@ For testing and stability it would be greatly appreciated if you were able to ad
 
 ## Getting Started
 
-Before you start using this Library, you **need** to know how PHP works, you need to know how Event Loops and Promises work. This is a fundamental requirement before you start. Without this knowledge, you will only suffer.
-
 ### Requirements
 
-- [PHP 8.0](https://php.net) or higher (latest version recommended)
-	- x86 (32-bit) PHP requires [`ext-gmp`](https://www.php.net/manual/en/book.gmp.php) enabled.
-- [`ext-json`](https://www.php.net/manual/en/book.json.php)
-- [`ext-zlib`](https://www.php.net/manual/en/book.zlib.php)
-
-#### Recommended Extensions
-
-- One of [`ext-uv`](https://github.com/amphp/ext-uv) (recommended), `ext-ev` or `ext-event` for a faster, and more performant event loop.
-- [`ext-mbstring`](https://www.php.net/manual/en/book.mbstring.php) if handling non-latin characters.
-
-#### Voice Requirements
-
-- 64-bit PHP
-- [`ext-sodium`](https://www.php.net/manual/en/book.sodium.php)
-- [FFmpeg](https://ffmpeg.org/)
+- PHP 7.4
+	- We recommend PHP 8.0 as it will be the most stable and most performant.
+	- x86 (32-bit) PHP requires [`ext-gmp` extension](https://www.php.net/manual/en/book.gmp.php) enabled for handling Permissions.
+- Composer
+- `ext-json`
+- `ext-zlib`
 
 ### Windows and SSL
 
@@ -49,6 +38,20 @@ You will notice this issue by your script exiting immediately after one loop tur
 
 As such users of this library need to download a [Certificate Authority extract](https://curl.haxx.se/docs/caextract.html) from the cURL website.<br>
 The path to the caextract must be set in the [`php.ini`](https://secure.php.net/manual/en/openssl.configuration.php) for `openssl.cafile`.
+
+#### Recommended Extensions
+
+- The latest PHP version.
+- One of `ext-uv` (recommended), `ext-libev` or `ext-event` for a faster, and more performant event loop.
+- `ext-mbstring` if handling non-english characters.
+- `ext-gmp` if using 32-bit PHP.
+
+#### Voice Requirements
+
+- 64-bit Linux or Darwin based OS.
+    - If you are running on Windows, you must be using PHP 8.0.
+- `ext-sodium`
+- FFmpeg
 
 ### Installing DiscordPHP
 

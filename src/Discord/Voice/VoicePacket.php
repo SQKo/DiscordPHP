@@ -11,6 +11,8 @@
 
 namespace Discord\Voice;
 
+use function Sodium\crypto_secretbox;
+
 /**
  * A voice packet received from Discord.
  *
@@ -115,7 +117,7 @@ class VoicePacket
         $nonce = new Buffer(24);
         $nonce->write((string) $header, 0);
 
-        $data = \sodium_crypto_secretbox($data, (string) $nonce, $key);
+        $data = crypto_secretbox($data, (string) $nonce, $key);
 
         $this->buffer = new Buffer(strlen((string) $header) + strlen($data));
         $this->buffer->write((string) $header, 0);
@@ -194,7 +196,7 @@ class VoicePacket
      *
      * @param string $data Data from Discord.
      *
-     * @return VoicePacket A voice packet.
+     * @return self A voice packet.
      */
     public static function make(string $data): VoicePacket
     {

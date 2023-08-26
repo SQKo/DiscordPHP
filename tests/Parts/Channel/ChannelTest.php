@@ -185,12 +185,12 @@ final class ChannelTest extends DiscordTestCase
     }
 
     /**
-     * @covers \Discord\Repository\Channel\InviteRepository::freshen
+     * @covers \Discord\Parts\Channel\Channel::getInvites
      */
     public function testCanGetInvites()
     {
         return wait(function (Discord $discord, $resolve) {
-            $this->channel()->invites->freshen()
+            $this->channel()->getInvites()
                 ->then(function (Collection $invites) {
                     $this->assertInstanceOf(Collection::class, $invites);
 
@@ -255,17 +255,18 @@ final class ChannelTest extends DiscordTestCase
     }
 
     /**
-     * @covers \Discord\Parts\Channel\Channel::isTextBased
+     * @covers \Discord\Parts\Channel\Channel::allowVoice
      */
-    public function testTextChannelIsTextBased()
+    public function testTextChannelDoesNotAllowVoice()
     {
-        $this->assertTrue($this->channel()->isTextBased());
+        $this->assertFalse($this->channel()->allowVoice());
+        $this->assertTrue($this->channel()->allowText());
     }
 
     /**
-     * @covers \Discord\Parts\Channel\Channel::isVoiceBased
+     * @covers \Discord\Parts\Channel\Channel::allowVoice
      */
-    public function testVoiceChannelIsVoiceBased()
+    public function testVoiceChannelDoesNotAllowText()
     {
         /**
          * @var Channel
@@ -274,6 +275,7 @@ final class ChannelTest extends DiscordTestCase
             return $channel->type == Channel::TYPE_VOICE;
         })->first();
 
-        $this->assertTrue($vc->isVoiceBased());
+        $this->assertFalse($vc->allowText());
+        $this->assertTrue($vc->allowVoice());
     }
 }

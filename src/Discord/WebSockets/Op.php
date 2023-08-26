@@ -77,14 +77,8 @@ class Op
     public const VOICE_SPEAKING = 5;
     /** Sent by the Discord servers to acknowledge heartbeat */
     public const VOICE_HEARTBEAT_ACK = 6;
-    /** Resume a connection. */
-    public const VOICE_RESUME = 7;
     /** Hello packet used to pass heartbeat interval */
     public const VOICE_HELLO = 8;
-    /** Acknowledge a successful session resume. */
-    public const VOICE_RESUMED = 9;
-    /** A client has disconnected from the voice channel. */
-    public const VOICE_CLIENT_DISCONNECT = 13;
 
     /**
      * Gateway Close Event Codes.

@@ -331,7 +331,7 @@ class TextInput extends Component
 
         if (isset($this->max_length)) {
             if (isset($this->min_length) && $this->min_length > $this->max_length) {
-                throw new \OutOfRangeException('Minimum length cannot be higher than maximum length');
+                throw new \OutOfBoundsException('Minimum length cannot be higher than maximum length');
             }
 
             $content['max_length'] = $this->max_length;

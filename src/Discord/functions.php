@@ -19,10 +19,8 @@ use Discord\Parts\Guild\Role;
 use Discord\Parts\Part;
 use Discord\Parts\User\Member;
 use Discord\Parts\User\User;
-use React\EventLoop\Loop;
 use React\EventLoop\LoopInterface;
-use React\Promise\Promise;
-use React\Promise\PromiseInterface;
+use React\Promise\ExtendedPromiseInterface;
 use Symfony\Component\OptionsResolver\Options;
 
 /**
@@ -285,32 +283,19 @@ function escapeMarkdown(string $text): string
 /**
  * Run a deferred search in array.
  *
- * @param array|object   $array    Traversable, use $collection->getIterator() if searching in Collection
- * @param callable       $callback The filter function to run
- * @param ?LoopInterface $loop     Loop interface, use $discord->getLoop()
+ * @param array|object  $array     Traversable, use $collection->getIterator() if searching in Collection
+ * @param callable      $callback  The filter function to run
+ * @param LoopInterface $loop      Loop interface, use $discord->getLoop()
+ * @param callable      $canceller The function to cancel the search
  *
- * @return Promise
- *
- * @since 10.0.0 Handle `$canceller` internally, use `cancel()` from the returned promise.
- * @since 7.1.0
+ * @return ExtendedPromiseInterface
  */
-function deferFind($array, callable $callback, $loop = null): Promise
+function deferFind($array, callable $callback, $loop, ?callable $canceller = null): ExtendedPromiseInterface
 {
-    $cancelled = false;
-    $deferred = new Deferred(function () use (&$cancelled) {
-        $cancelled = true;
-    });
+    $deferred = new Deferred($canceller);
     $iterator = new ArrayIterator($array);
 
-    $loop ??= Loop::get();
-
-    $loop->addPeriodicTimer(0.001, function ($timer) use ($loop, $deferred, $iterator, $callback, &$cancelled) {
-        if ($cancelled) {
-            $loop->cancelTimer($timer);
-
-            return;
-        }
-
+    $loop->addPeriodicTimer(0.001, function ($timer) use ($loop, $deferred, $iterator, $callback) {
         if (! $iterator->valid()) {
             $loop->cancelTimer($timer);
             $deferred->reject();
@@ -331,33 +316,3 @@ function deferFind($array, callable $callback, $loop = null): Promise
 
     return $deferred->promise();
 }
-
-/**
- * Attempts to return a resolved value from a synchronous promise.
- * Like await() but only for resolvable blocking promise without touching the loop.
- *
- * @param PromiseInterface $promiseInterface The synchronous promise.
- *
- * @return mixed null if failed to return.
- *
- * @see \React\Async\await() for asynchronous promise.
- *
- * @since 10.0.0
- */
-function nowait(PromiseInterface $promiseInterface)
-{
-    $resolved = null;
-
-    $promiseInterface->then(static function ($value) use (&$resolved) {
-        return $resolved = $value;
-    });
-
-    return $resolved;
-}
-
-/**
- * File namespaces that were changed in new versions are aliased.
- */
-class_alias(\Discord\Repository\Channel\StageInstanceRepository::class, '\Discord\Repository\Guild\StageInstanceRepository'); // @since 10.0.0
-class_alias(\Discord\Parts\Guild\CommandPermissions::class, '\Discord\Parts\Interactions\Command\Overwrite'); // @since 10.0.0
-class_alias(\Discord\Repository\Guild\CommandPermissionsRepository::class, '\Discord\Repository\Guild\OverwriteRepository'); // @since 10.0.0

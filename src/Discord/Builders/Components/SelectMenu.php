@@ -26,24 +26,29 @@ use function Discord\poly_strlen;
  * On mobile, tapping a select menu opens up a half-sheet with the options.
  *
  * @link https://discord.com/developers/docs/interactions/message-components#select-menus
- *
- * @since 10.0.0 Renamed from SelectMenu to StringSelect and made SelectMenu abstract
  */
-abstract class SelectMenu extends Component
+class SelectMenu extends Component
 {
     /**
      * Custom ID to identify the select menu.
      *
      * @var string
      */
-    protected $custom_id;
+    private $custom_id;
+
+    /**
+     * Array of options that the select menu has.
+     *
+     * @var Option[]
+     */
+    private $options = [];
 
     /**
      * Placeholder string to display if nothing is selected. Maximum 150 characters.
      *
      * @var string|null
      */
-    protected $placeholder;
+    private $placeholder;
 
     /**
      * Minimum number of options that must be selected.
@@ -51,7 +56,7 @@ abstract class SelectMenu extends Component
      *
      * @var int|null
      */
-    protected $min_values;
+    private $min_values;
 
     /**
      * Maximum number of options that must be selected.
@@ -59,28 +64,28 @@ abstract class SelectMenu extends Component
      *
      * @var int|null
      */
-    protected $max_values;
+    private $max_values;
 
     /**
      * Whether the select menu should be disabled.
      *
      * @var bool|null
      */
-    protected $disabled;
+    private $disabled;
 
     /**
      * Callback used to listen for `INTERACTION_CREATE` events.
      *
      * @var callable|null
      */
-    protected $listener;
+    private $listener;
 
     /**
      * Discord instance when the listener is set.
      *
      * @var Discord|null
      */
-    protected $discord;
+    private $discord;
 
     /**
      * Creates a new select menu.
@@ -97,11 +102,11 @@ abstract class SelectMenu extends Component
      *
      * @param string|null $custom_id The custom ID of the select menu.
      *
-     * @return static
+     * @return self
      */
     public static function new(?string $custom_id = null): self
     {
-        return new static($custom_id);
+        return new self($custom_id);
     }
 
     /**
@@ -120,6 +125,52 @@ abstract class SelectMenu extends Component
         }
 
         $this->custom_id = $custom_id;
+
+        return $this;
+    }
+
+    /**
+     * Adds an option to the select menu. Maximum 25 options.
+     *
+     * @param Option $option Option to add.
+     *
+     * @throws \OverflowException
+     * @throws \UnexpectedValueException
+     *
+     * @return $this
+     */
+    public function addOption(Option $option): self
+    {
+        if (count($this->options) > 25) {
+            throw new \OverflowException('You can only have 25 options per select menu.');
+        }
+
+        $value = $option->getValue();
+
+        // didn't wanna use a hashtable here so that we can keep the order of options
+        foreach ($this->options as $other) {
+            if ($other->getValue() == $value) {
+                throw new \UnexpectedValueException('Another value already has the same value. These must not be the same.');
+            }
+        }
+
+        $this->options[] = $option;
+
+        return $this;
+    }
+
+    /**
+     * Removes an option from the select menu.
+     *
+     * @param Option $option Option to remove.
+     *
+     * @return $this
+     */
+    public function removeOption(Option $option): self
+    {
+        if (($idx = array_search($option, $this->options)) !== null) {
+            array_splice($this->options, $idx, 1);
+        }
 
         return $this;
     }
@@ -224,8 +275,6 @@ abstract class SelectMenu extends Component
      * @param bool     $oneOff   Whether the listener should be removed after the selection is changed for the first time.
      *
      * @return $this
-     *
-     * @todo setListener callback return for each type.
      */
     public function setListener(?callable $callback, Discord $discord, bool $oneOff = false): self
     {
@@ -240,7 +289,7 @@ abstract class SelectMenu extends Component
         }
 
         $this->listener = function (Interaction $interaction) use ($callback, $oneOff) {
-            if ($interaction->data->component_type == $this->type &&
+            if ($interaction->data->component_type == Component::TYPE_STRING_SELECT &&
                 $interaction->data->custom_id == $this->custom_id) {
                 if (empty($this->options)) {
                     $response = $callback($interaction);
@@ -301,6 +350,16 @@ abstract class SelectMenu extends Component
     }
 
     /**
+     * Returns the array of options that the select menu has.
+     *
+     * @return array
+     */
+    public function getOptions(): array
+    {
+        return $this->options;
+    }
+
+    /**
      * Returns the placeholder string of the select menu.
      *
      * @return string|null
@@ -346,18 +405,13 @@ abstract class SelectMenu extends Component
     public function jsonSerialize(): array
     {
         $content = [
-            'type' => $this->type,
+            'type' => Component::TYPE_STRING_SELECT,
             'custom_id' => $this->custom_id,
         ];
 
         if (isset($this->options)) {
             $content['options'] = $this->options;
         }
-
-        if (isset($this->channel_types)) {
-            $content['channel_types'] = $this->channel_types;
-        }
-
         if (isset($this->placeholder)) {
             $content['placeholder'] = $this->placeholder;
         }

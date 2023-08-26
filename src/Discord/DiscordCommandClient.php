@@ -59,7 +59,7 @@ class DiscordCommandClient extends Discord
 
         parent::__construct($discordOptions);
 
-        $this->on('init', function () {
+        $this->on('ready', function () {
             $this->commandClientOptions['prefix'] = str_replace('@mention', (string) $this->user, $this->commandClientOptions['prefix']);
             $this->commandClientOptions['name'] = str_replace('<UsernamePlaceholder>', $this->username, $this->commandClientOptions['name']);
 
@@ -121,9 +121,6 @@ class DiscordCommandClient extends Discord
                     }
 
                     $help = $command->getHelp($prefix);
-                    if (empty($help)) {
-                        return;
-                    }
 
                     $embed = new Embed($this);
                     $embed->setAuthor($this->commandClientOptions['name'], $this->client->user->avatar)
@@ -171,9 +168,6 @@ class DiscordCommandClient extends Discord
                 $embedfields = [];
                 foreach ($this->commands as $command) {
                     $help = $command->getHelp($prefix);
-                    if (empty($help)) {
-                        continue;
-                    }
                     $embedfields[] = [
                         'name' => $help['command'],
                         'value' => $help['description'],
@@ -357,8 +351,7 @@ class DiscordCommandClient extends Discord
             $options['longDescription'],
             $options['usage'],
             $options['cooldown'],
-            $options['cooldownMessage'],
-            $options['showHelp']
+            $options['cooldownMessage']
         );
 
         return [$commandInstance, $options];
@@ -383,7 +376,6 @@ class DiscordCommandClient extends Discord
                 'aliases',
                 'cooldown',
                 'cooldownMessage',
-                'showHelp',
             ])
             ->setDefaults([
                 'description' => 'No description provided.',
@@ -392,7 +384,6 @@ class DiscordCommandClient extends Discord
                 'aliases' => [],
                 'cooldown' => 0,
                 'cooldownMessage' => 'please wait %d second(s) to use this command again.',
-                'showHelp' => true,
             ]);
 
         $options = $resolver->resolve($options);

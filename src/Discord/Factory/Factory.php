@@ -12,6 +12,7 @@
 namespace Discord\Factory;
 
 use Discord\Discord;
+use Discord\Http\Http;
 use Discord\Parts\Part;
 use Discord\Repository\AbstractRepository;
 
@@ -30,13 +31,22 @@ class Factory
     protected $discord;
 
     /**
+     * The HTTP client.
+     *
+     * @var Http Client.
+     */
+    protected $http;
+
+    /**
      * Constructs a factory.
      *
      * @param Discord $discord The Discord client.
+     * @param Http    $http    The HTTP client.
      */
-    public function __construct(Discord $discord)
+    public function __construct(Discord $discord, Http $http)
     {
         $this->discord = $discord;
+        $this->http = $http;
     }
 
     /**
@@ -90,6 +100,6 @@ class Factory
      */
     public function repository(string $class, array $data = []): AbstractRepository
     {
-        return new $class($this->discord, $data);
+        return new $class($this->http, $this, $data);
     }
 }

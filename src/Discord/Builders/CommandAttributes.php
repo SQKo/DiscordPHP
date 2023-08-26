@@ -33,7 +33,6 @@ use function Discord\poly_strlen;
  * @property ?string                  $default_member_permissions Set of permissions represented as a bit set.
  * @property bool|null                $dm_permission              Indicates whether the command is available in DMs with the app, only for globally-scoped commands. By default, commands are visible.
  * @property ?bool                    $default_permission         Whether the command is enabled by default when the app is added to a guild. SOON DEPRECATED.
- * @property bool|null                $nsfw                       Indicates whether the command is age-restricted, defaults to `false`.
  */
 trait CommandAttributes
 {
@@ -204,20 +203,6 @@ trait CommandAttributes
     public function setDmPermission(bool $permission): self
     {
         $this->dm_permission = $permission;
-
-        return $this;
-    }
-
-    /**
-     * Sets the age restriction of the command.
-     *
-     * @param bool $restricted Age restriction of the command.
-     *
-     * @return $this
-     */
-    public function setNsfw(bool $restricted): self
-    {
-        $this->nsfw = $restricted;
 
         return $this;
     }

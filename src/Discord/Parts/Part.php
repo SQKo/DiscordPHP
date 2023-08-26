@@ -19,6 +19,8 @@ use Discord\Http\Http;
 use JsonSerializable;
 use React\Promise\ExtendedPromiseInterface;
 
+use function Discord\studly;
+
 /**
  * This class is the base of all objects that are returned. All "Parts" extend
  * off this base class.
@@ -53,8 +55,6 @@ abstract class Part implements ArrayAccess, JsonSerializable
      * Used for storing custom information, used by end products.
      *
      * @var mixed
-     *
-     * @deprecated 10.0.0 Relying on this variable with dynamic caching is discouraged.
      */
     public $scriptData;
 
@@ -149,7 +149,7 @@ abstract class Part implements ArrayAccess, JsonSerializable
      *
      * @throws \RuntimeException The part is not fetchable.
      *
-     * @return ExtendedPromiseInterface<self>
+     * @return ExtendedPromiseInterface<static>
      */
     public function fetch(): ExtendedPromiseInterface
     {
@@ -163,9 +163,9 @@ abstract class Part implements ArrayAccess, JsonSerializable
      */
     public function fill(array $attributes): void
     {
-        foreach ($this->fillable as $key) {
-            if (array_key_exists($key, $attributes)) {
-                $this->setAttribute($key, $attributes[$key]);
+        foreach ($attributes as $key => $value) {
+            if (in_array($key, $this->fillable)) {
+                $this->setAttribute($key, $value);
             }
         }
     }
@@ -180,7 +180,7 @@ abstract class Part implements ArrayAccess, JsonSerializable
      */
     private function checkForMutator(string $key, string $type)
     {
-        $str = $type.static::studly($key).'Attribute';
+        $str = $type.studly($key).'Attribute';
 
         if (is_callable([$this, $str])) {
             return $str;
@@ -293,16 +293,16 @@ abstract class Part implements ArrayAccess, JsonSerializable
     /**
      * Serializes the data. Used for Serializable.
      *
-     * @return ?string A string of serialized data.
+     * @return string A string of serialized data.
      */
-    public function serialize(): ?string
+    public function serialize(): string
     {
         return serialize($this->getRawAttributes());
     }
 
     public function __serialize(): array
     {
-        return $this->getRawAttributes();
+        return $this->attributes;
     }
 
     /**
@@ -429,68 +429,6 @@ abstract class Part implements ArrayAccess, JsonSerializable
         }
 
         return $attr;
-    }
-
-    /**
-     * Get the Discord instance that owns this Part.
-     *
-     * @return Discord
-     */
-    public function getDiscord()
-    {
-        return $this->discord;
-    }
-
-    /**
-     * Create a Part where the `created` status is referenced by this Part.
-     *
-     * @internal
-     *
-     * @see \Discord\Factory\Factory::part()
-     *
-     * @since 10.0.0
-     *
-     * @param string       $class The attribute Part class to build.
-     * @param array|object $data  Data to create the object.
-     *
-     * @return Part
-     */
-    public function createOf(string $class, array|object $data): Part
-    {
-        $ofPart = $this->factory->part($class, (array) $data, $this->created);
-        $ofPart->created = &$this->created;
-
-        return $ofPart;
-    }
-
-    /**
-     * Converts a string to studlyCase.
-     *
-     * This is a port of updated Laravel's implementation, a non-regex with
-     * static cache. The Discord\studly() is kept due to unintended bug and we
-     * do not want to introduce BC by replacing it. This method is private
-     * static as we may move it outside this class in future.
-     *
-     * @param string $string The string to convert.
-     *
-     * @return string
-     *
-     * @since 10.0.0
-     */
-    private static function studly(string $string): string
-    {
-        static $studlyCache = [];
-        $key = $string;
-
-        if (isset($studlyCache[$key])) {
-            return $studlyCache[$key];
-        }
-
-        $words = explode(' ', str_replace(['-', '_'], ' ', $string));
-
-        $studlyWords = array_map(fn ($word) => ucfirst($word), $words);
-
-        return $studlyCache[$key] = implode($studlyWords);
     }
 
     /**

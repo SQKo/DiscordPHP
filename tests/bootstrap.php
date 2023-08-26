@@ -10,9 +10,6 @@
  */
 
 include __DIR__.'/../vendor/autoload.php';
-
-//class RedisPsr16 extends \Symfony\Component\Cache\Psr16Cache {}
-
 include __DIR__.'/functions.php';
 include __DIR__.'/DiscordSingleton.php';
 include __DIR__.'/DiscordTestCase.php';
